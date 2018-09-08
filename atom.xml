@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-08T13:38:10.262Z</updated>
+  <updated>2018-09-08T14:29:01.122Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Web学习之旅开始</title>
+    <link href="http://yoursite.com/2018/09/08/wen%E5%89%8D%E7%AB%AF/"/>
+    <id>http://yoursite.com/2018/09/08/wen前端/</id>
+    <published>2018-09-08T14:00:00.000Z</published>
+    <updated>2018-09-08T14:29:01.122Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>This is the beginning.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;This is the beginning.&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo github 部署个人博客</title>
+    <link href="http://yoursite.com/2018/08/14/hexo-github-pages-blog/"/>
+    <id>http://yoursite.com/2018/08/14/hexo-github-pages-blog/</id>
+    <published>2018-08-14T13:10:25.288Z</published>
+    <updated>2018-09-08T14:28:06.467Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><h2 id="hexo-github-pages搭建个人博客"><a href="#hexo-github-pages搭建个人博客" class="headerlink" title="hexo+github pages搭建个人博客"></a>hexo+github pages搭建个人博客</h2><h3 id="1-环境准备：win10"><a href="#1-环境准备：win10" class="headerlink" title="1.环境准备：win10"></a>1.环境准备：win10</h3><pre><code>gitnode.jsnpmgithub</code></pre><h3 id="2-域名"><a href="#2-域名" class="headerlink" title="2.域名"></a>2.域名</h3><pre><code>域名解析添加记录：192.30.252.153 192.30.252.154 两个A记录http://shihaitao123.github.iowww.janicelin.com  </code></pre><h3 id="3-建站过程"><a href="#3-建站过程" class="headerlink" title="3.建站过程"></a>3.建站过程</h3><pre><code>一.安装Hexo    npm install -g hexo-cli二.建立站点三.配置站点   config.yml文件内四.生成内容五.主题   主题安装和渲染</code></pre><h3 id="4-部署到GitHub"><a href="#4-部署到GitHub" class="headerlink" title="4.部署到GitHub"></a>4.部署到GitHub</h3><pre><code>终端下的目录文件夹中完成    1.create a reposity    2.set up git       user.name和Email    3.身份验证      生成SSH key添加到GitHub账户    4.测试连接</code></pre><h3 id="5-hexo部署"><a href="#5-hexo部署" class="headerlink" title="5.hexo部署"></a>5.hexo部署</h3><pre><code>1.deploy:   type: git   repo: https://github.com/your_name/ your_name.github.io.git（2.0版本，更改）   branch: master2.hexo clean  hexo g  hexo s  hexo d</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;h2 id=&quot;hexo-github-pages搭建个人博客&quot;&gt;&lt;a href=&quot;#hexo-github-pages搭建个人博客&quot; class=&quot;headerlink&quot; tit
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Test for Hexo</title>
