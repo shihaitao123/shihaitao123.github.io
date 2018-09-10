@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[计算机网络-概述]]></title>
+    <url>%2F2018%2F09%2F10%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E6%A6%82%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[概述1.计算机网络的两大功能：连通性和共享 2.因特网发展的三个阶段： 1）从单个网络ARPANET向互联网发展的过程 2）建成了三级结构的因特网 3）逐渐形成了多层次的ISP(Internet service provider)结构的因特网 3.NAP（IXP）网络接入点：用来交换因特网上流量；向各ISP提供交换设施，使他们能够互相平等通信 4.因特网的组成： (1)边缘部分：用户利用核心部分提供的服务直接使用网络进行通信并交换或共享信息;端系统：主机，进程之间的通信 两类通信方式： 1）客户服务器方式：客户是服务的请求方，服务器是服务的提供方； 客户程序：一对多，必须知道服务器程序的地址 服务器程序：可同时处理多个远地或本地客户的请求（被动等待） 2）对等连接方式(p2p)：平等的、对等连接通信，既是通信端又是服务端 (2)核心部分：为边缘部分提供服务（提供连通性和交换），主要由路由器和网络组成；核心中的核心：路由器（转发收到的分组，实现分组交换） 交换：按照某种方式动态的分配传输线路的资源 1）电路交换：建立连接(占用通信资源)——通话（一直占用通信资源）——释放资源（归还通信资源） 2）报文交换：基于存储转发原理（时延较长） 3）分组交换：报文切割加上首部形成分组，高效、灵活、迅速、可靠 存储转发时造成时延 后两者不需要预先分配传输带宽 路由器处理分组过程：缓存–查找转发表–找到合适端口 电路交换、报文交换、分组交换的比较 1、电路交换 公共电话网(PSTN网)和移动网(包括GSM和CDMA网)采用的都是电路交换技术，它的基本特点是采用面向连接的方 式，在双方进行通信之前，需要为通信双方分配一条具有固定宽带的通信电路，通信双方在通信过程中一直占用所 分配的资源，直到通信结束，并且在电路的建立和释放过程中都需要利用相关的信令协议。这种方式的优点是在通 信过程中可以保证为用户提供足够的带宽，并且实时性强，时延小，交换设备成本低，但同时带来的缺点是信道利 用率低，一旦电路被建立不管通信双方是否处于通话状态分配的电路一直被占用。 2、报文交换 报文交换是以报文为数据交换的单位，报文携带有目标地址、源地址等信息，在交换结点采用存储转发的传输方 式；由于报文长度差异很大，长报文可能导致很大的时延；为了满足各种长度报文的需要并且达到高效的目的，节 点需要分配不同大小的缓冲区，否则就有可能造成数据传送的失败，这样对每个节点来说缓冲区的分配也比较困 难。另外一个缺点是出错时，整个报文都将重传。 3、分组交换 分组交换仍采用存储转发传输方式，但将一个长报文先分割为若干个较短的分组，然后把这些分组（携带源、目的 地址和编号信息）逐个地发送出去。采用分组交换技术，在通信之前不需要建立连接，每个节点首先将前一节点送 来的分组收下并保存在缓冲区中，然后根据分组头部中的地址信息选择适当的链路将其发送至下一个节点，这样在 通信过程中可以根据用户的要求和网络的能力来动态分配带宽。分组交换比电路交换的信道利用率高，但时延较 大。分组转发的带来的问题：排队时延以及增加头部带来的开销。 总之，若要传送的数据量很大，且其传送时间远大于呼叫时间，则采用电路交换较为合适；当端到端的通路有很多 段的链路组成时，采用分组交换传送数据较为合适。从提高整个网络的信道利用率上看，报文交换和分组交换优于 电路交换，其中分组交换比报文交换的时延小，尤其适合于计算机之间的突发式的数据通信。 5.计算机网络的分类： 按作用范围：WAN,MAN,LAN,PAN 按介质：有线网，光纤网，无限网络 按无线上网方式：WLAN,WWAN(手机） 按通信性能：资源共享，分布式计算机，远程通信网络 6.计算机网络的性能： 1）速率（比特每秒b/s）:数据量/信息量的单位 2）带宽：频域称谓，赫兹Hz，信号具有的频带宽度；时域称谓，比特每秒，通信线路的最高数据率；两者本质一样，宽度越大，传输速率自然越高 3）吞吐量：单位时间内通过某个网络（或信道、接口）的数据量 4）时延： 发送时延（传输时延）：发生在内部的发送器中 传播时延：发生在外部的传输信道媒体上 处理时延：交换结点为存储转发而进行一些处理所花费的时间 排队时延：结点缓存队列中分组排队所经历的时延（取决于当时的通信量） 数据的发送率不是比特在链路上的传播速率 5）时延带宽积 6）往返时间（RTT）：简单说就是两倍传播时延（实际上还包括处理时延，排队时延，转发时的发送时延） 7）利用率 本文链接： 1.计算机网络知识点整理 2.计算机网络知识复习重点]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Markdown语法整理]]></title>
+    <url>%2F2018%2F09%2F09%2FMarkdown%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86%2F</url>
+    <content type="text"><![CDATA[本文是对Markdown常用语法的总结。tab键相当于四个空格，每一行开始进入语法编辑状态，输入tab则进入文本编辑状态。 一.标题第一种： # 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ###### 五级标题 ###### 六级标题 支持h1-h6 第二种： 一级标题 ============== 二级标题 -------------- =和-的数量没有限制，大于一个即行。 第三种： # 一级标题# ## 二级标题## 支持h1-h6 二.斜体和粗体1.*斜体* 2.**粗体** 3.***加粗斜体*** 4.~~删除线~~ 显示效果： 1.斜体 2.粗体 3.加粗斜体 4.删除线 三.列表1.无序列表： * * * +，-也可以。 2.有序列表： 1.列表1 2.列表2 3.列表3 效果如下所示：1.无序列表： 2.有序列表： 1.列表1 2.列表2 3.列表3 3.定义型列表 定义型列表由名词和解释组成，一行写上定义，紧跟一行写解释。解释的语法：紧跟一个缩进（tab)。 1. Markdown 2. ： 轻量级文本标记语言，可以转换成HTML和PDF格式 3. 4. 代码块2 5. ： 这是代码块的定义 6. 7. 代码块 显示效果： Markdown 轻量级文本标记语言，可以转换成HTML和PDF格式 代码块2 这是代码块的定义 代码块 四.链接链接分为行内式和引用式。 1.行内式： 欢迎来到[Nowshi Blog](http://janicelin.com) 欢迎来到[百度](www.baidu.com) 显示效果： 欢迎来到Nowshi Blog 欢迎来到百度 2.引用式： I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [baidu][3]. [1]: http://google.com [2]: http://search.yahoo.com [3]: http://baidu.com 效果如下： I get 10 times more traffic from Google than from Yahoo or baidu. 五.引用语法说明： 引用需要在被引用的文本前加上&gt;符号。 *不以结婚为目的的谈恋爱都是耍流氓 &gt;这是毛主席说的 *有钱和情最有缘 &gt;这是我说的 效果如下： *不以结婚为目的的谈恋爱都是耍流氓 这是毛主席说的 *有钱和情最有缘 这是我说的 六.锚点网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。 Markdown Extra 只支持在标题后插入锚点，其它地方无效。 语法描述： 在你准备跳转到的指定标题后插入锚点标记，然后在文档的其它地方写上连接到锚点的链接。 七.脚注在需要添加注脚的文字后加上脚注名字[^注脚名字]称为加注。 使用Markdown[^1]可以效率的书写文档，直接转换成HTML,你可 以使用Leanote[^2]编辑器进行书写 [^1]:Markdown是一种纯文本标记语言 [^2]:开源笔记平台，支持Markdown和笔记直接发为博文 效果如下： 使用Markdown^1可以效率的书写文档，直接转换成HTML,你可 以使用Leanote^2编辑器进行书写 八.表格First Header | Second Header ------------- | ------------- Content Cell | Content Cell Content Cell | Content Cell 九.代码1.用(1234``` bash$ hexo new &quot;My New Post&quot; 效果如下： 1$ hexo new "My New Post" 2.tab缩进 第一种：简单文字出现一个代码框。使用&lt;blockquote&gt;。 （不是单引号而是左上角的ESC下面~中的） 第二种：大片文字需要实现代码框。使用Tab和四个空格。 十.图片插入图片和链接类似，分为行内式和引用式。 1.行内式： 语法说明： ![图片alt](图片地址 &quot;图片title&quot;) 美丽花儿： ！[美丽花儿](http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg &quot;美丽花儿&quot;) 显示效果： 美丽花儿： 美丽花儿 2.引用式 语法说明： ！[图片alt][标记] [标记]：图片地址 &quot;title&quot; 美丽花儿： [美丽花儿][flower] [flower]:http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg &quot;美丽花儿&quot; 显示效果： 美丽花儿： 美丽花儿 十一.视频Markdown语法不支持插入视频 普遍的做法是插入HTML的ifame框架，通过网站自带的分享功能获取 第二种做法是伪造播放界面，实质是插入视频图片，然后通过点击跳转到相关页面 本文链接： 1..md即markdown文件的基本常用编写语法（图文并茂) 2.Markdown 语法整理大集合2017 3.Markdown 11种基本语法 4.Markdown 语法手册(完整整理版)]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Web学习之旅开始]]></title>
+    <url>%2F2018%2F09%2F08%2Fwen%E5%89%8D%E7%AB%AF%2F</url>
+    <content type="text"><![CDATA[This is the beginning.]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo github 部署个人博客]]></title>
+    <url>%2F2018%2F08%2F14%2Fhexo-github-pages-blog%2F</url>
+    <content type="text"><![CDATA[hexo+github pages搭建个人博客1.环境准备：win10git node.js npm github 2.域名域名解析 添加记录：192.30.252.153 192.30.252.154 两个A记录 http://shihaitao123.github.io www.janicelin.com 3.建站过程一.安装Hexo npm install -g hexo-cli 二.建立站点 三.配置站点 config.yml文件内 四.生成内容 五.主题 主题安装和渲染 4.部署到GitHub终端下的目录文件夹中完成 1.create a reposity 2.set up git user.name和Email 3.身份验证 生成SSH key添加到GitHub账户 4.测试连接 5.hexo部署1.deploy: type: git repo: https://github.com/your_name/ your_name.github.io.git（2.0版本，更改） branch: master 2.hexo clean hexo g hexo s hexo d]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Test for Hexo]]></title>
+    <url>%2F2018%2F08%2F14%2Ftest%2F</url>
+    <content type="text"><![CDATA[This is the first test for hexo.]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F08%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
