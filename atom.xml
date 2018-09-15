@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-14T11:12:07.083Z</updated>
+  <updated>2018-09-15T12:26:47.658Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>路由选择协议</title>
+    <link href="http://yoursite.com/2018/09/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://yoursite.com/2018/09/15/计算机网络知识整理-路由选择协议/</id>
+    <published>2018-09-15T12:25:25.000Z</published>
+    <updated>2018-09-15T12:26:47.658Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>常见的路由选择协议有：RIP协议、OSPF协议。</p><h3 id="RIP协议"><a href="#RIP协议" class="headerlink" title="RIP协议"></a>RIP协议</h3><p>底层是贝尔曼福特算法，它选择路由的度量标准（metric)是跳数，最大跳数是15跳，如果大于15跳，它就会丢弃数据包。</p><h3 id="OSPF协议"><a href="#OSPF协议" class="headerlink" title="OSPF协议"></a>OSPF协议</h3><p>开放式最短路径优先(Open Shortest Path First)，底层是迪杰斯特拉算法，是链路状态路由选择协议，它选择路由的度量标准是带宽和延迟。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;常见的路由选择协议有：RIP协议、OSPF协议。&lt;/p&gt;
+&lt;h3 id=&quot;RIP协议&quot;&gt;&lt;a href=&quot;#RIP协议&quot; class=&quot;headerlink&quot; title=&quot;
+      
+    
+    </summary>
+    
+      <category term="Network" scheme="http://yoursite.com/categories/Network/"/>
+    
+    
+      <category term="Network" scheme="http://yoursite.com/tags/Network/"/>
+    
+  </entry>
   
   <entry>
     <title>ARP/RARP协议</title>
