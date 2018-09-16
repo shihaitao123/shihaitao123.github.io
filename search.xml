@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[UDP协议]]></title>
+    <url>%2F2018%2F09%2F16%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-UDP%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[UDP用户数据报协议，是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。UDP通讯时不需要接收方确认，属于不可靠的传输，可能会出现丢包现象，实际应用中要求程序员编程验证。 UDP与TCP位于同一层，但它不管数据包的顺序、错误或重发。因此，UDP不被应用于那些使用虚电路的面向连接的服务，UDP主要用于那些面向查询—应答的服务，例如NFS。相对于FTP或Telnet，这些服务需要交换的信息量较小。 每个UDP报文分UDP报头和UDP数据区两部分。报头由四个16位长（2字节）字段组成，分别说明该报文的源端口、目的端口、报文长度以及校验值。UDP报头由4个域组成，其中每个域各占用2个字节，具体如下： （1）源端口号； （2）目标端口号； （3）数据报长度； （4）校验值。 使用UDP协议包括：TFTP（简单文件传输协议）、SNMP（简单网络管理协议）、DNS（域名解析协议）、NFS、BOOTP。 TCP 与 UDP 的区别：TCP是面向连接的，可靠的字节流服务；UDP是面向无连接的，不可靠的数据报服务。 本文链接： 1.计算机网络基础知识总结]]></content>
+      <categories>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Network</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[路由选择协议]]></title>
     <url>%2F2018%2F09%2F15%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E5%8D%8F%E8%AE%AE%2F</url>
-    <content type="text"><![CDATA[常见的路由选择协议有：RIP协议、OSPF协议。 RIP协议底层是贝尔曼福特算法，它选择路由的度量标准（metric)是跳数，最大跳数是15跳，如果大于15跳，它就会丢弃数据包。 OSPF协议开放式最短路径优先(Open Shortest Path First)，底层是迪杰斯特拉算法，是链路状态路由选择协议，它选择路由的度量标准是带宽和延迟。]]></content>
+    <content type="text"><![CDATA[常见的路由选择协议有：RIP协议、OSPF协议。 RIP协议底层是贝尔曼福特算法，它选择路由的度量标准（metric)是跳数，最大跳数是15跳，如果大于15跳，它就会丢弃数据包。 OSPF协议开放式最短路径优先(Open Shortest Path First)，底层是迪杰斯特拉算法，是链路状态路由选择协议，它选择路由的度量标准是带宽和延迟。 本文链接： 1.计算机网络基础知识总结]]></content>
       <categories>
         <category>Network</category>
       </categories>
