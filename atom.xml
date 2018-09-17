@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-16T12:32:23.997Z</updated>
+  <updated>2018-09-17T05:39:51.066Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html注册登陆</title>
+    <link href="http://yoursite.com/2018/09/17/html%E6%B3%A8%E5%86%8C%E7%99%BB%E9%99%86/"/>
+    <id>http://yoursite.com/2018/09/17/html注册登陆/</id>
+    <published>2018-09-17T05:33:25.000Z</published>
+    <updated>2018-09-17T05:39:51.066Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>html、css和JavaScript实现简单的注册登陆功能。</p><p>账号：</p><p>6-12位</p><p>首字母不能为数字</p><p>只能包含字母和数字</p><p>密码：</p><p>6-12位</p><p>登陆界面html</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt; &lt;head&gt;  &lt;meta charset=&quot;utf-8&quot;&gt;  &lt;title&gt;登陆&lt;/title&gt;  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;test.css&quot;&gt;  &lt;script src=&quot;注册.js&quot;&gt;&lt;/script&gt; &lt;/head&gt; &lt;body&gt; &lt;body bgcolor=&quot;#F0F8FF&quot;&gt; &lt;div class=&quot;box&quot;&gt;    &lt;div id=&quot;title&quot;&gt;&lt;h2 align=&quot;center&quot;&gt;登陆&lt;/h2&gt;&lt;/div&gt;    &lt;p class=&quot;input_box&quot;&gt;         账户：&lt;input id=&quot;uname&quot; type=&quot;text&quot; placeholder=&quot;请输入你的账户&quot;&gt;    &lt;/p&gt;    &lt;p class=&quot;input_box&quot;&gt;         密码：&lt;input id=&quot;upass&quot; type=&quot;text&quot; placeholder=&quot;请输入你的密码&quot;&gt;    &lt;/p&gt;    &lt;div id=&quot;error_box&quot;&gt;&lt;br&gt;&lt;/div&gt;    &lt;div class=&quot;button&quot;&gt;&lt;button onclick=&quot;foLogin()&quot;&gt;登陆&lt;/button&gt;&lt;/div&gt; &lt;h4align=&quot;center&quot;&gt;&lt;a href=&quot;注册.html&quot;&gt;没有账号？点我注册&lt;/a&gt;&lt;/h4&gt; &lt;/div&gt;     &lt;/body&gt;&lt;/html&gt;</code></pre><p>登陆界面js</p><pre><code>function foLogin(){    var oUname=document.getElementById(&quot;Uname&quot;);    var oError=document.getElementById(&quot;error_box&quot;);    var oUpass=document.getElementById(&quot;Upass&quot;);    var isError=true;    oError.innerHTML=&quot;&lt;br&gt;&quot;;    if(oUname.value.length&lt;6||oUname.value.length&gt;12){        oError.innerHTML=&quot;用户名要6-12位&quot;；        isError=false;        return;    }else if(oUname.value.charCodeAt(0)&gt;=48&amp;&amp;（oUname.value.charCodeAt(0)&lt;=57)）{        oError.innerHTML=&quot;首位不能为数字&quot;；        return;    }else for (var i=0;i&lt;oUname.value.length;i++){    if((oUname.value.charCodeAt(i)&lt;48) || (oUname.value.charCodeAt(i)&gt;57)||(oUname.value.charCodeAt(i)&lt;58)||(oUname.value.charCodeAt(i)&gt;97)){        oError.innerHTML=&quot;只能为数字和密码&quot;；        return；    }   }    if(oUpass.value.length&lt;6||oUpass.value.length&gt;12){        oError.innerHTML=&quot;密码要6-12位&quot;；        isError=false;        return;    }}</code></pre><p>注册界面html</p><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta charset=&quot;utf-8&quot;&gt;    &lt;title&gt;注册&lt;/title&gt;&lt;/title&gt;    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;test.css&quot;&gt;    &lt;script src=&quot;登陆.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;    &lt;body bgcolor=&quot;#F0F8FF&quot;&gt;    &lt;div class=&quot;box&quot;&gt;       &lt;div id=&quot;title&quot;&gt;&lt;h2 align=&quot;center&quot;&gt;注册&lt;/h2&gt;&lt;/div&gt;       &lt;p class=&quot;input_box&quot;&gt;           账户：&lt;input id=&quot;uname&quot; type=&quot;text&quot; placeholder=&quot;请输入你的账户&quot;&gt;       &lt;/p&gt;       &lt;p class=&quot;input_box&quot;&gt;           密码：&lt;input id=&quot;upass&quot; type=&quot;password&quot; placeholder=&quot;请设置你的密码&quot;&gt;       &lt;/p&gt;       &lt;p class=&quot;input_box&quot;&gt;           验证：&lt;input id=&quot;upass1&quot; type=&quot;password&quot; placeholder=&quot;请再次输入密码&quot;&gt;       &lt;/p&gt;       &lt;p class=&quot;input_box&quot;&gt;           邮箱：&lt;input id=&quot;邮箱&quot; type=&quot;text&quot; placeholder=&quot;请输入你的邮箱&quot;&gt;       &lt;/p&gt;       &lt;div id=&quot;error_box&quot;&gt;&lt;br&gt;&lt;/div&gt;       &lt;div class=&quot;button&quot;&gt;&lt;button onclick=&quot;foLogin()&quot;&gt;立即注册&lt;/button&gt;&lt;/div&gt;       &lt;h4 align=&quot;center&quot;&gt;&lt;a href=&quot;登陆.html&quot;&gt;已有账号请登录&lt;/a&gt;&lt;/h4&gt;    &lt;/div&gt;    &lt;/body&gt;&lt;/html&gt;</code></pre><p>注册界面js</p><pre><code>function foLogin() {            var oUname = document.getElementById(&quot;uname&quot;);            var oError = document.getElementById(&quot;error_box&quot;);            var oUpass = document.getElementById(&quot;upass&quot;);            var oUpass1 = document.getElementById(&quot;upass1&quot;);            var isError = true;            oError.innerHTML = &quot;&lt;br&gt;&quot;;            if (oUname.value.length &lt; 6 || oUname.value.length &gt; 12) {                oError.innerHTML = &quot;用户名要6-12位&quot;;                isError = false;                return;            }else if(oUname.value.charCodeAt(0)&gt;=48 &amp;&amp;(oUname.value.charCodeAt(0)&lt;=57)){                oError.innerHTML=&quot;首位不能为数字&quot;;                return;            }else for (var i=0;i&lt;oUname.value.length;i++){               if((oUname.value.charCodeAt(i)&lt;48)||(oUname.value.charCodeAt(i)&gt;57)&amp;&amp;(oUname.value.charCodeAt(i)&lt;58)&amp;&amp;(oUname.value.charCodeAt(i)&gt;97)){                oError.innerHTML=&quot;只能为数字和字母&quot;;                return;            }            }            if (oUpass.value.length &lt; 6 || oUpass.value.length &gt; 12) {                oError.innerHTML = &quot;密码要6-12位&quot;;                isError = false;                return;            }else if(oUname.value!=oUpass1.value) {                oError.innerHTML = &quot;设置密码和验证密码不一致&quot;;                return;            } }</code></pre><p>css</p><pre><code>.box{    border: 1px solid #000000;    height: 370px;    width: 500px;    float: left;    margin: 50px;    margin-left: 30%;}input{    align-self: center;    height: 30px;    widht:300px;}button{    font-size: 16px;    width: 360px;    height: 30px;    align-self: center;    margin-bottom: auto;    background: #cccccc;    margin-left: 15%;}</code></pre><p>实现效果：</p><p><img src="picture/1.png" alt="登陆界面"></p><p><img src="picture/2.png" alt="注册界面"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;html、css和JavaScript实现简单的注册登陆功能。&lt;/p&gt;
+&lt;p&gt;账号：&lt;/p&gt;
+&lt;p&gt;6-12位&lt;/p&gt;
+&lt;p&gt;首字母不能为数字&lt;/p&gt;
+&lt;p&gt;只能包含字母和数
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>UDP协议</title>
