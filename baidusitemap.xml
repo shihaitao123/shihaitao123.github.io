@@ -4,12 +4,32 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-DNS%E5%8D%8F%E8%AE%AE/</loc>
-    <lastmod>2018-09-20T12:52:32.338Z</lastmod>
+    <loc>http://yoursite.com/2018/09/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-DHCP%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2018-09-21T15:32:42.910Z</lastmod>
     <data>
         <display>
-        <title>DNS协议</title>
-        <pubTime>2018-09-19T02:24:25.000Z</pubTime>
+        <title>DHCP协议</title>
+        <pubTime>2018-09-21T16:00:25.000Z</pubTime>
+        
+        <tag>Network</tag>
+         
+         
+           
+             
+              <breadCrumb title="Network" url="http://yoursite.com/categories/Network/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/21/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-NAT%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2018-09-21T15:32:17.871Z</lastmod>
+    <data>
+        <display>
+        <title>NAT协议</title>
+        <pubTime>2018-09-21T15:28:25.000Z</pubTime>
         
         <tag>Network</tag>
          
@@ -25,11 +45,31 @@
     
   <url>
     <loc>http://yoursite.com/2018/09/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-HTTP%E5%8D%8F%E8%AE%AE/</loc>
-    <lastmod>2018-09-20T12:51:40.744Z</lastmod>
+    <lastmod>2018-09-20T12:59:20.125Z</lastmod>
     <data>
         <display>
         <title>HTTP协议</title>
         <pubTime>2018-09-20T12:24:25.000Z</pubTime>
+        
+        <tag>Network</tag>
+         
+         
+           
+             
+              <breadCrumb title="Network" url="http://yoursite.com/categories/Network/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/09/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86-DNS%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2018-09-20T12:52:32.338Z</lastmod>
+    <data>
+        <display>
+        <title>DNS协议</title>
+        <pubTime>2018-09-19T02:24:25.000Z</pubTime>
         
         <tag>Network</tag>
          
