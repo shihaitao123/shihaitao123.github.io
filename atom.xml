@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-21T15:49:30.420Z</updated>
+  <updated>2018-09-24T05:18:39.539Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML面试题(1)</title>
+    <link href="http://yoursite.com/2018/09/24/HTML%E9%9D%A2%E8%AF%95%E9%A2%98(1)/"/>
+    <id>http://yoursite.com/2018/09/24/HTML面试题(1)/</id>
+    <published>2018-09-24T04:12:25.000Z</published>
+    <updated>2018-09-24T05:18:39.539Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p><strong>1.doctype(文档类型) 的作用是什么？</strong></p><p>声明文档的解析类型(document.compatMode)，避免浏览器的怪异模式。</p><p>document.compatMode：</p><pre><code>BackCompat：怪异模式，浏览器使用自己的怪异模式解析渲染页面。CSS1Compat：标准模式，浏览器使用W3C的标准解析渲染页面。</code></pre><p>这个属性会被浏览器识别并使用，但是如果你的页面没有DOCTYPE的声明，那么compatMode默认就是BackCompat， 浏览器按照自己的方式解析渲染页面，那么，在不同的浏览器就会显示不同的样式。<br>如果你的页面添加了&lt;!DOCTYPE html&gt;那么，那么就等同于开启了标准模式,那么浏览器就得老老实实的按照W3C的标准解析渲染页面，这样一来，你的页面在所有的浏览器里显示的就都是一个样子了。</p><p><strong>2.浏览器标准模式 (standards mode) 、几乎标准模式（almost standards mode）和怪异模式 (quirks mode) 之间的区别是什么？</strong></p><p>所谓的标准模式是指，浏览器按W3C标准解析执行代码；怪异模式则是使用浏览器自己的方式解析执行代码，因为不同浏览器解析执行的方式不一样，所以我们称之为怪异模式。浏览器解析时到底使用标准模式还是怪异模式，与你网页中的DTD声明直接相关，DTD声明定义了标准文档的类型（标准模式解析）文档类型，会使浏览器使用相应的方式加载网页并显示，忽略DTD声明,将使网页进入怪异模式(quirks mode)。</p><p>几乎标准模式（almost standards mode）是Firefox1+的设定的，类似于标准模式</p><p>判断浏览器模式:</p><p>js方法<br>       alert(window.top.document.compatMode)<br>       //BackCompat  怪异模式<br>       //CSS1Compat  标准模式</p><p>jquery方法<br>      alert($.boxModel)<br>      alert($.support.boxModel)</p><p><strong>3.HTML 和 XHTML 有什么区别？</strong></p><p>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言，看起来与HTML有些相象，只有一些小的但重要的区别，XHTML就是一个扮演着类似HTML的角色的XML，所以，本质上说，XHTML是一个过渡技术，结合了XML(有几分)的强大功能及HTML(大多数)的简单特性。<br>HTML 和 XHTML 的区别简单来说，XHTML 可以认为是 XML 版本的 HTML，为符合 XML 要求，XHTML 语法上要求更严谨些。<br>以下是 XHTML 相对 HTML 的几大区别：</p><pre><code>XHTML 要求正确嵌套XHTML 所有元素必须关闭XHTML 区分大小写XHTML 属性值要用双引号XHTML 用 id 属性代替 name 属性XHTML 特殊字符的处理</code></pre><p><strong>4.如果页面使用 ‘application/xhtml+xml’ 会有什么问题吗？</strong></p><p>使用xhtml,页面结构中必须包含head标签,并且每个标签结构都要关闭,包括空标签。所有标签都要小写。使用了’application/xhtml+xml’之后,部分老浏览器不会支持</p><p><strong>5.如果网页内容需要支持多语言，你会怎么做？</strong></p><p>采用统一编码UTF-8方式编码</p><p>应用字符集的选择，对提供了多语言版本的网站来说，Unicode字符集应该是最理想的选择。它是一种双字节编码机制的字符集，不管是东方文字还是西方文字，在Unicode中一律用两个字节来表示，因而至少可以定义65536个不同的字符，几乎可以涵盖世界上目前所有通用的语言的每一种字符。 所以在设计和开发多语言网站时，一定要注意先把非中文页面的字符集定义为“utf-8”格式，即：这一步非常重要，原因在于若等页面做好之后再更改字符集设置，可说是一件非常非常吃力不讨好的工作，有时候甚至可能需要从头再来，重新输入网站的文字内容。 </p><p><strong>6.在设计和开发多语言网站时，有哪些问题你必须要考虑？</strong></p><pre><code>在 HTML 中使用lang属性。引导用户切换到自己的母语——让用户能够轻松地切换到自己的国家或语言，而不用麻烦。在图片中展示文本会阻碍网站规模增长——把文本放在图片中展示，仍然是一种非常流行的方式。这样做可以在所有终端上，都能显示出美观的非系统字体。然而，为了翻译图片中的文本，需要为每种语言单独创建对应的图片，这种做法很容易在图片数量不断增长的过程中失控。限制词语或句子的长度——网页内容在使用其他语言表述时，文字长度会发生变化。设计时，需要警惕文字长度溢出布局的问题，最好不要使用受文字长度影响较大的设计。比如标题、标签、按钮的设计，往往很受文字长度影响，这些设计中的文字与正文或评论部分不同，一般不可以自由换行。注意颜色的使用——颜色在不同的语言和文化中，意义和感受是不同的。设计时应该使用恰当的颜色。日期和货币的格式化——日期在不同的国家和地区，会以不同的方式显示。比如美国的日期格式是“May 31, 2012”，而在欧洲部分地区，日期格式是“31 May 2012”。不要使用连接的翻译字符串——不要做类似这样的事情，比如“今天的日期是”+具体日期。这样做可能会打乱其他语言的语序。替代方案是，为每种语言编写带变量替换的模版字符串。请看下面两个分别用英语和中文表示的句子：I will travel on {% date %}和{% date %} 我会出发。可以看到，语言的语法规则不同，变量的位置是不同的。注意语言阅读的方向——在英语中，文字是从左向右阅读的；而在传统日语中，文字是从右向左阅读的。</code></pre><p>1- 应用字符集的选择；所以对提供了多语言版本的网站来说，Unicode字符集应该是最理想的选择。它是一种双字节编码机制的字符集，不管是东方文字还是西方文字，在Unicode中一律用两个字节来表示，因而至少可以定义65536个不同的字符，几乎可以涵盖世界上目前所有通用的语言的每一种字符。 所以在设计和开发多语言网站时，一定要注意先把非中文页面的字符集定义为“utf-8”格式，即：这一步非常重要，原因在于若等页面做好之后再更改字符集设置，可说是一件非常非常吃力不讨好的工作，有时候甚至可能需要从头再来，重新输入网站的文字内容。 </p><p>2- 语言书写习惯&amp;导航结构 ；有些国家的语言书写习惯是从右到左，例如许多中东地区所使用的阿拉伯语，波斯语和希伯来语等等。如果你的市场目标是这些语言的国家，那么在网站设计中就需要考虑这些特殊的语言书写习惯。而且如果你在网站导航结构设计中使用的是一个竖直导航栏，这时候就应该把它放在右边，而不是象我们习惯的那样放在左边了。</p><p>3- 数据库驱动型网站<br>对一个数据库驱动型的网站，尤其是当客户可以留言并向数据库添加信息时，则应当考虑如何从技术上实现对不同语言数据信息的收集和检索。</p><p>4- 搜索引擎&amp;市场推广；最好的办法是找一个专业的网站推广公司来帮助进行市场调研。调研内容主要应包括：目标市场国家或地区对什么搜索引擎或门户网站的使用率最高? 一些主要的门户网站的用户真实查询率又是多少? 这一点尤为重要。就象我们常使用新浪、搜狐等大型国内门户网站，但一般更多是为了使用其邮件服务。而查询的话还是喜欢百度或Google一样，你需要了解在这些人们青睐有加的门户网站上，到底有多少人是奔查询而来的。充分的市场考察才能做到有的放矢，从而保证最丰厚的投资回报。</p><p><strong>7.使用 data- 属性的好处是什么？</strong></p><p>通过data-可以自定义属性,可以通过HTMLElement.dataset获取这些属性的值,data-中-后接自定义属性的名字,例如data-url。实际开发中可以利用这一点在生成DOM结构时把数据储存在自定义属性中,通过一系列交互操作,可以再获得这些数据,而不用再去ajax去后台取得数据。</p><p><strong>8.如果把 HTML5 看作做一个开放平台，那它的构建模块有哪些？</strong></p><pre><code>标签及属性地理位置画布视频音频拖放微数据应用缓存Web存储web workers服务器发送事件语义 - 提供更准确地描述内容。连接 - 提供新的方式与服务器通信。离线和存储 - 允许网页在本地存储数据并有效地离线运行。多媒体 - 在 Open Web 中，视频和音频被视为一等公民（first-class citizens）。2D/3D 图形和特效 - 提供更多种演示选项。性能和集成 - 提供更快的访问速度和性能更好的计算机硬件。设备访问 - 允许使用各种输入、输出设备。外观 - 可以开发丰富的主题。</code></pre><p><strong>9.请描述 cookies、sessionStorage 和 localStorage 的区别。</strong></p><p>1)sessionStorage和localStorage是web storage的两种储存方式,其中sessionStorage是会话级别储存,在浏览器或页面关闭时数据就会销毁,而localStorage是持久化的本地储存,不刻意去删除数据,数据是不会销毁的。以上这两种方式只是客户端的储存,不会涉及到服务器储存。与之相比,每次发送HTTP请求时会将cookie添加到Cookie头字段,发送给服务器。</p><p>2)在储存量方面也有差异,单个cookie保存的数据不能超过4K,而localStorage和sessionStorage一般有5-10M。</p><p>3)每个域名下cookie的个数会有限制,依据浏览器不同会有不同,而localStorage数量是无限制的。</p><p><strong>10.请解释 <script>、<script async> 和 <script defer> 的区别。</strong></p><p>&lt; script&gt;加载js文件会阻塞页面的渲染和交互,而&lt; script async&gt;和&lt; script defer&gt;都是异步加载js文件,期间不会产生阻塞,区别在于&lt; script async&gt;是加载完之后自动执行,&lt; script defer&gt;需要等到页面加载之后再执行。</p><p>三者之间的区别：</p><p><img src="http://sfault-image.b0.upaiyun.com/28/4a/284aec5bb7f16b3ef4e7482110c5ddbb_articlex" alt="三者加载执行的区别"></p><pre><code>&lt;script&gt; - HTML 解析中断，脚本被提取并立即执行。执行结束后，HTML 解析继续。&lt;script async&gt; - 脚本的提取、执行的过程与HTML解析过程并行，脚本执行完毕可能在HTML解析完毕之前。当脚本与页面上其他脚本独立时，可以使用async，比如用作页面统计分析。&lt;script defer&gt; - 脚本仅提取过程与HTML解析过程并行，脚本的执行将在HTML解析完毕后进行。如果有多个含defer的脚本，脚本的执行顺序将按照在 document 中出现的位置，从上到下顺序执行。</code></pre><p><strong>11.为什么通常推荐将 CSS <link> 放置在 <head></head> 之间，而将 JS <script> 放置在 </body> 之前？你知道有哪些例外吗？</strong></p><p>把<link>放在<head>中</p><p>把<link>标签放在<head></head>之间是规范要求的内容。此外，这种做法可以让页面逐步呈现，提高了用户体验。将样式表放在文档底部附近，会使许多浏览器（包括Internet Explorer）不能逐步呈现页面。一些浏览器会阻止渲染，以避免在页面样式发生变化时，重新绘制页面中的元素。这种做法可以防止呈现给用户空白的页面或没有样式的内容。</p><p>把<script>标签恰好放在</body>之前</p><p>脚本在下载和执行期间会阻止HTML解析。把<script>标签放在底部，保证HTML首先完成解析，将页面尽早呈现给用户。</p><p>例外情况是当你的脚本里包含document.write()时。但是现在，document.write()不推荐使用。同时，将<script>标签放在底部，意味着浏览器不能开始下载脚本，直到整个文档（document）被解析。也许，对此比较好的做法是，<script>使用defer属性，放在<head>中。</p><p>一般希望DOM还没加载必须需要先加载的js会放置在&lt; head&gt;中,有些加了defer、async的&lt; script&gt;也会放在&lt; head&gt;中。</p><p><strong>12.什么是渐进式渲染 (progressive rendering)？</strong></p><p>渐进式渲染是用于提高网页性能（尤其是提高用户感知的加载速度），以尽快呈现页面的技术。</p><p>在以前互联网带宽较小的时期，这种技术更为普遍。如今，移动终端的盛行，而移动网络往往不稳定，渐进式渲染在现代前端开发中仍然有用武之地。</p><p>一些举例：</p><pre><code>图片懒加载——页面上的图片不会一次性全部加载。当用户滚动页面到图片部分时，JavaScript将加载并显示图像。确定显示内容的优先级（分层次渲染）——为了尽快将页面呈现给用户，页面只包含基本的最少量的CSS、脚本和内容，然后可以使用延迟加载脚本或监听DOMContentLoaded/load事件加载其他资源和内容。异步加载HTML片段——当页面通过后台渲染时，把HTML拆分，通过异步请求，分块发送给浏览器。更多相关细节可以在这里找到。</code></pre><p><strong>13.为什么在<img>标签中使用srcset属性？请描述浏览器遇到该属性后的处理过程。</strong></p><p>因为需要设计响应式图片。我们可以使用两个新的属性——srcset 和 sizes——来提供更多额外的资源图像和提示，帮助浏览器选择正确的一个资源。</p><p>srcset 定义了我们允许浏览器选择的图像集，以及每个图像的大小。</p><p>sizes 定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择。</p><p>所以，有了这些属性，浏览器会：</p><pre><code>1.查看设备宽度2.检查sizes列表中哪个媒体条件是第一个为真3.查看给予该媒体查询的槽大小4.加载srcset列表中引用的最接近所选的槽大小的图像</code></pre><p><strong>14.你用过哪些不同的 HTML 模板语言？</strong></p><p>比如 Pug （以前叫 Jade）、 ERB、 Slim、 Handlebars、 Jinja、 Liquid 等等。在我看来，这些模版语言大多是相似的，都提供了用于展示数据的内容替换和过滤器的功能。大部分模版引擎都支持自定义过滤器，以展示自定义格式的内容。</p></script></strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;&lt;strong&gt;1.doctype(文档类型) 的作用是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;声明文档的解析类型(document.compatMode)，避免浏览器的怪异
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="HTML面试题" scheme="http://yoursite.com/tags/HTML%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>举例</title>
