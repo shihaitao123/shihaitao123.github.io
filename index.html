@@ -312,6 +312,811 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/HTML和CSS面试题(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/26/HTML和CSS面试题(1)/" itemprop="url">HTML和CSS面试题(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T12:12:25+08:00">
+                2018-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/26/HTML和CSS面试题(1)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/26/HTML和CSS面试题(1)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  611
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p>1.浏览器的内核</p>
+<pre><code>IE：trident内核
+Firefox：gecko内核
+Safari：webkit内核
+Opera：以前是presto内核，现已经改用Blink内核
+Chrome：Blink(基于webkit，Google和Opera Software公共开发）
+</code></pre><p>2.怪异模式和标准模式的区别</p>
+<p>总体会有布局，样式解析和脚本执行三个方面的区别</p>
+<p>3.div+css的布局较table布局有什么优点？</p>
+<pre><code>改版的时候更方便，只需要改CSS文件
+表现与结构分离
+页面加载速度快、结构化清晰、页面显示简洁
+易于优化(seo)搜索引擎更友好，排名更容易靠前
+</code></pre><p>4.为什么利用多个域名来存储网站资源会更有效？</p>
+<p>CDN缓存更方便</p>
+<p>突破浏览器并发限制<br>节约cookie带宽<br>节约主域名的连接数，优化页面响应速度<br>防止不必要的安全问题</p>
+<p>5.src和href的区别</p>
+<p>src用于替换当前元素</p>
+<p>href用于在当前文档和引用资源之间建立连接</p>
+<p>href(Hypertext Reference)指向网络资源所在位置</p>
+<pre><code>&lt;link href=&quot;common.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre><p>浏览器会识别该文档为CSS文件，就会并行下载资源并且不会停止对当前文档的处理。这也是问什么使用link方式加载CSS，而不是使用@import方式。</p>
+<p>6.网页制作用到的图片格式</p>
+<pre><code>png-8
+png-24
+jpeg
+gif
+svg
+(WebP)
+</code></pre><p>WebP格式：Google开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节约大量的服务器带宽资源和数据空间。</p>
+<p>在质量相同的情况下，WebP图像的体积比JPEG格式图像小40%</p>
+<p>7.微格式</p>
+<p>微格式是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p>
+<p>优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。(应用范例：豆瓣)</p>
+<p>8.在CSS/JS代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次JS请求一般情况下有哪些地方会有缓存处理？</p>
+<pre><code>DNS缓存
+CDN缓存
+浏览器缓存
+服务器缓存
+</code></pre><p>9.有哪些方法优化图片的加载</p>
+<p>图片懒加载：</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/数据结构与算法-冒泡排序/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/26/数据结构与算法-冒泡排序/" itemprop="url">冒泡排序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T12:12:25+08:00">
+                2018-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DS-A/" itemprop="url" rel="index">
+                    <span itemprop="name">DS && A</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/26/数据结构与算法-冒泡排序/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/26/数据结构与算法-冒泡排序/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  815
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p>##冒泡排序</p>
+<p>它是一种比较简单的排序算法。它会遍历若干次要排序的数列，每次遍历时，它都会从前往后依次的比较相邻两个数的大小；如果前者比后者大，则交换它们的位置。这样，一次遍历之后，最大的元素就在数列的末尾。采用相同的办法再次遍历时，第二大的元素就被排列在最大元素之前。重复此操作，直到整个数列都有序为止。</p>
+<p>冒泡排序</p>
+<pre><code>*
+ * 冒泡排序
+ *
+ * 参数说明：
+ *     a -- 待排序的数组
+ *     n -- 数组的长度
+ */
+void bubble_sort1(int a[], int n)
+{
+    int i,j;
+
+    for (i=n-1; i&gt;0; i--)
+    {
+        // 将a[0...i]中最大的数据放在末尾
+        for (j=0; j&lt;i; j++)
+        {
+            if (a[j] &gt; a[j+1])
+                swap(a[j], a[j+1]);
+        }
+    }
+}
+</code></pre><p>改进：<br>对冒泡排序进行优化，使它效率更高：添加一个标记，如果一趟遍历中发生了交换，则标记为true，否则为false。如果某一趟没有发生交换，说明排序已经完成。</p>
+<pre><code>/*
+ * 冒泡排序(改进版)
+ *
+ * 参数说明：
+ *     a -- 待排序的数组
+ *     n -- 数组的长度
+ */
+void bubble_sort2(int a[], int n)
+{
+    int i,j;
+    int flag;               // 标记
+
+for (i=n-1; i&gt;0; i--)
+{
+    flag = 0;           // 初始化标记为0
+
+    // 将a[0...i]中最大的数据放在末尾
+    for (j=0; j&lt;i; j++)
+    {
+        if (a[j] &gt; a[j+1])
+        {
+            swap(a[j], a[j+1]);
+            flag = 1;   // 若发生交换，则设标记为1
+        }
+    }
+
+    if (flag==0)
+        break;          // 若没发生交换，则说明数列已有序。
+}
+</code></pre><p>}</p>
+<p>##冒泡排序的时间复杂度和稳定性</p>
+<p>假设数列中有N个数，遍历一趟的时间复杂度是O(N),需要遍历N-<br>1次，所以时间复杂度为O(N^2)。</p>
+<p>冒泡排序是稳定的。</p>
+<p>算法稳定性：假设在数列中存在a[i]=a[j]，若在排序之前，a[i]在a[j]前面；并且排序之后，a[i]仍然在a[j]前面。则这个排序算法是稳定的！</p>
+<p>##完整程序：</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+// 数组长度
+#define LENGTH(array) ( (sizeof(array)) / (sizeof(array[0])) )
+// 交互数值
+#define swap(a,b)    (a^=b,b^=a,a^=b)
+
+/*
+ * 冒泡排序
+ *
+ * 参数说明：
+ *     a -- 待排序的数组
+ *     n -- 数组的长度
+ */
+
+void bubble_sort1(int a[], int n)
+{
+    int i,j;
+
+    for (i=n-1; i&gt;0; i--)
+    {
+        // 将a[0...i]中最大的数据放在末尾
+        for (j=0; j&lt;i; j++)
+        {
+            if (a[j] &gt; a[j+1])
+                swap(a[j], a[j+1]);
+        }
+    }
+}
+
+/*
+ * 冒泡排序(改进版)
+ *
+ * 参数说明：
+ *     a -- 待排序的数组
+ *     n -- 数组的长度
+ */
+
+void bubble_sort2(int a[], int n)
+{
+    int i,j;
+    int flag;                 // 标记
+
+    for (i=n-1; i&gt;0; i--)
+    {
+        flag = 0;            // 初始化标记为0
+
+        // 将a[0...i]中最大的数据放在末尾
+        for (j=0; j&lt;i; j++)
+        {
+            if (a[j] &gt; a[j+1])
+            {
+                swap(a[j], a[j+1]);
+                flag = 1;    // 若发生交换，则设标记为1
+            }
+        }
+
+        if (flag==0)
+            break;            // 若没发生交换，则说明数列已有序。
+    }
+}
+
+void main()
+{
+    int i;
+    int a[] = {20,40,30,10,60,50};
+    int ilen = LENGTH(a);
+
+    printf(&quot;before sort:&quot;);
+    for (i=0; i&lt;ilen; i++)
+        printf(&quot;%d &quot;, a[i]);
+    printf(&quot;\n&quot;);
+
+    bubble_sort1(a, ilen);
+    //bubble_sort2(a, ilen);
+
+    printf(&quot;after  sort:&quot;);
+    for (i=0; i&lt;ilen; i++)
+        printf(&quot;%d &quot;, a[i]);
+    printf(&quot;\n&quot;);
+}
+</code></pre><p>本文链接：<a href="https://blog.csdn.net/zuochao_2013/article/details/70854026" target="_blank" rel="noopener">数据结构与算法</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/25/CSS面试题(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/25/CSS面试题(1)/" itemprop="url">CSS面试题(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-25T01:50:25+08:00">
+                2018-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/25/CSS面试题(1)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/25/CSS面试题(1)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  638
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p><strong>CSS 中类 (classes) 和 ID 的区别。</strong></p>
+<pre><code>**请问 &quot;resetting&quot; 和 &quot;normalizing&quot; CSS 之间的区别？你会如何选择，为什么？**
+
+**请解释浮动 (Floats) 及其工作原理。**
+
+**描述z-index和叠加上下文是如何形成的。**
+
+**请描述 BFC(Block Formatting Context) 及其如何工作。**
+
+**列举不同的清除浮动的技巧，并指出它们各自适用的使用场景。**
+
+**请解释 CSS sprites，以及你要如何在页面或网站中实现它。**
+
+**你最喜欢的图片替换方法是什么，你如何选择使用。**
+
+**你会如何解决特定浏览器的样式问题？**
+
+**如何为有功能限制的浏览器提供网页？ **
+
+**你会使用哪些技术和处理方法？**
+
+**有哪些的隐藏内容的方法 (如果同时还要保证屏幕阅读器可用呢)？**
+
+**你用过栅格系统 (grid system) 吗？如果使用过，你最喜欢哪种？**
+**你用过媒体查询，或针对移动端的布局/CSS 吗？**
+
+**你熟悉 SVG 样式的书写吗？**
+
+**如何优化网页的打印样式？**
+
+**在书写高效 CSS 时会有哪些问题需要考虑？**
+
+**使用 CSS 预处理器的优缺点有哪些？ **
+
+
+**请描述你曾经使用过的 CSS 预处理器的优缺点。**
+
+**如果设计中使用了非标准的字体，你该如何去实现？**
+
+**请解释浏览器是如何判断元素是否匹配某个 CSS 选择器？**
+
+**请描述伪元素 (pseudo-elements) 及其用途。**
+
+**请解释你对盒模型的理解，以及如何在 CSS 中告诉浏览器使用不同的盒模型来渲染你的布局。**
+
+**请解释 * { box-sizing: border-box; } 的作用, 并且说明使用它有什么好处？**
+
+**请罗列出你所知道的 display 属性的全部值**
+
+**请解释 inline 和 inline-block 的区别？**
+
+**请解释 relative、fixed、absolute 和 static 元素的区别**
+
+**CSS 中字母 &apos;C&apos; 的意思是叠层 (Cascading)。请问在确定样式的过程中优先级是如何决定的 (请举例)？如何有效使用此系统？**
+
+**你在开发或生产环境中使用过哪些 CSS 框架？你觉得应该如何改善他们？**
+
+**请问你有尝试过 CSS Flexbox 或者 Grid 标准规格吗？**
+
+**为什么响应式设计 (responsive design) 和自适应设计 (adaptive design) 不同？**
+
+**你有兼容 retina 屏幕的经历吗？如果有，在什么地方使用了何种技术？**
+
+**请问为何要使用 translate() 而非 absolute positioning，或反之的理由？为什么？**
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/24/HTML面试题(1)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -797,642 +1602,11 @@ web workers
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/计算机网络知识整理-DHCP协议/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/22/计算机网络知识整理-DHCP协议/" itemprop="url">DHCP协议</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T00:00:25+08:00">
-                2018-09-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/22/计算机网络知识整理-DHCP协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/22/计算机网络知识整理-DHCP协议/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  102
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>DHCP动态主机设置协议（Dynamic Host Configuration Protocol）是一个局域网的网络协议，使用UDP协议工作，主要有两个用途：给内部网络或网络服务供应商自动分配IP地址，给用户或者内部网络管理员作为对所有计算机作中央管理的手段。</p>
-<p>本文链接：</p>
-<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-	  <div>
-    
-      </div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/计算机网络知识整理-NAT协议/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/21/计算机网络知识整理-NAT协议/" itemprop="url">NAT协议</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T23:28:25+08:00">
-                2018-09-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/21/计算机网络知识整理-NAT协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/21/计算机网络知识整理-NAT协议/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  136
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>NAT网络地址转换(Network Address Translation)属接入广域网(WAN)技术，是一种将私有（保留）地址转化为合法IP地址的转换技术，它被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了lP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。</p>
-<p>本文链接：</p>
-<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-	  <div>
-    
-      </div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/20/计算机网络知识整理-HTTP协议/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/20/计算机网络知识整理-HTTP协议/" itemprop="url">HTTP协议</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T20:24:25+08:00">
-                2018-09-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Network/" itemprop="url" rel="index">
-                    <span itemprop="name">Network</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/20/计算机网络知识整理-HTTP协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/20/计算机网络知识整理-HTTP协议/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。 </p>
-<p>HTTP 协议包括哪些请求？</p>
-<pre><code>GET：请求读取由URL所标志的信息。
-POST：给服务器添加信息（如注释）。
-PUT：在给定的URL下存储一个文档。
-DELETE：删除给定的URL所标志的资源。
-</code></pre><p>HTTP 中， POST 与 GET 的区别</p>
-<pre><code>1）Get是从服务器上获取数据，Post是向服务器传送数据。
-2）Get是把参数数据队列加到提交表单的Action属性所指向的URL中，值和表单内各个字段一一对应，在URL中可以看到。
-3）Get传送的数据量小，不能大于2KB；Post传送的数据量较大，一般被默认为不受限制。
-4）根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。
-</code></pre><p>I. 所谓 安全的 意味着该操作用于获取信息而非修改信息。换句话说，GET请求一般不应产生副作用。就是说，它仅仅是获取资源信息，就像数据库查询一样，不会修改，增加数据，不会影响资源的状态。</p>
-<p>II. 幂等 的意味着对同一URL的多个请求应该返回同样的结果。</p>
-<h3 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h3><p>HTTP协议工作于客户端-服务端架构上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。</p>
-<p>Web服务器有：Apache服务器，IIS服务器（Internet Information Services）等。</p>
-<p>Web服务器根据接收到的请求后，向客户端发送响应信息。</p>
-<p>HTTP默认端口号为80，但是你也可以改为8080或者其他端口。</p>
-<p>HTTP三点注意事项：</p>
-<pre><code>HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。
-
-HTTP是媒体独立的：这意味着，只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。 
-
-HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
-</code></pre><h3 id="HTTP与HTTPS的区别"><a href="#HTTP与HTTPS的区别" class="headerlink" title="HTTP与HTTPS的区别"></a>HTTP与HTTPS的区别</h3><p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
-<p>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。</p>
-<p>HTTP协议传输的数据都是未加密的，也就是明文的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了SSL（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</p>
-<p>HTTPS和HTTP的区别主要如下：</p>
-<pre><code>1、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。
-2、http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。
-3、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
-4、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
-</code></pre><h4 id="HTTPS的工作原理"><a href="#HTTPS的工作原理" class="headerlink" title="HTTPS的工作原理"></a>HTTPS的工作原理</h4><p>我们都知道HTTPS能够加密信息，以免敏感信息被第三方获取，所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用HTTPS协议。</p>
-<p><img src="http://www.mahaixiang.cn/uploads/allimg/1507/1-150H120343I41.jpg" alt="HTTPS加密过程"></p>
-<p>客户端在使用HTTPS方式与Web服务器通信时有以下几个步骤，如图所示。</p>
-<pre><code>（1）客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。
-
-（2）Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。
-
-（3）客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。
-
-（4）客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。
-
-（5）Web服务器利用自己的私钥解密出会话密钥。
-
-（6）Web服务器利用会话密钥加密与客户端之间的通信。
-</code></pre><p>！<a href="http://pic002.cnblogs.com/images/2012/339704/2012071410212142.gif" target="_blank" rel="noopener">HTTPS加密</a></p>
-<h4 id="HTTPS的优点"><a href="#HTTPS的优点" class="headerlink" title="HTTPS的优点"></a>HTTPS的优点</h4><p>尽管HTTPS并非绝对安全，掌握根证书的机构、掌握加密算法的组织同样可以进行中间人形式的攻击，但HTTPS仍是现行架构下最安全的解决方案，主要有以下几个好处：</p>
-<pre><code>（1）使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器；
-（2）HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。
-（3）HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。
-（4）谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。
-</code></pre><h4 id="HTTPS的缺点"><a href="#HTTPS的缺点" class="headerlink" title="HTTPS的缺点"></a>HTTPS的缺点</h4><p>虽然说HTTPS有很大的优势，但其相对来说，还是存在不足之处的：</p>
-<pre><code>（1）HTTPS协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电；
-
-（2）HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响；
-
-（3）SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。
-
-（4）SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗。
-
-（5）HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。
-</code></pre><h4 id="http切换到HTTPS"><a href="#http切换到HTTPS" class="headerlink" title="http切换到HTTPS"></a>http切换到HTTPS</h4><p>如果需要将网站从http切换到https到底该如何实现呢？</p>
-<p> 这里需要将页面中所有的链接，例如js，css，图片等等链接都由http改为https。例如：<a href="http://www.baidu.com改为https://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com改为https://www.baidu.com</a></p>
-<p>BTW，这里虽然将http切换为了https，还是建议保留http。所以我们在切换的时候可以做http和https的兼容，具体实现方式是，去掉页面链接中的http头部，这样可以自动匹配http头和https头。例如：将<a href="http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。" target="_blank" rel="noopener">http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。</a></p>
-<p>本文链接：</p>
-<p>1.<a href="http://www.runoob.com/http/http-intro.html" target="_blank" rel="noopener">HTTP 简介</a></p>
-<p>2.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-	  <div>
-    
-      </div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1482,7 +1656,7 @@ HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1493,7 +1667,7 @@ HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1504,7 +1678,7 @@ HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1548,7 +1722,7 @@ HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -1562,7 +1736,7 @@ HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">20.3k</span>
+    <span title="Site words total count">22.3k</span>
   
 </div>
 
