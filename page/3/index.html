@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/17/html注册登陆/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/23/计算机网络知识整理-一个举例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -331,7 +331,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/17/html注册登陆/" itemprop="url">html注册登陆</a></h1>
+                <a class="post-title-link" href="/2018/09/23/计算机网络知识整理-一个举例/" itemprop="url">举例</a></h1>
         
 
         <div class="post-meta">
@@ -343,358 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-17T13:33:25+08:00">
-                2018-09-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">web</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/17/html注册登陆/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/17/html注册登陆/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  5
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>html、css和JavaScript实现简单的注册登陆功能。</p>
-<p>账号：</p>
-<p>6-12位</p>
-<p>首字母不能为数字</p>
-<p>只能包含字母和数字</p>
-<p>密码：</p>
-<p>6-12位</p>
-<p>登陆界面html</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
- &lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;登陆&lt;/title&gt;
-  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;test.css&quot;&gt;
-  &lt;script src=&quot;注册.js&quot;&gt;&lt;/script&gt;
- &lt;/head&gt;
-
- &lt;body&gt;
- &lt;body bgcolor=&quot;#F0F8FF&quot;&gt;
-
- &lt;div class=&quot;box&quot;&gt;
-    &lt;div id=&quot;title&quot;&gt;&lt;h2 align=&quot;center&quot;&gt;登陆&lt;/h2&gt;&lt;/div&gt;
-    &lt;p class=&quot;input_box&quot;&gt;
-         账户：&lt;input id=&quot;uname&quot; type=&quot;text&quot; placeholder=&quot;请输入你的账户&quot;&gt;
-    &lt;/p&gt;
-
-    &lt;p class=&quot;input_box&quot;&gt;
-         密码：&lt;input id=&quot;upass&quot; type=&quot;text&quot; placeholder=&quot;请输入你的密码&quot;&gt;
-    &lt;/p&gt;
-
-    &lt;div id=&quot;error_box&quot;&gt;&lt;br&gt;&lt;/div&gt;
-
-    &lt;div class=&quot;button&quot;&gt;&lt;button onclick=&quot;foLogin()&quot;&gt;登陆&lt;/button&gt;&lt;/div&gt;
-
- &lt;h4align=&quot;center&quot;&gt;&lt;a href=&quot;注册.html&quot;&gt;没有账号？点我注册&lt;/a&gt;&lt;/h4&gt;
- &lt;/div&gt;    
- &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>登陆界面js</p>
-<pre><code>function foLogin(){
-    var oUname=document.getElementById(&quot;Uname&quot;);
-    var oError=document.getElementById(&quot;error_box&quot;);
-    var oUpass=document.getElementById(&quot;Upass&quot;);
-
-    var isError=true;
-    oError.innerHTML=&quot;&lt;br&gt;&quot;;
-
-    if(oUname.value.length&lt;6||oUname.value.length&gt;12){
-        oError.innerHTML=&quot;用户名要6-12位&quot;；
-        isError=false;
-        return;
-    }else if(oUname.value.charCodeAt(0)&gt;=48&amp;&amp;（oUname.value.charCodeAt(0)&lt;=57)）{
-        oError.innerHTML=&quot;首位不能为数字&quot;；
-        return;
-    }else for (var i=0;i&lt;oUname.value.length;i++){
-
-    if((oUname.value.charCodeAt(i)&lt;48) || (oUname.value.charCodeAt(i)&gt;57)||(oUname.value.charCodeAt(i)&lt;58)||(oUname.value.charCodeAt(i)&gt;97)){
-        oError.innerHTML=&quot;只能为数字和密码&quot;；
-        return；
-    }
-   }
-
-    if(oUpass.value.length&lt;6||oUpass.value.length&gt;12){
-        oError.innerHTML=&quot;密码要6-12位&quot;；
-        isError=false;
-        return;
-    }
-}
-</code></pre><p>注册界面html</p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;注册&lt;/title&gt;&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;test.css&quot;&gt;
-    &lt;script src=&quot;登陆.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;body bgcolor=&quot;#F0F8FF&quot;&gt;
-    &lt;div class=&quot;box&quot;&gt;
-       &lt;div id=&quot;title&quot;&gt;&lt;h2 align=&quot;center&quot;&gt;注册&lt;/h2&gt;&lt;/div&gt;
-       &lt;p class=&quot;input_box&quot;&gt;
-           账户：&lt;input id=&quot;uname&quot; type=&quot;text&quot; placeholder=&quot;请输入你的账户&quot;&gt;
-       &lt;/p&gt;
-
-       &lt;p class=&quot;input_box&quot;&gt;
-           密码：&lt;input id=&quot;upass&quot; type=&quot;password&quot; placeholder=&quot;请设置你的密码&quot;&gt;
-       &lt;/p&gt;
-       &lt;p class=&quot;input_box&quot;&gt;
-           验证：&lt;input id=&quot;upass1&quot; type=&quot;password&quot; placeholder=&quot;请再次输入密码&quot;&gt;
-       &lt;/p&gt;
-
-       &lt;p class=&quot;input_box&quot;&gt;
-           邮箱：&lt;input id=&quot;邮箱&quot; type=&quot;text&quot; placeholder=&quot;请输入你的邮箱&quot;&gt;
-       &lt;/p&gt;
-
-       &lt;div id=&quot;error_box&quot;&gt;&lt;br&gt;&lt;/div&gt;
-       &lt;div class=&quot;button&quot;&gt;&lt;button onclick=&quot;foLogin()&quot;&gt;立即注册&lt;/button&gt;&lt;/div&gt;
-       &lt;h4 align=&quot;center&quot;&gt;&lt;a href=&quot;登陆.html&quot;&gt;已有账号请登录&lt;/a&gt;&lt;/h4&gt;   
- &lt;/div&gt;   
- &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>注册界面js</p>
-<pre><code>function foLogin() {
-            var oUname = document.getElementById(&quot;uname&quot;);
-            var oError = document.getElementById(&quot;error_box&quot;);
-            var oUpass = document.getElementById(&quot;upass&quot;);
-            var oUpass1 = document.getElementById(&quot;upass1&quot;);
-            var isError = true;
-            oError.innerHTML = &quot;&lt;br&gt;&quot;;
-
-            if (oUname.value.length &lt; 6 || oUname.value.length &gt; 12) {
-                oError.innerHTML = &quot;用户名要6-12位&quot;;
-                isError = false;
-                return;
-            }else if(oUname.value.charCodeAt(0)&gt;=48 &amp;&amp;(oUname.value.charCodeAt(0)&lt;=57)){
-                oError.innerHTML=&quot;首位不能为数字&quot;;
-                return;
-
-
-            }else for (var i=0;i&lt;oUname.value.length;i++){
-               if((oUname.value.charCodeAt(i)&lt;48)||(oUname.value.charCodeAt(i)&gt;57)&amp;&amp;(oUname.value.charCodeAt(i)&lt;58)&amp;&amp;(oUname.value.charCodeAt(i)&gt;97)){
-                oError.innerHTML=&quot;只能为数字和字母&quot;;
-                return;
-
-            }
-            }
-            if (oUpass.value.length &lt; 6 || oUpass.value.length &gt; 12) {
-                oError.innerHTML = &quot;密码要6-12位&quot;;
-                isError = false;
-                return;
-            }else if(oUname.value!=oUpass1.value) {
-                oError.innerHTML = &quot;设置密码和验证密码不一致&quot;;
-                return;
-            }
- }
-</code></pre><p>css</p>
-<pre><code>.box{
-    border: 1px solid #000000;
-    height: 370px;
-    width: 500px;
-    float: left;
-    margin: 50px;
-    margin-left: 30%;
-}
-
-input{
-    align-self: center;
-    height: 30px;
-    widht:300px;
-}
-
-button{
-    font-size: 16px;
-    width: 360px;
-    height: 30px;
-    align-self: center;
-    margin-bottom: auto;
-    background: #cccccc;
-    margin-left: 15%;
-}
-</code></pre><p>实现效果：</p>
-<p><img src="/picture/1.png" alt="登陆界面"></p>
-<p><img src="/picture/2.png" alt="注册界面"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-	  <div>
-    
-      </div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/16/计算机网络知识整理-UDP协议/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/16/计算机网络知识整理-UDP协议/" itemprop="url">UDP协议</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-16T20:29:25+08:00">
-                2018-09-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-23T23:28:25+08:00">
+                2018-09-23
               </time>
             
 
@@ -734,8 +384,8 @@ button{
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/16/计算机网络知识整理-UDP协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/16/计算机网络知识整理-UDP协议/" itemprop="commentCount"></span>
+                <a href="/2018/09/23/计算机网络知识整理-一个举例/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/23/计算机网络知识整理-一个举例/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -757,7 +407,7 @@ button{
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  368
+                  477
                 </span>
               
 
@@ -796,17 +446,17 @@ button{
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>UDP用户数据报协议，是面向无连接的通讯协议，UDP数据包括目的端口号和源端口号信息，由于通讯不需要连接，所以可以实现广播发送。UDP通讯时不需要接收方确认，属于不可靠的传输，可能会出现丢包现象，实际应用中要求程序员编程验证。</p>
-<p>UDP与TCP位于同一层，但它不管数据包的顺序、错误或重发。因此，UDP不被应用于那些使用虚电路的面向连接的服务，UDP主要用于那些面向查询—应答的服务，例如NFS。相对于FTP或Telnet，这些服务需要交换的信息量较小。</p>
-<p>每个UDP报文分UDP报头和UDP数据区两部分。报头由四个16位长（2字节）字段组成，分别说明该报文的源端口、目的端口、报文长度以及校验值。UDP报头由4个域组成，其中每个域各占用2个字节，具体如下：</p>
-<pre><code>（1）源端口号；
-（2）目标端口号；
-（3）数据报长度；
-（4）校验值。
-</code></pre><p>使用UDP协议包括：TFTP（简单文件传输协议）、SNMP（简单网络管理协议）、DNS（域名解析协议）、NFS、BOOTP。</p>
-<p>TCP 与 UDP 的区别：TCP是面向连接的，可靠的字节流服务；UDP是面向无连接的，不可靠的数据报服务。</p>
-<p>本文链接：</p>
-<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label6" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>在浏览器中输入 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>  后执行的全部过程：</p>
+<p>现在假设如果我们在客户端（客户端）浏览器中输入<a href="http://www.baidu.com,而baidu.com为要访问的服务器（服务器），下面详细分析客户端为了访问服务器而执行的一系列关于协议的操作：" target="_blank" rel="noopener">http://www.baidu.com,而baidu.com为要访问的服务器（服务器），下面详细分析客户端为了访问服务器而执行的一系列关于协议的操作：</a></p>
+<pre><code>1）客户端浏览器通过DNS解析到www.baidu.com的IP地址220.181.27.48，通过这个IP地址找到客户端到服务器的路径。客户端浏览器发起一个HTTP会话到220.161.27.48，然后通过TCP进行封装数据包，输入到网络层。
+
+2）在客户端的传输层，把HTTP会话请求分成报文段，添加源和目的端口，如服务器使用80端口监听客户端的请求，客户端由系统随机选择一个端口如5000，与服务器进行交换，服务器把相应的请求返回给客户端的5000端口。然后使用IP层的IP地址查找目的端。
+
+3）客户端的网络层不用关系应用层或者传输层的东西，主要做的是通过查找路由表确定如何到达服务器，期间可能经过多个路由器，这些都是由路由器来完成的工作，不作过多的描述，无非就是通过查找路由表决定通过那个路径到达服务器。
+
+4）客户端的链路层，包通过链路层发送到路由器，通过邻居协议查找给定IP地址的MAC地址，然后发送ARP请求查找目的地址，如果得到回应后就可以使用ARP的请求应答交换的IP数据包现在就可以传输了，然后发送IP数据包到达服务器的地址。
+</code></pre><p>本文链接：</p>
+<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
 
           
         
@@ -859,7 +509,7 @@ button{
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/15/计算机网络知识整理-路由选择协议/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/计算机网络知识整理-DHCP协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -878,7 +528,7 @@ button{
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/15/计算机网络知识整理-路由选择协议/" itemprop="url">路由选择协议</a></h1>
+                <a class="post-title-link" href="/2018/09/22/计算机网络知识整理-DHCP协议/" itemprop="url">DHCP协议</a></h1>
         
 
         <div class="post-meta">
@@ -890,8 +540,8 @@ button{
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-15T20:25:25+08:00">
-                2018-09-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T00:00:25+08:00">
+                2018-09-22
               </time>
             
 
@@ -931,8 +581,8 @@ button{
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/15/计算机网络知识整理-路由选择协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/15/计算机网络知识整理-路由选择协议/" itemprop="commentCount"></span>
+                <a href="/2018/09/22/计算机网络知识整理-DHCP协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/22/计算机网络知识整理-DHCP协议/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -954,7 +604,7 @@ button{
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  133
+                  102
                 </span>
               
 
@@ -993,11 +643,9 @@ button{
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>常见的路由选择协议有：RIP协议、OSPF协议。</p>
-<h3 id="RIP协议"><a href="#RIP协议" class="headerlink" title="RIP协议"></a>RIP协议</h3><p>底层是贝尔曼福特算法，它选择路由的度量标准（metric)是跳数，最大跳数是15跳，如果大于15跳，它就会丢弃数据包。</p>
-<h3 id="OSPF协议"><a href="#OSPF协议" class="headerlink" title="OSPF协议"></a>OSPF协议</h3><p>开放式最短路径优先(Open Shortest Path First)，底层是迪杰斯特拉算法，是链路状态路由选择协议，它选择路由的度量标准是带宽和延迟。</p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>DHCP动态主机设置协议（Dynamic Host Configuration Protocol）是一个局域网的网络协议，使用UDP协议工作，主要有两个用途：给内部网络或网络服务供应商自动分配IP地址，给用户或者内部网络管理员作为对所有计算机作中央管理的手段。</p>
 <p>本文链接：</p>
-<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label6" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
+<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
 
           
         
@@ -1050,7 +698,7 @@ button{
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/计算机网络知识整理-ARP和RARP协议/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/21/计算机网络知识整理-NAT协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -1069,7 +717,7 @@ button{
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/14/计算机网络知识整理-ARP和RARP协议/" itemprop="url">ARP/RARP协议</a></h1>
+                <a class="post-title-link" href="/2018/09/21/计算机网络知识整理-NAT协议/" itemprop="url">NAT协议</a></h1>
         
 
         <div class="post-meta">
@@ -1081,8 +729,8 @@ button{
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-14T19:11:25+08:00">
-                2018-09-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T23:28:25+08:00">
+                2018-09-21
               </time>
             
 
@@ -1122,8 +770,8 @@ button{
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/14/计算机网络知识整理-ARP和RARP协议/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/14/计算机网络知识整理-ARP和RARP协议/" itemprop="commentCount"></span>
+                <a href="/2018/09/21/计算机网络知识整理-NAT协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/21/计算机网络知识整理-NAT协议/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1145,7 +793,196 @@ button{
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.2k
+                  136
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p>NAT网络地址转换(Network Address Translation)属接入广域网(WAN)技术，是一种将私有（保留）地址转化为合法IP地址的转换技术，它被广泛应用于各种类型Internet接入方式和各种类型的网络中。原因很简单，NAT不仅完美地解决了lP地址不足的问题，而且还能够有效地避免来自网络外部的攻击，隐藏并保护网络内部的计算机。</p>
+<p>本文链接：</p>
+<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/20/计算机网络知识整理-HTTP协议/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/20/计算机网络知识整理-HTTP协议/" itemprop="url">HTTP协议</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T20:24:25+08:00">
+                2018-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/20/计算机网络知识整理-HTTP协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/20/计算机网络知识整理-HTTP协议/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2k
                 </span>
               
 
@@ -1184,49 +1021,73 @@ button{
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><h3 id="地址解析协议"><a href="#地址解析协议" class="headerlink" title="地址解析协议"></a>地址解析协议</h3><p>ARP(Address Resolution Protocol)：根据IP地址获取物理地址的一个TCP/IP协议。主机发送信息时将包含目标IP地址的ARP请求广播到网络上的所有主机，并接收返回消息，以此确定目标的物理地址；收到返回消息后将该IP地址和物理地址存入本机ARP缓存中并保留一定时间，下次请求时直接查询ARP缓存以节约资源。地址解析协议是建立在网络中各个主机互相信任的基础上的，网络上的主机可以自主发送ARP应答消息，其他主机收到应答报文时不会检测该报文的真实性就会将其记入本机ARP缓存；由此攻击者就可以向某一主机发送伪ARP应答报文，使其发送的信息无法到达预期的主机或到达错误的主机，这就构成了一个ARP欺骗。ARP命令可用于查询本机ARP缓存中IP地址和MAC地址的对应关系、添加或删除静态对应关系等。</p>
-<pre><code>ARP工作流程举例：
-主机A的IP地址为192.168.1.1，MAC地址为0A-11-22-33-44-01；
-主机B的IP地址为192.168.1.2，MAC地址为0A-11-22-33-44-02；
-当主机A要与主机B通信时，地址解析协议可以将主机B的IP地址（192.168.1.2）解析成主机B的MAC地址，以下为工作流程：
+            <script src="/assets/js/APlayer.min.js"> </script><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。 </p>
+<p>HTTP 协议包括哪些请求？</p>
+<pre><code>GET：请求读取由URL所标志的信息。
+POST：给服务器添加信息（如注释）。
+PUT：在给定的URL下存储一个文档。
+DELETE：删除给定的URL所标志的资源。
+</code></pre><p>HTTP 中， POST 与 GET 的区别</p>
+<pre><code>1）Get是从服务器上获取数据，Post是向服务器传送数据。
+2）Get是把参数数据队列加到提交表单的Action属性所指向的URL中，值和表单内各个字段一一对应，在URL中可以看到。
+3）Get传送的数据量小，不能大于2KB；Post传送的数据量较大，一般被默认为不受限制。
+4）根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。
+</code></pre><p>I. 所谓 安全的 意味着该操作用于获取信息而非修改信息。换句话说，GET请求一般不应产生副作用。就是说，它仅仅是获取资源信息，就像数据库查询一样，不会修改，增加数据，不会影响资源的状态。</p>
+<p>II. 幂等 的意味着对同一URL的多个请求应该返回同样的结果。</p>
+<h3 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h3><p>HTTP协议工作于客户端-服务端架构上。浏览器作为HTTP客户端通过URL向HTTP服务端即WEB服务器发送所有请求。</p>
+<p>Web服务器有：Apache服务器，IIS服务器（Internet Information Services）等。</p>
+<p>Web服务器根据接收到的请求后，向客户端发送响应信息。</p>
+<p>HTTP默认端口号为80，但是你也可以改为8080或者其他端口。</p>
+<p>HTTP三点注意事项：</p>
+<pre><code>HTTP是无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。
 
-（1）根据主机A上的路由表内容，IP确定用于访问主机B的转发IP地址是192.168.1.2;然后A主机在自己的本地ARP缓存中检查主机B的匹配MAC地址
-（2）如果主机A在ARP缓存中没有找到映射，它将询问192.168.1.2的硬件地址，从而将ARP请求帧广播到本地网络上的所有主机。源主机A的IP地址和MAC地址都包括在ARP请求中。本地网络上的每台主机都接收到ARP请求并且检查是否与自己的IP地址匹配。如果主机发现请求的IP地址与自己的IP地址不匹配，它将丢弃ARP请求
-（3）主机B确定ARP请求中的IP地址与自己的IP地址匹配，则将主机A的IP地址和MAC地址映射添加到本地ARP缓存中
-（4）主机B将包含其MAC地址的ARP回复消息直接发送回主机A
-（5）当主机A收到从主机B发来的ARP回复消息时，会用主机B的IP和MAC地址映射更新ARP缓存。本机缓存是有生存期的，生存期结束后，将再次重复上面的过程。主机B的MAC地址一旦确定，主机A就能向主机B发送IP通信了
-</code></pre><h3 id="逆地址解析协议"><a href="#逆地址解析协议" class="headerlink" title="逆地址解析协议"></a>逆地址解析协议</h3><p>RARP:功能和ARP协议相对，其将局域网中某个主机的物理地址转换为IP地址，比如局域网中有一台主机只知道物理地址而不知道IP地址，那么可以通过RARP协议发出征求自身IP地址的广播请求，然后由RARP服务器负责回答。</p>
-<pre><code>RARP协议工作流程：
-（1）给主机发送一个本地的RARP广播，在此广播包中，声明自己的MAC地址并且请求任何收到此请求的RARP服务器分配一个IP地址
-（2）本地网段上的RARP服务器收到此请求后，检查其RARP列表，查找该MAC地址对应的IP地址
-（3）如果存在，RARP服务器就给源主机发送一个响应数据包并将此IP地址提供给对方主机使用
-（4）如果不存在，RARP服务器对此不做任何的响应
-（5）源主机收到从RARP服务器的响应信息，就利用得到的IP地址进行通讯；如果一直没有收到RARP服务器的响应信息，表示初始化失败
-</code></pre><h3 id="ARP-RARP具体解析过程"><a href="#ARP-RARP具体解析过程" class="headerlink" title="ARP/RARP具体解析过程"></a>ARP/RARP具体解析过程</h3><p>A:当主机x和主机y在同一个网段中时：</p>
-<p>首先主机x会查找自己的ARP缓存表，而这个表在windows系统中是使用ARP –A命令来进行查看的，如果存在主机y的ip地址与MAC地址之间的映射，那么可以直接使用这个关系中MAC地址对ip数据包进行封装。</p>
-<p>如果在缓存表中没有找到这个关系，那么主机x以广播的方式发送一个ARP的请求报文，使得本网络中的每一个主机都能收到这个报文，这个ARP报文中，包含主机x的源ip地址和源MAC地址，以及目的ip地址，目的MAC地址中内容是全为f的广播地址。</p>
-<p>主机y收到这样的报文后，将主机x发送的ARP的x的ip和MAC的对应关系存入自己的缓存中，同样将构造一个相应的ARP报文，将自己的MAC地址放到报文中，单播回主机x。</p>
-<p>主机x收到这个相应报文后，将自己的缓存表中添加主机y的MAC地址与ip地址的对应关系，然后进行数据发送。 </p>
-<p><img src="https://img-blog.csdn.net/20160918223621081" alt="ARP解析过程" title="ARP解析过程"></p>
-<p>B.当主机x和主机y不在同一个网段中时：</p>
-<p>如果主机x不知道网关的MAC地址，（也就是说在主机x的缓存表中没有网关的MAC地址映射）那么主机x先构造一个ARP的广播的请求报文，请求网关的MAC地址，进而获得网关的MAC与ip的对应关系。</p>
-<p>如果主机x的缓存中已经有了网关的MAC地址与ip地址之间的关系了，那么将主机x发给主机y的ARP报文中的目的MAC地址的位置填写网关的MAC地址，发给网关。</p>
-<p>如果在网关的ARP缓存表中有y的MAC地址，则网关直接将来自主机x的报文中的目的MAC地址字段填写主机y的MAC地址直接发给主机y。</p>
-<p>如果在网关的缓存中不存在主机y的MAC地址，那么网关继续以广播的方式发送一个ARP的请求报文，请求主机y的MAC地址，然后，主机y相应单播回自己的MAC地址，其他主机不响应，这里的过程就是相同的网段中的ARP的建立的过程了。</p>
-<p>通过以上两种方式，就建立起了ARP的解析的过程。</p>
-<p>我们在学习ARP的时候要知道它存在的不足，也就是ARP的欺骗，网上的一些软件可以很容易做到ARP的欺骗，使得局域网中的网络通信收到严重的影响。我们先说明解决ARP欺骗的解决办法：</p>
-<p><strong>清除ARP缓存表</strong></p>
-<p><strong>绑定静态的IP地址</strong></p>
-<p>而在企业中，一般的路由器都是企业级路由器，很少用到家用路由器，上边的两种方法可以用在电脑上，也可以用在家用的路由器上，但是企业路由器就行不通了，对企业路由器进行配置。作为一个企业的系统运维人员，我们在了解事故产生的原因的时候，更应该想到的是怎样去处理解决和防范这样的事故的产生： </p>
-<p>Arp检测功能，企业路由器如h3c的路由器可以启用arp的检测功能，检测用户的合法性，检测arp报文的有效性等。</p>
-<p>可以使用路由器中的arp的限速功能，对大量arp报文进行限制。</p>
-<p>在此我们说明，导致arp欺骗的原因，主要有以下三方面：</p>
-<p>是欺骗网关的情况，黑客通过假冒主机A向网关发送ARP报文，使得网关错误的记录该主机A的合法的ARP映射，这样，使得外部网络数据无法到达内部网络。</p>
-<p>是欺骗其他的主机，这种情况是向网络中的其他主机发送主机A的伪造的ARP报文，使得其他的主机不能访问主机A。</p>
-<p>在arp的缓存表中存储的数据，即ip与mac的对应关系的条数是确定的，是有限度的，此时供给者构造大量的不同的源IP地址的arp报文，使得设备学习的arp的表项超出了最大的限制，最终使得合法的用户的arp报文不能有效的生成arp表项，导致不同通信。</p>
+HTTP是媒体独立的：这意味着，只要客户端和服务器知道如何处理的数据内容，任何类型的数据都可以通过HTTP发送。客户端以及服务器指定使用适合的MIME-type内容类型。 
+
+HTTP是无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。
+</code></pre><h3 id="HTTP与HTTPS的区别"><a href="#HTTP与HTTPS的区别" class="headerlink" title="HTTP与HTTPS的区别"></a>HTTP与HTTPS的区别</h3><p>HTTPS：是以安全为目标的HTTP通道，简单讲是HTTP的安全版，即HTTP下加入SSL层，HTTPS的安全基础是SSL，因此加密的详细内容就需要SSL。</p>
+<p>HTTPS协议的主要作用可以分为两种：一种是建立一个信息安全通道，来保证数据传输的安全；另一种就是确认网站的真实性。</p>
+<p>HTTP协议传输的数据都是未加密的，也就是明文的，因此使用HTTP协议传输隐私信息非常不安全，为了保证这些隐私数据能加密传输，于是网景公司设计了SSL（Secure Sockets Layer）协议用于对HTTP协议传输的数据进行加密，从而就诞生了HTTPS。简单来说，HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全。</p>
+<p>HTTPS和HTTP的区别主要如下：</p>
+<pre><code>1、https协议需要到ca申请证书，一般免费证书较少，因而需要一定费用。
+2、http是超文本传输协议，信息是明文传输，https则是具有安全性的ssl加密传输协议。
+3、http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
+4、http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。
+</code></pre><h4 id="HTTPS的工作原理"><a href="#HTTPS的工作原理" class="headerlink" title="HTTPS的工作原理"></a>HTTPS的工作原理</h4><p>我们都知道HTTPS能够加密信息，以免敏感信息被第三方获取，所以很多银行网站或电子邮箱等等安全级别较高的服务都会采用HTTPS协议。</p>
+<p><img src="http://www.mahaixiang.cn/uploads/allimg/1507/1-150H120343I41.jpg" alt="HTTPS加密过程"></p>
+<p>客户端在使用HTTPS方式与Web服务器通信时有以下几个步骤，如图所示。</p>
+<pre><code>（1）客户使用https的URL访问Web服务器，要求与Web服务器建立SSL连接。
+
+（2）Web服务器收到客户端请求后，会将网站的证书信息（证书中包含公钥）传送一份给客户端。
+
+（3）客户端的浏览器与Web服务器开始协商SSL连接的安全等级，也就是信息加密的等级。
+
+（4）客户端的浏览器根据双方同意的安全等级，建立会话密钥，然后利用网站的公钥将会话密钥加密，并传送给网站。
+
+（5）Web服务器利用自己的私钥解密出会话密钥。
+
+（6）Web服务器利用会话密钥加密与客户端之间的通信。
+</code></pre><p>！<a href="http://pic002.cnblogs.com/images/2012/339704/2012071410212142.gif" target="_blank" rel="noopener">HTTPS加密</a></p>
+<h4 id="HTTPS的优点"><a href="#HTTPS的优点" class="headerlink" title="HTTPS的优点"></a>HTTPS的优点</h4><p>尽管HTTPS并非绝对安全，掌握根证书的机构、掌握加密算法的组织同样可以进行中间人形式的攻击，但HTTPS仍是现行架构下最安全的解决方案，主要有以下几个好处：</p>
+<pre><code>（1）使用HTTPS协议可认证用户和服务器，确保数据发送到正确的客户机和服务器；
+（2）HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，要比http协议安全，可防止数据在传输过程中不被窃取、改变，确保数据的完整性。
+（3）HTTPS是现行架构下最安全的解决方案，虽然不是绝对安全，但它大幅增加了中间人攻击的成本。
+（4）谷歌曾在2014年8月份调整搜索引擎算法，并称“比起同等HTTP网站，采用HTTPS加密的网站在搜索结果中的排名将会更高”。
+</code></pre><h4 id="HTTPS的缺点"><a href="#HTTPS的缺点" class="headerlink" title="HTTPS的缺点"></a>HTTPS的缺点</h4><p>虽然说HTTPS有很大的优势，但其相对来说，还是存在不足之处的：</p>
+<pre><code>（1）HTTPS协议握手阶段比较费时，会使页面的加载时间延长近50%，增加10%到20%的耗电；
+
+（2）HTTPS连接缓存不如HTTP高效，会增加数据开销和功耗，甚至已有的安全措施也会因此而受到影响；
+
+（3）SSL证书需要钱，功能越强大的证书费用越高，个人网站、小网站没有必要一般不会用。
+
+（4）SSL证书通常需要绑定IP，不能在同一IP上绑定多个域名，IPv4资源不可能支撑这个消耗。
+
+（5）HTTPS协议的加密范围也比较有限，在黑客攻击、拒绝服务攻击、服务器劫持等方面几乎起不到什么作用。最关键的，SSL证书的信用链体系并不安全，特别是在某些国家可以控制CA根证书的情况下，中间人攻击一样可行。
+</code></pre><h4 id="http切换到HTTPS"><a href="#http切换到HTTPS" class="headerlink" title="http切换到HTTPS"></a>http切换到HTTPS</h4><p>如果需要将网站从http切换到https到底该如何实现呢？</p>
+<p> 这里需要将页面中所有的链接，例如js，css，图片等等链接都由http改为https。例如：<a href="http://www.baidu.com改为https://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com改为https://www.baidu.com</a></p>
+<p>BTW，这里虽然将http切换为了https，还是建议保留http。所以我们在切换的时候可以做http和https的兼容，具体实现方式是，去掉页面链接中的http头部，这样可以自动匹配http头和https头。例如：将<a href="http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。" target="_blank" rel="noopener">http://www.baidu.com改为//www.baidu.com。然后当用户从http的入口进入访问页面时，页面就是http，如果用户是从https的入口进入访问页面，页面即使https的。</a></p>
 <p>本文链接：</p>
-<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label4" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
-<p>2.<a href="https://blog.csdn.net/wswit/article/details/52578878" target="_blank" rel="noopener">ARP地址解析协议总结</a></p>
+<p>1.<a href="http://www.runoob.com/http/http-intro.html" target="_blank" rel="noopener">HTTP 简介</a></p>
+<p>2.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
 
           
         
@@ -1279,7 +1140,7 @@ button{
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/计算机网络知识整理-子网掩码与网络划分/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/19/计算机网络知识整理-DNS协议/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -1298,7 +1159,7 @@ button{
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/" itemprop="url">子网掩码与网络划分</a></h1>
+                <a class="post-title-link" href="/2018/09/19/计算机网络知识整理-DNS协议/" itemprop="url">DNS协议</a></h1>
         
 
         <div class="post-meta">
@@ -1310,8 +1171,8 @@ button{
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T17:10:25+08:00">
-                2018-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T10:24:25+08:00">
+                2018-09-19
               </time>
             
 
@@ -1351,8 +1212,8 @@ button{
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/" itemprop="commentCount"></span>
+                <a href="/2018/09/19/计算机网络知识整理-DNS协议/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/19/计算机网络知识整理-DNS协议/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1374,7 +1235,7 @@ button{
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.3k
+                  156
                 </span>
               
 
@@ -1390,7 +1251,7 @@ button{
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11
+                  1
                 </span>
               
             </div>
@@ -1413,99 +1274,9 @@ button{
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><h3 id="子网掩码与网络划分"><a href="#子网掩码与网络划分" class="headerlink" title="子网掩码与网络划分"></a>子网掩码与网络划分</h3><p>子网掩码是一个应用于TCP/IP网络的32位二进制值，它可以屏蔽掉IP地址中的一部分，从而分离出IP地址中的网络部分和主机部分，基于子网掩码，管理员可以将网络进一步划分为若干子网。</p>
-<p>在使用TCP/IP协议的两台计算机进行通信时，我们通过将本机的子网掩码与接收方主机的IP地址进行与运算，即可得到目标主机所在的网络号，又由于每台主机在配置TCP/IP协议时都设置了一个本机IP地址与子网掩码，所以可以知道本机所在的网络号。</p>
-<p>通过比较两个网络号，就可以知道接收方主机是否在本网络上。如果网络号相同，表明接收方在本网络上，那么可以通过相关协议把数据包直接发送到目标主机；如果网络号不同，表明主机在远程网络上，那么数据包将会发送到本网络上的路由器，由路由器将数据包发送到其他网络，直至到目的地。在这个过程中，子网掩码是不可或缺的。</p>
-<h3 id="如何使用子网掩码得到网络-主机地址"><a href="#如何使用子网掩码得到网络-主机地址" class="headerlink" title="如何使用子网掩码得到网络/主机地址"></a>如何使用子网掩码得到网络/主机地址</h3><p>过程如下：</p>
-<pre><code>1.将IP地址与子网掩码转换成二进制
-2.将二进制的IP地址与子网掩码做与运算，将答案转为十进制便得到网络地址
-3.将二进制形式的子网掩码取反
-4.将取反后的子网掩码与IP地址做与运算，将答案转为十进制便得到主机地址
-</code></pre><p>假设有一个IP地址：192.68.0.1 子网掩码：255.255.255.0</p>
-<p>化为二进制：</p>
-<p>IP地址：11000000.10101000.00000000.00000001</p>
-<p>子网掩码：11111111.11111111.11111111.00000000</p>
-<p>将二者做与运算：11000000.10101000.00000000.00000000</p>
-<p>转为十进制：192.168.0.0，便是上面IP的网络地址</p>
-<p>PS：由于上面的子网掩码为C类地址的默认子网掩码，便可直接看出网络地址为IP地址的前三部分，即前三个字节</p>
-<p>‘1’在做’与’运算时，不影响结果，’0’在做’与’运算时，将得到0，利用’与’的这个特性，当管理员设置子网掩码时，即将子网掩码上与网络地址所对应的位都设为’1’,其他位都设为’0’,那么当作’与’时，ip地址中的网络号将被保留到结果中，而主机号将被置0，这样就解析出了网络号，解析主机号也一样，只需先把子网掩码取’反’,在做’与’。</p>
-<h3 id="子网掩码的分类"><a href="#子网掩码的分类" class="headerlink" title="子网掩码的分类"></a>子网掩码的分类</h3><p>1）缺省子网掩码：</p>
-<p>即未划分子网，对应的网络号的位都置1，主机号都置0。 </p>
-<pre><code>A类网络缺省子网掩码：255.0.0.0 
-B类网络缺省子网掩码：255.255.0.0 
-C类网络缺省子网掩码：255.255.255.0 
-</code></pre><p>2）自定义子网掩码： </p>
-<p>将一个网络划分为几个子网，需要每一段使用不同的网络号或子网号，实际上我们可以认为是将主机号分为两个部分：子网号、子网主机号。 形式如下：<br>未做子网划分的ip地址：网络号＋主机号 </p>
-<p>做子网划分后的ip地址：网络号＋子网号＋子网主机号</p>
-<p>也就是说ip地址在化分子网后，以前的主机号位置的一部分给了子网号，余下的是子网主机号。 </p>
-<h3 id="子网编址技术"><a href="#子网编址技术" class="headerlink" title="子网编址技术"></a>子网编址技术</h3><p>子网划分也是靠子网掩码来实现的。 </p>
-<p>子网是指一个ip地址上生成的逻辑网络，它可以让一个网络地址跨越多个物理网络，即一个网络地址代表多个网络（很明显这样做可以节省ip地址）。呵呵，听起来是不是很蹊跷？一个网络就这样被莫名其妙的划分成了许多子网？那么这样做有什么用呢？</p>
-<p>我举个例子来跟你说吧：比如你是某个学校的网管，你的学校有四个处于不同物理位置的网络教室，每个网络教室25台机器，你的任务是给这些机器配置ip地址和子网掩码。你可能会觉得这再简单不过了，申请4个C类地址，每个教室一个，然后在一一配置不就搞定了。嗯，这样做理论上没错，但你有没有想到这样做很浪费，你一共浪费了(254-25)*4=916个ip地址，如果所有的网管都像你这样做，那么internet上的ip地址将会在极短的时间内枯竭，显然，你是不能这样做，你应该做子网划分。 </p>
-<p>子网划分说白了是这样一个事情：因为在划分了子网后，ip地址的网络号是不变的，因此在局域网外部看来，这里仍然只存在一个网络，即网络号所代表的那个网络；但在网络内部却是另外一个景象，因为我们每个子网的子网号是不同的，当用化分子网后的ip地址与子网掩码（注意，这里指的子网掩码已经不是缺省子网掩码了，而是自定义子网掩码，是管理员在经过计算后得出的）做’与’运算时，每个子网将得到不同的子网地址，从而实现了对网络的划分（得到了不同的地址，当然就能区别出各个子网了，有趣吧）。 </p>
-<p>子网编址技术，即子网划分将会有助于以下问题的解决： </p>
-<p>1）巨大的网络地址管理耗费：如果你是一个A类网络的管理员，你一定会为管理数量庞大的主机而头痛的</p>
-<p>2）路由器中的选路表的急剧膨胀：当路由器与其他路由器交换选路表时，互联网的负载是很高的，所需的计算量也很高</p>
-<p>3）IP地址空间有限并终将枯竭：这是一个至关重要的问题，高速发展的internet,使原来的编址方法不能适应，而一些ip地址却不能被充分的利用，造成了浪费</p>
-<p>因此，在配置局域网或其他网络时，根据需要划分子网是很重要的，有时也是必要的。现在，子网编址技术已经被绝大多数局域网所使用。 </p>
-<h3 id="如何划分子网及确定子网掩码"><a href="#如何划分子网及确定子网掩码" class="headerlink" title="如何划分子网及确定子网掩码"></a>如何划分子网及确定子网掩码</h3><p>在动手划分之前，一定要考虑网络目前的需求和将来的需求计划。 </p>
-<p>划分子网主要从以下方面考虑: </p>
-<p>1.网络中物理段的数量（即要划分的子网数量） </p>
-<p>2.每个物理段的主机的数量 </p>
-<p>确定子网掩码的步骤： </p>
-<pre><code>第一步：确定物理网段的数量，并将其转换为二进制数，并确定位数n。如：你需要6个子网，6的二进制值为110，共3位,即n=3
-
-第二步：按照你ip地址的类型写出其缺省子网掩码。如C类，则缺省子网掩码为11111111.11111111.11111111.00000000
-
-第三步：将子网掩码中与主机号的前n位对应的位置置1，其余位置置0。若n=3且为
-
-C类地址：则得到子网掩码为11111111.11111111.11111111.11100000化为十进制得到255.255.255.224 
-B类地址：则得到子网掩码为11111111.11111111.11100000.00000000化为十进制得到255.255.224.0 
-A类地址：则得到子网掩码为11111111.11100000.00000000.00000000化为十进制得到255.224.0.0 
-</code></pre><p>另：由于网络被划分为6个子网，占用了主机号的前3位，若是C类地址，则主机号只能用5位来表示主机号，因此每个子网内的主机数量＝（2的5次方）－2＝30，6个子网总共所能标识的主机数将小于254，这点请大家注意！ </p>
-<p>解惑： </p>
-<p>1.你可能有这样的疑问，比如在上面的例子里，6的二进制值为110，那么为什么要将子网掩码中与主机号的前n位对应的位置都置1，而不是用6的二进制110去替代前n位呢？ </p>
-<p>答案是这样的：我们计算子网掩码的目的是什么？就是希望它在做’与’的时候能够解析出网络号，也就是说它与网络号所对应的位置都应该是1（当然包括与子网号所对应的位置），那么很显然，你写上110是不对的，如果你这么写，那么它的意义是主机号的前两位作为子网号，那么这样将最多划分2个子网（不明白没关系，下面有计算子网数量的方法),与我们当初所要划分的6个子网显然是不一致的。</p>
-<p>2.细心的人可能会发现，划分4个子网，5个子网和6个子网的子网掩码是一样的，同为255.255.255.224，是不是错了呢？三个子网掩码应该不同呀？呵呵，是这样的，因为4，5，6的二进制值都是3为，因此在子网掩码中这三位都置1，划分是没有问题的，只是你的理解上有一点小小的问题，划分为4个子网，其实可以理解为划分为6个子网，但你只使用了其中的4个。比如你想划分8个子网，与划分14个子网所得到的子网掩码是一样的，都占用了4位作为子网号。 </p>
-<h3 id="相关判断方法"><a href="#相关判断方法" class="headerlink" title="相关判断方法"></a>相关判断方法</h3><p>1）如何判断是否做了子网划分</p>
-<p>这个问题很简单，如果它使用了缺省子网掩码，那么表示没有作子网划分；反之，则一定作了子网划分。 </p>
-<p>2）如何计算子网地址<br>还是老办法，将ip地址与子网掩码的二进制形式做’与’，得到的结果即为子网地址。 </p>
-<p>3）如何计算主机地址<br>这个也不用说了吧，先将子网掩码的二进制取’反’，再与ip地址做’与’。 </p>
-<p>4）如何计算子网数量</p>
-<p>这个问题大家会常常提到，还是从子网掩码入手，主要有两个步骤：</p>
-<pre><code>观察子网掩码的二进制形式，确定作为子网号的位数n
-
-子网数量为2的n次方－2（为什么减2） 
-</code></pre><p>举个例子来说，比如有这样一个子网掩码：255.255.255.224其二进制为：<br>11111111.11111111.11111111.11100000 可见n=3,2的3次方为8，说明子网地址可能有如下8种情况： </p>
-<pre><code>000 
-001 
-010 
-011 
-100 
-101 
-110 
-111 
-</code></pre><p>但其中代表网络自身的000；代表广播地址的111是被保留的，所以要减2。 </p>
-<p>5）如何计算总主机数量，子网内主机数量</p>
-<p>  总主机数量＝子网数量×子网内主机数量 </p>
-<p>再用一个例子给大家说明，比如子网掩码为255.255.255.224</p>
-<p>上面的讨论知道它最多可以划分6个子网，那么每个子网内最多有多少个主机呢？其实上面我已经给大家算过了，由于网络被划分为6个子网，占用了主机号的前3位，且是C类地址，则主机号只能用5位来表示主机号，因此子网内的主机数量＝（2的5次方）－2＝30</p>
-<p>因此通过这个子网掩码我们可以算出这个网络最多可以标识6*30=180个主机（可见，在化分子网后，整个网络所能标识的主机数量将减少）。 </p>
-<p>6）计算ip地址范围 </p>
-<p> 通过一个自定义子网掩码，我们可以得到这个网络所有可能的ip地址范围。<br>具体步骤： </p>
-<pre><code>写出二进制子网地址
-将子网地址化为十进制 
-计算子网所能容纳主机数 
-得出ip范围（起始地址：子网地址＋1；终止地址：子网地址＋主机数） 
-</code></pre><p>假设一个子网掩码为：255.255.255.224，可知其最多可以划分6个子网，子网内主机数为30，那么所有可能的ip地址及计算流程如下： </p>
-<p>子网－－子网地址（二进制）－－－－－－－－子网地址－－－－－实际ip范围</p>
-<p>1号－11001010.01110000.00001010.00100000－202.112.10.32－202.112.10.33-202.112.10.62 </p>
-<p>2号－11001010.01110000.00001010.01000000－202.112.10.64－202.112.10.65-202.112.10.94 </p>
-<p>3号－11001010.01110000.00001010.01100000－202.112.10.96－202.112.10.97-202.112.10.126 </p>
-<p>4号－11001010.01110000.00001010.10000000－202.112.10.128－202.112.10.129-202.112.10.158 </p>
-<p>5号－11001010.01110000.00001010.10100000－202.112.10.160－202.112.10.161-202.112.10.190  </p>
-<p>6号－11001010.01110000.00001010.11000000－202.112.10.192－202.112.10.193-202.112.10.222</p>
-<p>本文参考地址:</p>
-<p>1.<a href="https://blog.csdn.net/jin13277480598/article/details/53940476" target="_blank" rel="noopener">子网掩码与子网划分</a></p>
+            <script src="/assets/js/APlayer.min.js"> </script><p>DNS是域名系统(DomainNameSystem)的缩写，该系统用于命名组织到域层次结构中的计算机和网络服务，可以简单地理解为将URL转换为IP地址。域名是由圆点分开一串单词或缩写组成的，每一个域名都对应一个惟一的IP地址，在Internet上域名与IP地址之间是一一对应的，DNS就是进行域名解析的服务器。DNS命名用于Internet等TCP/IP网络中，通过用户友好的名称查找计算机和服务。</p>
+<p>本文链接：</p>
+<p>1.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html#_label11" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
 
           
         
@@ -1549,7 +1320,7 @@ A类地址：则得到子网掩码为11111111.11100000.00000000.00000000化为�
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1599,7 +1370,7 @@ A类地址：则得到子网掩码为11111111.11100000.00000000.00000000化为�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1679,7 +1450,7 @@ A类地址：则得到子网掩码为11111111.11100000.00000000.00000000化为�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.3k</span>
+    <span title="Site words total count">23.8k</span>
   
 </div>
 

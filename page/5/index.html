@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/hexo-github-pages-blog/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/计算机网络知识整理-子网掩码与网络划分/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -331,7 +331,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/14/hexo-github-pages-blog/" itemprop="url">Hexo github 部署个人博客</a></h1>
+                <a class="post-title-link" href="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/" itemprop="url">子网掩码与网络划分</a></h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-14T21:10:25+08:00">
-                2018-08-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T17:10:25+08:00">
+                2018-09-13
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
                   </a>
                 </span>
 
@@ -384,8 +384,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/14/hexo-github-pages-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/14/hexo-github-pages-blog/" itemprop="commentCount"></span>
+                <a href="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/13/计算机网络知识整理-子网掩码与网络划分/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  173
+                  3.3k
                 </span>
               
 
@@ -423,7 +423,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  11
                 </span>
               
             </div>
@@ -446,224 +446,99 @@
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><h2 id="hexo-github-pages搭建个人博客"><a href="#hexo-github-pages搭建个人博客" class="headerlink" title="hexo+github pages搭建个人博客"></a>hexo+github pages搭建个人博客</h2><h3 id="1-环境准备：win10"><a href="#1-环境准备：win10" class="headerlink" title="1.环境准备：win10"></a>1.环境准备：win10</h3><pre><code>git
-node.js
-npm
-github
-</code></pre><h3 id="2-域名"><a href="#2-域名" class="headerlink" title="2.域名"></a>2.域名</h3><pre><code>域名解析
-添加记录：192.30.252.153 192.30.252.154 两个A记录
-http://shihaitao123.github.io
-www.janicelin.com  
-</code></pre><h3 id="3-建站过程"><a href="#3-建站过程" class="headerlink" title="3.建站过程"></a>3.建站过程</h3><pre><code>一.安装Hexo 
-   npm install -g hexo-cli
-二.建立站点
-三.配置站点
-   config.yml文件内
-四.生成内容
-五.主题
-   主题安装和渲染
-</code></pre><h3 id="4-部署到GitHub"><a href="#4-部署到GitHub" class="headerlink" title="4.部署到GitHub"></a>4.部署到GitHub</h3><pre><code>终端下的目录文件夹中完成
-    1.create a reposity
-    2.set up git 
-      user.name和Email
-    3.身份验证
-      生成SSH key添加到GitHub账户
-    4.测试连接
-</code></pre><h3 id="5-hexo部署"><a href="#5-hexo部署" class="headerlink" title="5.hexo部署"></a>5.hexo部署</h3><pre><code>1.deploy:
-   type: git
-   repo: https://github.com/your_name/ your_name.github.io.git（2.0版本，更改）
-   branch: master
-2.hexo clean
-  hexo g
-  hexo s
-  hexo d
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
+            <script src="/assets/js/APlayer.min.js"> </script><h3 id="子网掩码与网络划分"><a href="#子网掩码与网络划分" class="headerlink" title="子网掩码与网络划分"></a>子网掩码与网络划分</h3><p>子网掩码是一个应用于TCP/IP网络的32位二进制值，它可以屏蔽掉IP地址中的一部分，从而分离出IP地址中的网络部分和主机部分，基于子网掩码，管理员可以将网络进一步划分为若干子网。</p>
+<p>在使用TCP/IP协议的两台计算机进行通信时，我们通过将本机的子网掩码与接收方主机的IP地址进行与运算，即可得到目标主机所在的网络号，又由于每台主机在配置TCP/IP协议时都设置了一个本机IP地址与子网掩码，所以可以知道本机所在的网络号。</p>
+<p>通过比较两个网络号，就可以知道接收方主机是否在本网络上。如果网络号相同，表明接收方在本网络上，那么可以通过相关协议把数据包直接发送到目标主机；如果网络号不同，表明主机在远程网络上，那么数据包将会发送到本网络上的路由器，由路由器将数据包发送到其他网络，直至到目的地。在这个过程中，子网掩码是不可或缺的。</p>
+<h3 id="如何使用子网掩码得到网络-主机地址"><a href="#如何使用子网掩码得到网络-主机地址" class="headerlink" title="如何使用子网掩码得到网络/主机地址"></a>如何使用子网掩码得到网络/主机地址</h3><p>过程如下：</p>
+<pre><code>1.将IP地址与子网掩码转换成二进制
+2.将二进制的IP地址与子网掩码做与运算，将答案转为十进制便得到网络地址
+3.将二进制形式的子网掩码取反
+4.将取反后的子网掩码与IP地址做与运算，将答案转为十进制便得到主机地址
+</code></pre><p>假设有一个IP地址：192.68.0.1 子网掩码：255.255.255.0</p>
+<p>化为二进制：</p>
+<p>IP地址：11000000.10101000.00000000.00000001</p>
+<p>子网掩码：11111111.11111111.11111111.00000000</p>
+<p>将二者做与运算：11000000.10101000.00000000.00000000</p>
+<p>转为十进制：192.168.0.0，便是上面IP的网络地址</p>
+<p>PS：由于上面的子网掩码为C类地址的默认子网掩码，便可直接看出网络地址为IP地址的前三部分，即前三个字节</p>
+<p>‘1’在做’与’运算时，不影响结果，’0’在做’与’运算时，将得到0，利用’与’的这个特性，当管理员设置子网掩码时，即将子网掩码上与网络地址所对应的位都设为’1’,其他位都设为’0’,那么当作’与’时，ip地址中的网络号将被保留到结果中，而主机号将被置0，这样就解析出了网络号，解析主机号也一样，只需先把子网掩码取’反’,在做’与’。</p>
+<h3 id="子网掩码的分类"><a href="#子网掩码的分类" class="headerlink" title="子网掩码的分类"></a>子网掩码的分类</h3><p>1）缺省子网掩码：</p>
+<p>即未划分子网，对应的网络号的位都置1，主机号都置0。 </p>
+<pre><code>A类网络缺省子网掩码：255.0.0.0 
+B类网络缺省子网掩码：255.255.0.0 
+C类网络缺省子网掩码：255.255.255.0 
+</code></pre><p>2）自定义子网掩码： </p>
+<p>将一个网络划分为几个子网，需要每一段使用不同的网络号或子网号，实际上我们可以认为是将主机号分为两个部分：子网号、子网主机号。 形式如下：<br>未做子网划分的ip地址：网络号＋主机号 </p>
+<p>做子网划分后的ip地址：网络号＋子网号＋子网主机号</p>
+<p>也就是说ip地址在化分子网后，以前的主机号位置的一部分给了子网号，余下的是子网主机号。 </p>
+<h3 id="子网编址技术"><a href="#子网编址技术" class="headerlink" title="子网编址技术"></a>子网编址技术</h3><p>子网划分也是靠子网掩码来实现的。 </p>
+<p>子网是指一个ip地址上生成的逻辑网络，它可以让一个网络地址跨越多个物理网络，即一个网络地址代表多个网络（很明显这样做可以节省ip地址）。呵呵，听起来是不是很蹊跷？一个网络就这样被莫名其妙的划分成了许多子网？那么这样做有什么用呢？</p>
+<p>我举个例子来跟你说吧：比如你是某个学校的网管，你的学校有四个处于不同物理位置的网络教室，每个网络教室25台机器，你的任务是给这些机器配置ip地址和子网掩码。你可能会觉得这再简单不过了，申请4个C类地址，每个教室一个，然后在一一配置不就搞定了。嗯，这样做理论上没错，但你有没有想到这样做很浪费，你一共浪费了(254-25)*4=916个ip地址，如果所有的网管都像你这样做，那么internet上的ip地址将会在极短的时间内枯竭，显然，你是不能这样做，你应该做子网划分。 </p>
+<p>子网划分说白了是这样一个事情：因为在划分了子网后，ip地址的网络号是不变的，因此在局域网外部看来，这里仍然只存在一个网络，即网络号所代表的那个网络；但在网络内部却是另外一个景象，因为我们每个子网的子网号是不同的，当用化分子网后的ip地址与子网掩码（注意，这里指的子网掩码已经不是缺省子网掩码了，而是自定义子网掩码，是管理员在经过计算后得出的）做’与’运算时，每个子网将得到不同的子网地址，从而实现了对网络的划分（得到了不同的地址，当然就能区别出各个子网了，有趣吧）。 </p>
+<p>子网编址技术，即子网划分将会有助于以下问题的解决： </p>
+<p>1）巨大的网络地址管理耗费：如果你是一个A类网络的管理员，你一定会为管理数量庞大的主机而头痛的</p>
+<p>2）路由器中的选路表的急剧膨胀：当路由器与其他路由器交换选路表时，互联网的负载是很高的，所需的计算量也很高</p>
+<p>3）IP地址空间有限并终将枯竭：这是一个至关重要的问题，高速发展的internet,使原来的编址方法不能适应，而一些ip地址却不能被充分的利用，造成了浪费</p>
+<p>因此，在配置局域网或其他网络时，根据需要划分子网是很重要的，有时也是必要的。现在，子网编址技术已经被绝大多数局域网所使用。 </p>
+<h3 id="如何划分子网及确定子网掩码"><a href="#如何划分子网及确定子网掩码" class="headerlink" title="如何划分子网及确定子网掩码"></a>如何划分子网及确定子网掩码</h3><p>在动手划分之前，一定要考虑网络目前的需求和将来的需求计划。 </p>
+<p>划分子网主要从以下方面考虑: </p>
+<p>1.网络中物理段的数量（即要划分的子网数量） </p>
+<p>2.每个物理段的主机的数量 </p>
+<p>确定子网掩码的步骤： </p>
+<pre><code>第一步：确定物理网段的数量，并将其转换为二进制数，并确定位数n。如：你需要6个子网，6的二进制值为110，共3位,即n=3
 
-    
+第二步：按照你ip地址的类型写出其缺省子网掩码。如C类，则缺省子网掩码为11111111.11111111.11111111.00000000
 
-	  <div>
-    
-      </div>
-	
-    
+第三步：将子网掩码中与主机号的前n位对应的位置置1，其余位置置0。若n=3且为
 
-    
+C类地址：则得到子网掩码为11111111.11111111.11111111.11100000化为十进制得到255.255.255.224 
+B类地址：则得到子网掩码为11111111.11111111.11100000.00000000化为十进制得到255.255.224.0 
+A类地址：则得到子网掩码为11111111.11100000.00000000.00000000化为十进制得到255.224.0.0 
+</code></pre><p>另：由于网络被划分为6个子网，占用了主机号的前3位，若是C类地址，则主机号只能用5位来表示主机号，因此每个子网内的主机数量＝（2的5次方）－2＝30，6个子网总共所能标识的主机数将小于254，这点请大家注意！ </p>
+<p>解惑： </p>
+<p>1.你可能有这样的疑问，比如在上面的例子里，6的二进制值为110，那么为什么要将子网掩码中与主机号的前n位对应的位置都置1，而不是用6的二进制110去替代前n位呢？ </p>
+<p>答案是这样的：我们计算子网掩码的目的是什么？就是希望它在做’与’的时候能够解析出网络号，也就是说它与网络号所对应的位置都应该是1（当然包括与子网号所对应的位置），那么很显然，你写上110是不对的，如果你这么写，那么它的意义是主机号的前两位作为子网号，那么这样将最多划分2个子网（不明白没关系，下面有计算子网数量的方法),与我们当初所要划分的6个子网显然是不一致的。</p>
+<p>2.细心的人可能会发现，划分4个子网，5个子网和6个子网的子网掩码是一样的，同为255.255.255.224，是不是错了呢？三个子网掩码应该不同呀？呵呵，是这样的，因为4，5，6的二进制值都是3为，因此在子网掩码中这三位都置1，划分是没有问题的，只是你的理解上有一点小小的问题，划分为4个子网，其实可以理解为划分为6个子网，但你只使用了其中的4个。比如你想划分8个子网，与划分14个子网所得到的子网掩码是一样的，都占用了4位作为子网号。 </p>
+<h3 id="相关判断方法"><a href="#相关判断方法" class="headerlink" title="相关判断方法"></a>相关判断方法</h3><p>1）如何判断是否做了子网划分</p>
+<p>这个问题很简单，如果它使用了缺省子网掩码，那么表示没有作子网划分；反之，则一定作了子网划分。 </p>
+<p>2）如何计算子网地址<br>还是老办法，将ip地址与子网掩码的二进制形式做’与’，得到的结果即为子网地址。 </p>
+<p>3）如何计算主机地址<br>这个也不用说了吧，先将子网掩码的二进制取’反’，再与ip地址做’与’。 </p>
+<p>4）如何计算子网数量</p>
+<p>这个问题大家会常常提到，还是从子网掩码入手，主要有两个步骤：</p>
+<pre><code>观察子网掩码的二进制形式，确定作为子网号的位数n
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/14/test/" itemprop="url">Test for Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-14T20:46:25+08:00">
-                2018-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/08/14/test/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/14/test/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  7
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>This is the first test for hexo.</p>
+子网数量为2的n次方－2（为什么减2） 
+</code></pre><p>举个例子来说，比如有这样一个子网掩码：255.255.255.224其二进制为：<br>11111111.11111111.11111111.11100000 可见n=3,2的3次方为8，说明子网地址可能有如下8种情况： </p>
+<pre><code>000 
+001 
+010 
+011 
+100 
+101 
+110 
+111 
+</code></pre><p>但其中代表网络自身的000；代表广播地址的111是被保留的，所以要减2。 </p>
+<p>5）如何计算总主机数量，子网内主机数量</p>
+<p>  总主机数量＝子网数量×子网内主机数量 </p>
+<p>再用一个例子给大家说明，比如子网掩码为255.255.255.224</p>
+<p>上面的讨论知道它最多可以划分6个子网，那么每个子网内最多有多少个主机呢？其实上面我已经给大家算过了，由于网络被划分为6个子网，占用了主机号的前3位，且是C类地址，则主机号只能用5位来表示主机号，因此子网内的主机数量＝（2的5次方）－2＝30</p>
+<p>因此通过这个子网掩码我们可以算出这个网络最多可以标识6*30=180个主机（可见，在化分子网后，整个网络所能标识的主机数量将减少）。 </p>
+<p>6）计算ip地址范围 </p>
+<p> 通过一个自定义子网掩码，我们可以得到这个网络所有可能的ip地址范围。<br>具体步骤： </p>
+<pre><code>写出二进制子网地址
+将子网地址化为十进制 
+计算子网所能容纳主机数 
+得出ip范围（起始地址：子网地址＋1；终止地址：子网地址＋主机数） 
+</code></pre><p>假设一个子网掩码为：255.255.255.224，可知其最多可以划分6个子网，子网内主机数为30，那么所有可能的ip地址及计算流程如下： </p>
+<p>子网－－子网地址（二进制）－－－－－－－－子网地址－－－－－实际ip范围</p>
+<p>1号－11001010.01110000.00001010.00100000－202.112.10.32－202.112.10.33-202.112.10.62 </p>
+<p>2号－11001010.01110000.00001010.01000000－202.112.10.64－202.112.10.65-202.112.10.94 </p>
+<p>3号－11001010.01110000.00001010.01100000－202.112.10.96－202.112.10.97-202.112.10.126 </p>
+<p>4号－11001010.01110000.00001010.10000000－202.112.10.128－202.112.10.129-202.112.10.158 </p>
+<p>5号－11001010.01110000.00001010.10100000－202.112.10.160－202.112.10.161-202.112.10.190  </p>
+<p>6号－11001010.01110000.00001010.11000000－202.112.10.192－202.112.10.193-202.112.10.222</p>
+<p>本文参考地址:</p>
+<p>1.<a href="https://blog.csdn.net/jin13277480598/article/details/53940476" target="_blank" rel="noopener">子网掩码与子网划分</a></p>
 
           
         
@@ -716,7 +591,7 @@ www.janicelin.com
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/14/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/12/计算机网络知识整理-IP地址/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -735,7 +610,7 @@ www.janicelin.com
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/14/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/09/12/计算机网络知识整理-IP地址/" itemprop="url">IP地址</a></h1>
         
 
         <div class="post-meta">
@@ -747,8 +622,8 @@ www.janicelin.com
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-14T15:38:12+08:00">
-                2018-08-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-12T12:48:25+08:00">
+                2018-09-12
               </time>
             
 
@@ -770,8 +645,8 @@ www.janicelin.com
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
                   </a>
                 </span>
 
@@ -788,8 +663,8 @@ www.janicelin.com
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/14/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/08/14/hello-world/" itemprop="commentCount"></span>
+                <a href="/2018/09/12/计算机网络知识整理-IP地址/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/12/计算机网络知识整理-IP地址/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -811,7 +686,7 @@ www.janicelin.com
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  73
+                  1.7k
                 </span>
               
 
@@ -827,7 +702,7 @@ www.janicelin.com
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  6
                 </span>
               
             </div>
@@ -850,15 +725,940 @@ www.janicelin.com
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <script src="/assets/js/APlayer.min.js"> </script><h3 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h3><p>IP地址是TCP/IP网络中用来唯一标识每台主机或设备的地址，IP地址由32位(共四个八位组)的二进制组成，IP地址分为两部分，左边网络编号部分用来标识主机所在的网络；右边部分用来标识主机本身。连接到同一网络的主机必须拥有相同的网络编号。 </p>
+<p>1）网络地址</p>
+<p>IP地址由网络号（包括子网号）和主机号组成，网络地址的主机号为全0，网络地址代表着整个网络。</p>
+<p>2）广播地址</p>
+<p>广播地址通常称为直接广播地址，是为了区分受限广播地址。广播地址与网络地址的主机号正好相反，广播地址中，主机号为全1。当向某个网络的广播地址发送消息时，该网络内的所有主机都能收到该广播消息。</p>
+<p>3）组播地址</p>
+<p>D类地址就是组播地址。</p>
+<p>A类地址以0开头，第一个字节作为网络号，地址范围为：0.0.0.0~127.255.255.255</p>
+<p>B类地址以10开头，前两个字节作为网络号，地址范围是：128.0.0.0~191.255.255.255</p>
+<p>C类地址以110开头，前三个字节作为网络号，地址范围是：192.0.0.0~223.255.255.255</p>
+<p>D类地址以1110开头，地址范围是224.0.0.0~239.255.255.255，D类地址作为组播地址（一对多的通信）</p>
+<p>E类地址以1111开头，地址范围是240.0.0.0~255.255.255.255，E类地址为保留地址，供以后使用<br>注：只有A,B,C有网络号和主机号之分，D类地址和E类地址没有划分网络号和主机号。</p>
+<pre><code>A类地址：0nnnnnnn.hhhhhhhh.hhhhhhhh.hhhhhhhh 
+A类地址具有7位网络编号，因此可定义125个A类网络(网络编号不能是全0或全1)(127为环回地址)，每个网络可以拥有的主机数为16777214
+十进制表示范围：1.0.0.1-126.255.255.254 
+
+B类地址：10nnnnnn.nnnnnnnn.hhhhhhhh.hhhhhhhh 
+B类地址具有14位网络编号，因此可定义16382个B类网络 
+每个网络可以拥有的主机数为65534
+十进制表示范围：128.0.0.1-191.255.255.254 
+
+C类地址：110nnnnn.nnnnnnnn.nnnnnnnn.hhhhhhhh 
+C类地址具有21位网络编号，因此可定义2097152个C类地址
+每个网络可以拥有的主机数为254
+十进制表示范围：192.0.0.1-223.255.255.254 
+
+D类地址：1110xxxx.xxxxxxxx.xxxxxxxx.xxxxxxxx 
+D类地址用于组播，前面4位1110引导，后面28位为组播地址ID。 
+十进制表示范围：224.0.0.0-239.255.255.255 
+
+E类地址：总是以1111四位引导 
+E类地址用于研究用 
+十进制表示范围：240- 
+</code></pre><h3 id="特殊用途的IP地址"><a href="#特殊用途的IP地址" class="headerlink" title="特殊用途的IP地址"></a>特殊用途的IP地址</h3><p>4）255.255.255.255</p>
+<p>该IP地址指的是受限的广播地址。受限广播地址与一般广播地址（直接广播地址）的区别在于，受限广播地址只能用于本地网络，路由器不会转发以受限广播地址为目的地址的分组；一般广播地址既可在本地广播，也可跨网段广播。例如：主机192.168.1.1/30上的直接广播数据包后，另外一个网段192.168.1.5/30也能收到该数据报；若发送受限广播数据报，则不能收到。</p>
+<p>对本机来说，这个地址指本网段内(同一广播域)的所有主机。如果翻译成人类的语言，应该是这样：“这个房间里的所有人都注意了！”这个地址不能被路由器转发。<br>注：一般的广播地址（直接广播地址）能够通过某些路由器（当然不是所有的路由器），而受限的广播地址不能通过路由器。</p>
+<p>5）0.0.0.0</p>
+<p>常用于寻找自己的IP地址，例如在我们的RARP，BOOTP和DHCP协议中，若某个未知IP地址的无盘机想要知道自己的IP地址，它就以255.255.255.255为目的地址，向本地范围（具体而言是被各个路由器屏蔽的范围内）的服务器发送IP请求分组。</p>
+<p>严格说来，0.0.0.0已经不是一个真正意义上的IP地址了。它表示的是这样一个集合：所有不清楚的主机和目的网络。这里的“不清楚”是指在本机的路由表里没有特定条目指明如何到达。对本机来说，它就是一个“收容所”，所有不认识的“三无”人员，一律送进去。如果你在网络设置中设置了缺省网关，那么Windows系统会自动产生一个目的地址为0.0.0.0的缺省路由。 </p>
+<p>6）回环地址</p>
+<p>127.0.0.0/8被用作回环地址，回环地址表示本机的地址，常用于对本机的测试，用的最多的是127.0.0.1。用汉语表示，就是“我自己”。在Windows系统中，这个地址有一个别名“Localhost”。寻址这样一个地址，是不能把它发到网络接口的。除非出错，否则在传输介质上永远不应该出现目的地址为“127.0.0.1”的数据包。 </p>
+<p>7) 169.254.x.x </p>
+<p>如果你的主机使用了DHCP功能自动获得一个IP地址，那么当你的DHCP服务器发生故障，或响应时间太长而超出了一个系统规定的时间，Wingdows系统会为你分配这样一个地址。如果你发现你的主机IP地址是一个诸如此类的地址，很不幸，十有八九是你的网络不能正常运行了。 </p>
+<p>8）A、B、C类私有地址</p>
+<p>私有地址(private address)也叫专用地址，它们不会在全球使用，只具有本地意义。它是不用申请可直接用于企业内部网的，这就是Private Address，Private Address不会被INTERNET上的任何路由器转发，欲接入INTERNET必须要通过NAT/PAT转换，以公有IP的形式接入。 </p>
+<p>A类私有地址：10.0.0.0/8，范围是：10.0.0.0~10.255.255.255 </p>
+<p>B类私有地址：172.16.0.0/12，范围是：172.16.0.0~172.31.255.255</p>
+<p>C类私有地址：192.168.0.0/16，范围是：192.168.0.0~192.168.255.255</p>
+<p>对一台网络上的主机来说，它可以正常接收的合法目的网络地址有三种：本机的IP地址、广播地址以及组播地址。</p>
+<p>本文链接：</p>
+<p>1.<a href="https://blog.csdn.net/sonny543/article/details/51154494" target="_blank" rel="noopener">计算机网络ip地址分类及含义</a></p>
+<p>2.<a href="http://www.cnblogs.com/maybe2030/p/4781555.html" target="_blank" rel="noopener">计算机网络基础知识总结 </a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/计算机网络知识整理-OSI七层网络模型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/11/计算机网络知识整理-OSI七层网络模型/" itemprop="url">OSI七层网络模型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T18:53:25+08:00">
+                2018-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/11/计算机网络知识整理-OSI七层网络模型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/11/计算机网络知识整理-OSI七层网络模型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><h2 id="OSI七层网络模型"><a href="#OSI七层网络模型" class="headerlink" title="OSI七层网络模型"></a>OSI七层网络模型</h2><p>网络标准化组织（ISO）在1978年提出了开放系统互联参考模型，即著名的OSI/RM模型(Open System interconnection/Reference Model)。它将计算机网络体系结构的通信协议分为七层，自下而上依次为：</p>
+<pre><code>物理层（Physics Layer）
+数据链路层（Data Link Layer）
+网络层(Network Layer)
+传输层(Transport Layer)
+会话层(Session Layer)
+表示层(Presentation Layer)
+应用层(Application Layer)
+</code></pre><p>其中传输层完成数据传送服务，上面三层面向用户。</p>
+<p>除了标准的OSI七层模型外，常见的网络层次划分还有TCP/IP四层协议以及TCP/IP五层协议，对应关系如下：</p>
+<p><img src="https://images2015.cnblogs.com/blog/764050/201509/764050-20150904094019903-1923900106.jpg" alt="三种网络模型对应关系"></p>
+<p>TCP/IP协议是互联网的基础协议。</p>
+<p>！<a href="https://images2015.cnblogs.com/blog/764050/201509/764050-20150904095142060-1017190812.gif" target="_blank" rel="noopener">OSI七层模型每层作用</a></p>
+<p>下面具体介绍OSI七层模型：</p>
+<h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>激活、维持、关闭通信端点之间的机械特性、电气特性、功能特性以及过程特性。该层为上层协议提供了一个传输数据的可靠的物理媒体。物理层确保原始数据可在各种物理媒体上传输，包含了两个重要的设备：中继器(放大器)和集线器。</p>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>数据链路层在物理层提供的服务基础上为网络层提供服务，最基本的服务是将源自网络层的数据可靠地传输到相邻节点的目标机网络层。为了达到这一目的，数据链路层必须具备一系列的功能，主要有：</p>
+<p>1)如何将数据组合成数据块，即帧(frame)</p>
+<p>2)如何控制帧在物理信道上的传输</p>
+<p>3）在两个网络实体之间提供数据链路通道的建立、维持和释放的管理</p>
+<p>数据链路层在不可靠的物理介质上提供可靠的传输。该层的作用：物理地址寻址、数据的成帧、流量控制、数据的检错、重发等。</p>
+<p>有关数据链路层的重要知识点：</p>
+<pre><code>1&gt; 数据链路层为网络层提供可靠的数据传输
+2&gt; 基本数据单位为帧
+3&gt; 主要的协议：以太网协议
+4&gt; 两个重要设备名称：网桥和交换机
+</code></pre><h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>网络层的目的是实现两个端系统之间的数据透明传送，”路径选择、路由和逻辑寻址”</p>
+<pre><code>1&gt; 网络层负责对子网间的数据包进行路由选择。此外，网络层还可以实现拥塞控制、网际互连等功能；
+2&gt; 基本数据单位为IP数据报；
+3&gt; 包含的主要协议:
+ IP协议（Internet Protocol，因特网互联协议）
+ ICMP协议（Internet Control Message Protocol，因特网控制报文协议）
+ ARP协议（Address Resolution Protocol，地址解析协议）
+ RARP协议（Reverse Address Resolution Protocol，逆地址解析协议）
+4&gt; 重要的设备：路由器
+</code></pre><h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>第一个端到端，即主机到主机的层次。传输层负责将上层数据分段并提供到端到端的、可靠的或不可靠的传输，还要处理差错控制和流量控制问题。</p>
+<p>传输层的任务是根据通信子网的特性，最佳的利用网络资源，为两个端系统的会话层之间，提供建立、维护和取消传输连接的功能，负责端到端的可靠数据传输。在这一层，信息传送的协议数据单元称为段或报文。</p>
+<p>网络层只是根据网络地址将源结点发出的数据包传送到目的结点，而传输层则负责将数据可靠地传送到相应的端口。</p>
+<pre><code>1&gt; 传输层负责将上层数据分段并提供端到端的、可靠的或不可靠的传输以及端到端的差错控制和流量控制问题
+2&gt; 包含的主要协议：
+TCP协议(Transmission Control Protocol，传输控制协议)
+UDP协议(User Datagram Protocol，用户数据报协议)
+3&gt; 重要设备：网关
+</code></pre><h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><p>会话层管理主机之间的会话进程，即负责建立、管理、终止进程之间的会话。会话层还利用在数据中插入校验点来实现数据的同步。</p>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p>表示层对上层数据或信息进行变换以保证一个主机应用层信息可以被另一个主机的应用程序理解。表示层的数据转换包括数据的加密、压缩、格式转换等。</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>为操作系统或网络应用程序提供访问网络服务的接口。</p>
+<pre><code>1&gt; 数据传送的基本单位为报文
+2&gt; 包含的主要协议：
+FTP（文件传送协议）
+Telnet（远程登录协议）
+DNS（域名解析协议）
+SMTP（邮件传送协议）
+POP3协议（邮局协议
+HTTP协议（Hyper Text Transfer Protocol）
+</code></pre><p>本文链接：<br><a href="http://www.cnblogs.com/maybe2030/p/4781555.html" target="_blank" rel="noopener">计算机网络基础知识总结</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/10/计算机网络知识整理-概述/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/10/计算机网络知识整理-概述/" itemprop="url">计算机网络-概述</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-10T16:53:25+08:00">
+                2018-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Network/" itemprop="url" rel="index">
+                    <span itemprop="name">Network</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/10/计算机网络知识整理-概述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/10/计算机网络知识整理-概述/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.6k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>1.计算机网络的两大功能：<strong>连通性和共享</strong></p>
+<p>2.因特网发展的三个阶段： </p>
+<p>   1）从单个网络ARPANET向互联网发展的过程</p>
+<p>   2）建成了三级结构的因特网</p>
+<p>   3）逐渐形成了多层次的ISP(Internet service provider)结构的因特网</p>
+<p>3.NAP（IXP）网络接入点：用来交换因特网上流量；向各ISP提供交换设施，使他们能够互相平等通信</p>
+<p>4.因特网的组成：</p>
+<p>  <strong>(1)边缘部分</strong>：用户利用核心部分提供的服务直接使用网络进行通信并交换或共享信息;端系统：主机，进程之间的通信</p>
+<p>  两类通信方式：</p>
+<p>   1）客户服务器方式：客户是服务的请求方，服务器是服务的提供方；</p>
+<p>   客户程序：一对多，必须知道服务器程序的地址</p>
+<p>   服务器程序：可同时处理多个远地或本地客户的请求（被动等待）</p>
+<p>   2）对等连接方式(p2p)：平等的、对等连接通信，既是通信端又是服务端</p>
+<p>   <strong>(2)核心部分</strong>：为边缘部分提供服务（提供连通性和交换），主要由路由器和网络组成；核心中的核心：路由器（转发收到的分组，实现分组交换）</p>
+<p>   交换：按照某种方式动态的分配传输线路的资源</p>
+<p>   1）电路交换：建立连接(占用通信资源)——通话（一直占用通信资源）——释放资源（归还通信资源）</p>
+<p>   2）报文交换：基于存储转发原理（时延较长）</p>
+<p>   3）分组交换：报文切割加上首部形成分组，高效、灵活、迅速、可靠<br>   存储转发时造成时延</p>
+<p>   后两者不需要预先分配传输带宽</p>
+<p>   路由器处理分组过程：缓存–查找转发表–找到合适端口</p>
+<pre><code>电路交换、报文交换、分组交换的比较
+
+1、电路交换
+
+公共电话网(PSTN网)和移动网(包括GSM和CDMA网)采用的都是电路交换技术，它的基本特点是采用面向连接的方
+
+式，在双方进行通信之前，需要为通信双方分配一条具有固定宽带的通信电路，通信双方在通信过程中一直占用所
+
+分配的资源，直到通信结束，并且在电路的建立和释放过程中都需要利用相关的信令协议。这种方式的优点是在通
+
+信过程中可以保证为用户提供足够的带宽，并且实时性强，时延小，交换设备成本低，但同时带来的缺点是信道利
+
+用率低，一旦电路被建立不管通信双方是否处于通话状态分配的电路一直被占用。
+
+2、报文交换
+
+报文交换是以报文为数据交换的单位，报文携带有目标地址、源地址等信息，在交换结点采用存储转发的传输方
+
+式；由于报文长度差异很大，长报文可能导致很大的时延；为了满足各种长度报文的需要并且达到高效的目的，节
+
+点需要分配不同大小的缓冲区，否则就有可能造成数据传送的失败，这样对每个节点来说缓冲区的分配也比较困
+
+难。另外一个缺点是出错时，整个报文都将重传。
+
+3、分组交换
+
+分组交换仍采用存储转发传输方式，但将一个长报文先分割为若干个较短的分组，然后把这些分组（携带源、目的
+
+地址和编号信息）逐个地发送出去。采用分组交换技术，在通信之前不需要建立连接，每个节点首先将前一节点送
+
+来的分组收下并保存在缓冲区中，然后根据分组头部中的地址信息选择适当的链路将其发送至下一个节点，这样在
+
+通信过程中可以根据用户的要求和网络的能力来动态分配带宽。分组交换比电路交换的信道利用率高，但时延较
+
+大。分组转发的带来的问题：排队时延以及增加头部带来的开销。   
+
+
+总之，若要传送的数据量很大，且其传送时间远大于呼叫时间，则采用电路交换较为合适；当端到端的通路有很多
+
+段的链路组成时，采用分组交换传送数据较为合适。从提高整个网络的信道利用率上看，报文交换和分组交换优于
+
+电路交换，其中分组交换比报文交换的时延小，尤其适合于计算机之间的突发式的数据通信。
+</code></pre><p>5.计算机网络的分类：</p>
+<p>   按作用范围：WAN,MAN,LAN,PAN</p>
+<p>   按介质：有线网，光纤网，无限网络</p>
+<p>   按无线上网方式：WLAN,WWAN(手机）</p>
+<p>   按通信性能：资源共享，分布式计算机，远程通信网络</p>
+<p>6.计算机网络的性能：</p>
+<p>   1）速率（比特每秒b/s）:数据量/信息量的单位</p>
+<p>   2）带宽：频域称谓，赫兹Hz，信号具有的频带宽度；时域称谓，比特每秒，通信线路的最高数据率；两者本质一样，宽度越大，传输速率自然越高</p>
+<p>   3）吞吐量：单位时间内通过某个网络（或信道、接口）的数据量</p>
+<p>   4）时延：</p>
+<p>   发送时延（传输时延）：发生在内部的发送器中</p>
+<p>   传播时延：发生在外部的传输信道媒体上</p>
+<p>   处理时延：交换结点为存储转发而进行一些处理所花费的时间</p>
+<p>   排队时延：结点缓存队列中分组排队所经历的时延（取决于当时的通信量）</p>
+<p>   <strong>数据的发送率不是比特在链路上的传播速率</strong></p>
+<p>   5）时延带宽积</p>
+<p>   6）往返时间（RTT）：简单说就是两倍传播时延（实际上还包括处理时延，排队时延，转发时的发送时延）</p>
+<p>   7）利用率</p>
+<p>本文链接：</p>
+<p>1.<a href="https://blog.csdn.net/yjz_sdau/article/details/52504389" target="_blank" rel="noopener">计算机网络知识点整理</a></p>
+<p>2.<a href="https://blog.csdn.net/m0_37777640/article/details/77788711" target="_blank" rel="noopener">计算机网络知识复习重点</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/09/Markdown语法整理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/09/Markdown语法整理/" itemprop="url">Markdown语法整理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-09T20:36:16+08:00">
+                2018-09-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/09/Markdown语法整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/09/Markdown语法整理/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p><strong>本文是对Markdown常用语法的总结。tab键相当于四个空格，每一行开始进入语法编辑状态，输入tab则进入文本编辑状态。</strong></p>
+<h2 id="一-标题"><a href="#一-标题" class="headerlink" title="一.标题"></a>一.标题</h2><p>第一种：</p>
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+###### 五级标题
+###### 六级标题
+</code></pre><p>支持h1-h6</p>
+<p>第二种：</p>
+<pre><code>一级标题
+==============
+二级标题
+--------------
+</code></pre><p>=和-的数量没有限制，大于一个即行。</p>
+<p>第三种：</p>
+<pre><code># 一级标题#
+## 二级标题##
+</code></pre><p>支持h1-h6</p>
+<h2 id="二-斜体和粗体"><a href="#二-斜体和粗体" class="headerlink" title="二.斜体和粗体"></a>二.斜体和粗体</h2><pre><code>1.*斜体*
+
+2.**粗体**
+
+3.***加粗斜体***
+
+4.~~删除线~~
+</code></pre><p>显示效果：</p>
+<p>1.<em>斜体</em></p>
+<p>2.<strong>粗体</strong></p>
+<p>3.<strong><em>加粗斜体</em></strong></p>
+<p>4.<del>删除线</del></p>
+<h2 id="三-列表"><a href="#三-列表" class="headerlink" title="三.列表"></a>三.列表</h2><pre><code>1.无序列表：
+
+* 
+
+*  
+
+* 
+
++，-也可以。
+
+2.有序列表：
+
+1.列表1
+
+2.列表2
+
+3.列表3
+</code></pre><p>效果如下所示：<br>1.无序列表：</p>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<p>2.有序列表：</p>
+<p>1.列表1</p>
+<p>2.列表2</p>
+<p>3.列表3</p>
+<p>3.定义型列表</p>
+<p>定义型列表由名词和解释组成，一行写上定义，紧跟一行写解释。解释的语法：紧跟一个缩进（tab)。</p>
+<pre><code>1.
+
+    Markdown
+
+2.
+
+    ：    轻量级文本标记语言，可以转换成HTML和PDF格式
+
+3.
+
+4.
+
+    代码块2
+
+5.
+
+    ：    这是代码块的定义
+
+6.
+
+7.
+
+        代码块
+</code></pre><p>显示效果：</p>
+<p>Markdown</p>
+<p>轻量级文本标记语言，可以转换成HTML和PDF格式</p>
+<p>代码块2</p>
+<p>这是代码块的定义</p>
+<pre><code>代码块
+</code></pre><h2 id="四-链接"><a href="#四-链接" class="headerlink" title="四.链接"></a>四.链接</h2><p>链接分为行内式和引用式。</p>
+<p>1.行内式：</p>
+<pre><code>欢迎来到[Nowshi Blog](http://janicelin.com)
+
+欢迎来到[百度](www.baidu.com)
+</code></pre><p>显示效果：</p>
+<p>欢迎来到<a href="http://janicelin.com" target="_blank" rel="noopener">Nowshi Blog</a></p>
+<p>欢迎来到<a href="www.baidu.com">百度</a></p>
+<p>2.引用式：</p>
+<pre><code>I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [baidu][3].
+
+[1]: http://google.com
+
+[2]: http://search.yahoo.com
+
+[3]: http://baidu.com
+</code></pre><p>效果如下：</p>
+<p>I get 10 times more traffic from <a href="http://google.com" target="_blank" rel="noopener">Google</a> than from <a href="http://search.yahoo.com" target="_blank" rel="noopener">Yahoo</a> or <a href="http://baidu.com" target="_blank" rel="noopener">baidu</a>.</p>
+<h2 id="五-引用"><a href="#五-引用" class="headerlink" title="五.引用"></a>五.引用</h2><p>语法说明：</p>
+<p>引用需要在被引用的文本前加上&gt;符号。</p>
+<pre><code>*不以结婚为目的的谈恋爱都是耍流氓
+
+&gt;这是毛主席说的
+
+*有钱和情最有缘
+
+&gt;这是我说的
+</code></pre><p>效果如下：</p>
+<p>*不以结婚为目的的谈恋爱都是耍流氓</p>
+<blockquote>
+<p>这是毛主席说的</p>
+</blockquote>
+<p>*有钱和情最有缘</p>
+<blockquote>
+<p>这是我说的</p>
+</blockquote>
+<h2 id="六-锚点"><a href="#六-锚点" class="headerlink" title="六.锚点"></a>六.锚点</h2><p>网页中，锚点其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转。</p>
+<p>Markdown Extra 只支持在标题后插入锚点，其它地方无效。 </p>
+<p>语法描述： </p>
+<p>在你准备跳转到的指定标题后插入锚点标记，然后在文档的其它地方写上连接到锚点的链接。</p>
+<h2 id="七-脚注"><a href="#七-脚注" class="headerlink" title="七.脚注"></a>七.脚注</h2><p>在需要添加注脚的文字后加上脚注名字[^注脚名字]称为加注。</p>
+<pre><code>使用Markdown[^1]可以效率的书写文档，直接转换成HTML,你可
+
+以使用Leanote[^2]编辑器进行书写
+
+
+[^1]:Markdown是一种纯文本标记语言
+
+[^2]:开源笔记平台，支持Markdown和笔记直接发为博文
+</code></pre><p>效果如下：</p>
+<p>使用Markdown<a href="Markdown是一种纯文本标记语言">^1</a>可以效率的书写文档，直接转换成HTML,你可</p>
+<p>以使用Leanote<a href="开源笔记平台，支持Markdown和笔记直接发为博文">^2</a>编辑器进行书写</p>
+<h2 id="八-表格"><a href="#八-表格" class="headerlink" title="八.表格"></a>八.表格</h2><pre><code>First Header  | Second Header
+
+------------- | -------------
+
+Content Cell  | Content Cell
+
+Content Cell  | Content Cell
+</code></pre><h2 id="九-代码"><a href="#九-代码" class="headerlink" title="九.代码"></a>九.代码</h2><p>1.用(<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">$ hexo new &quot;My New Post&quot;</span><br></pre></td></tr></table></figure></p>
+<p>效果如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>2.tab缩进</p>
+<p>第一种：简单文字出现一个代码框。使用<code>&lt;blockquote&gt;</code>。</p>
+<p>（<code>不是单引号而是左上角的ESC下面~中的</code>）</p>
+<p>第二种：大片文字需要实现代码框。使用Tab和四个空格。</p>
+<h2 id="十-图片"><a href="#十-图片" class="headerlink" title="十.图片"></a>十.图片</h2><p>插入图片和链接类似，分为行内式和引用式。</p>
+<p>1.行内式：</p>
+<p>语法说明：</p>
+<pre><code>![图片alt](图片地址 &quot;图片title&quot;)
+
+美丽花儿：
+
+！[美丽花儿](http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg &quot;美丽花儿&quot;)
+</code></pre><p>显示效果：</p>
+<p>美丽花儿：</p>
+<p><a href="http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg" title="美丽花儿" target="_blank" rel="noopener">美丽花儿</a></p>
+<p>2.引用式</p>
+<p>语法说明：</p>
+<pre><code>！[图片alt][标记]
+[标记]：图片地址 &quot;title&quot;
+
+美丽花儿：
+
+[美丽花儿][flower]
+
+[flower]:http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg &quot;美丽花儿&quot;
+</code></pre><p>显示效果：</p>
+<p>美丽花儿：</p>
+<p><a href="http://ww2.sinaimg.cn/large/56d258bdjw1eugeubg8ujj21kw16odn6.jpg" title="美丽花儿" target="_blank" rel="noopener">美丽花儿</a></p>
+<h2 id="十一-视频"><a href="#十一-视频" class="headerlink" title="十一.视频"></a>十一.视频</h2><p>Markdown语法不支持插入视频</p>
+<p>普遍的做法是插入HTML的ifame框架，通过网站自带的分享功能获取</p>
+<p>第二种做法是伪造播放界面，实质是插入视频图片，然后通过点击跳转到相关页面</p>
+<p>本文链接：</p>
+<p>1.<a href="https://www.cnblogs.com/liugang-vip/p/6337580.html" target="_blank" rel="noopener">.md即markdown文件的基本常用编写语法（图文并茂)</a></p>
+<p>2.<a href="https://www.jianshu.com/p/b03a8d7b1719" target="_blank" rel="noopener">Markdown 语法整理大集合2017</a></p>
+<p>3.<a href="https://www.cnblogs.com/hnrainll/p/3514637.html" target="_blank" rel="noopener">Markdown 11种基本语法</a></p>
+<p>4.<a href="https://blog.csdn.net/witnessai1/article/details/52551362" target="_blank" rel="noopener">Markdown 语法手册(完整整理版)</a></p>
 
           
         
@@ -902,7 +1702,7 @@ www.janicelin.com
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -952,7 +1752,7 @@ www.janicelin.com
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">29</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1032,7 +1832,7 @@ www.janicelin.com
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">22.3k</span>
+    <span title="Site words total count">23.8k</span>
   
 </div>
 
