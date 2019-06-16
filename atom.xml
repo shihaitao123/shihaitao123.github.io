@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-06T06:39:15.340Z</updated>
+  <updated>2019-06-16T18:42:21.440Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,62 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/CSS%20hack%E5%92%8C%E6%A1%88%E4%BE%8B/"/>
-    <id>http://yoursite.com/2019/06/17/CSS hack和案例/</id>
-    <published>2019-06-16T18:31:48.034Z</published>
-    <updated>2018-11-06T06:39:15.340Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS hack</p><p>Hack即不合法但生效的写法</p><p>主要用于区分不同浏览器</p><p>难理解 难维护 易失效</p><p>替代方案：</p><pre><code>特性检测针对性加class</code></pre><p>###checkbox</p><pre><code>.checkbox input + label{           background:url(./checkbox1.png) left center no-repeat;           background-size:20px 20px;           padding-left:20px;       }       .checkbox input:checked + label{           background-image:url(./checkbox2.png);       }</code></pre><p>###tree</p><p>###tabs</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS hack&lt;/p&gt;
-&lt;p&gt;Hack即不合法但生效的写法&lt;/p&gt;
-&lt;p&gt;主要用于区分不同浏览器&lt;/p&gt;
-&lt;p&gt;难理解 难维护 易失效&lt;/p&gt;
-&lt;p&gt;替代方案：&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/CSS%E6%95%88%E6%9E%9C/"/>
-    <id>http://yoursite.com/2019/06/17/CSS效果/</id>
-    <published>2019-06-16T18:31:48.019Z</published>
-    <updated>2018-11-08T11:53:31.964Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS效果</p><p>###box-shadow</p><p>投影</p><p>复制</p><p>营造层次感(立体感)</p><p>充当没有宽度的边框</p><p>特殊效果</p><p>###text-shadow</p><p>立体感</p><p>印刷品质感</p><p>###border-radius</p><p>圆角矩形</p><p>圆形 border-radius：50%</p><p>半圆/扇形</p><p>一些奇怪的角角</p><p>###background</p><p>纹理/图案</p><p>渐变</p><p>雪碧图动画 background-position</p><p>背景图尺寸适应 background-size：cover/contain</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS效果&lt;/p&gt;
-&lt;p&gt;###box-shadow&lt;/p&gt;
-&lt;p&gt;投影&lt;/p&gt;
-&lt;p&gt;复制&lt;/p&gt;
-&lt;p&gt;营造层次感(立体感)&lt;/p&gt;
-&lt;p&gt;充当没有宽度的边框&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/HTML%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96/"/>
-    <id>http://yoursite.com/2019/06/17/HTML基础强化/</id>
-    <published>2019-06-16T18:31:48.019Z</published>
-    <updated>2018-10-30T16:54:24.188Z</updated>
+    <title>HTML基础强化</title>
+    <link href="http://yoursite.com/2018/10/06/HTML%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/10/06/HTML基础强化/</id>
+    <published>2018-10-06T10:11:25.000Z</published>
+    <updated>2019-06-16T18:42:21.440Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>HTML：</p><p>##常见元素：</p><p>###head区元素</p><p>viewport 适应移动端</p><p>###body区元素</p><p>div/section/article/aside/header/footer</p><p>p</p><p>span/em/strong</p><p>table/thead/tbody</p><p>ul</p><p>a</p><p>form/input/select/textarea/button</p><p>##如何理解HTML</p><p>HTML文档</p><p>描述文档的结构</p><p>有区块和大纲</p><p>工具 <a href="http://h5o.github.io" target="_blank" rel="noopener">http://h5o.github.io</a></p><p>HTML5新增内容：</p><p>新区块标签：section/article/nav/aside</p><p>表单增强：</p><pre><code>日期/时间/搜索表单验证placeholder 自动聚焦</code></pre><p>HTML5新增语义：</p><p>header/footer 头尾</p><p>section/article 区域</p><p>nav 导航</p><p>aside 不重要内容 </p><p>em/strong 强调</p><p>i icon 图标</p><p>##HTML元素分类</p><p>###按默认样式分：</p><p>块元素：</p><p>行内元素(内联元素)：</p><p>inline-block：select/input</p><p>###按内容分：</p><p>##HTML元素嵌套关系</p><p>块元素可以包含行内元素</p><p>块级元素不一定能包含块级元素</p><p>行内元素一般不能包含块级元素</p><pre><code>a包含div是合法的p包含div是不合法的</code></pre><p>内容模型：<a>是透明的，计算嵌套关系时候不存在</a></p><p>##CSS reset</p><pre><code>*{ margin：0; padding:0;}</code></pre><p>###哪些元素可以自闭合</p><pre><code>表单元素 input图片 imgbr hrmeta link</code></pre><p>###HTML和DOM的关系</p><p>HTML是死的</p><p>DOM由HTML解析而来，是活的</p><p>JS可以维护DOM</p><p>###proterty和attribute的区别</p><p>attribute是死的 属性</p><p>proterty是活的  特性</p><p>###form的作用有哪些？</p><pre><code>直接提交表单使用submit和reset按钮便于浏览器保存表单第三方库可以整体提取值第三方库可以进行表单验证</code></pre>]]></content>
     
@@ -90,15 +39,49 @@
     
     </summary>
     
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/06/17/CSS面试题/</id>
-    <published>2019-06-16T18:31:48.003Z</published>
-    <updated>2018-11-07T13:18:55.211Z</updated>
+    <title>CSS效果</title>
+    <link href="http://yoursite.com/2018/10/04/CSS%E6%95%88%E6%9E%9C/"/>
+    <id>http://yoursite.com/2018/10/04/CSS效果/</id>
+    <published>2018-10-04T10:11:25.000Z</published>
+    <updated>2019-06-16T18:40:32.464Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS效果</p><p>###box-shadow</p><p>投影</p><p>复制</p><p>营造层次感(立体感)</p><p>充当没有宽度的边框</p><p>特殊效果</p><p>###text-shadow</p><p>立体感</p><p>印刷品质感</p><p>###border-radius</p><p>圆角矩形</p><p>圆形 border-radius：50%</p><p>半圆/扇形</p><p>一些奇怪的角角</p><p>###background</p><p>纹理/图案</p><p>渐变</p><p>雪碧图动画 background-position</p><p>背景图尺寸适应 background-size：cover/contain</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS效果&lt;/p&gt;
+&lt;p&gt;###box-shadow&lt;/p&gt;
+&lt;p&gt;投影&lt;/p&gt;
+&lt;p&gt;复制&lt;/p&gt;
+&lt;p&gt;营造层次感(立体感)&lt;/p&gt;
+&lt;p&gt;充当没有宽度的边框&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS面试题(2)</title>
+    <link href="http://yoursite.com/2018/10/03/CSS%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>http://yoursite.com/2018/10/03/CSS面试题/</id>
+    <published>2018-10-03T10:11:25.000Z</published>
+    <updated>2019-06-16T18:39:57.544Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>CSS面试题</p><p>###CSS样式的优先级</p><pre><code>计算权重！important内联样式后写的优先级</code></pre><p>###雪碧图的作用</p><p>background-position</p><p>减少HTTP请求数 提高加载性能</p><p>有一些情况下可以减少图片大小</p><p>###自定义字体的使用场景</p><p>宣传/品牌/banner等固定文案</p><p>字体图标</p><p>###base64的使用</p><p>减少HTTP请求</p><p>适用于小图片</p><p>base64的体积约为原图的4/3</p><p>###伪类和伪元素的区别</p><p>伪类表示状态</p><p>伪元素是真的有元素</p><p>前者单冒号，后者双冒号</p><p>###如何美化checkbox</p><p>label[for]和id</p><p>隐藏原生input</p><p>：checked+label</p><p>###实现两栏(三栏)布局</p><pre><code>表格布局float+margininline-blockflexbox</code></pre><p>###position：absolute/fixed</p><pre><code>absolute相对最近的absolute/relativefixed相对屏幕</code></pre><p>###display：inline-block的间隙</p><pre><code>原因：字符间距1.font-size：02.div/div</code></pre><p>###如何清除浮动</p><pre><code>让盒子负责自己的布局overflow：hidden/auto::after{clear:both}</code></pre><p>###如何适应移动端页面</p><pre><code>viewportrem+viewport+media query设计上：隐藏+折行+自适应空间</code></pre>]]></content>
     
@@ -120,39 +103,19 @@
     
     </summary>
     
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/CSS%E5%B8%83%E5%B1%80/"/>
-    <id>http://yoursite.com/2019/06/17/CSS布局/</id>
-    <published>2019-06-16T18:31:48.003Z</published>
-    <updated>2018-11-06T08:31:10.201Z</updated>
-    
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS布局</p><p>表格布局-技巧性布局-flex/grid-响应式布局</p><p>盒子模型</p><p>content padding margin 边框</p><p>display:block/inline/inline-block </p><p>position:static/relative/absolute/fixed</p><pre><code>absolute/fixed是脱离于文档流的z-indexabsolute根据与最近的absolute或者relative定位</code></pre><p>###table布局</p><pre><code>1.table2.display：table-row</code></pre><p>###float+margin</p><p>元素“浮动”</p><p>脱离文档流</p><p>不脱离文本流</p><p>对自身的影响：</p><pre><code>形成块(BFC)位置尽量靠上位置尽量靠左(右)</code></pre><p>对兄弟元素的影响：</p><pre><code>上面贴非float元素旁边贴float元素不影响其它块级元素的位置影响其它块级元素的内部文本</code></pre><p>对父级元素的影响</p><pre><code>从布局上消失高度塌陷 </code></pre><p>overflow：auto</p><p>清除浮动？</p><p>###inline-box</p><p>像文本一样排block元素</p><p>没有清除浮动等问题</p><p>需要处理间隙</p><pre><code>1.font-size2.div和div之间的间隙</code></pre><p>###flexbox布局</p><p>弹性盒子</p><p>盒子本来就是并列的</p><p>指定宽度即可</p><pre><code>存在兼容性问题</code></pre><p>##响应式设计和布局</p><p>在不同设备上正常使用</p><p>一般主要处理屏幕大小问题</p><p>主要方法：</p><pre><code>隐藏+折行+自适应空间rem+viewport+media query</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS布局&lt;/p&gt;
-&lt;p&gt;表格布局-技巧性布局-flex/grid-响应式布局&lt;/p&gt;
-&lt;p&gt;盒子模型&lt;/p&gt;
-&lt;p&gt;content padding margin 边框&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/06/17/CSS%20%E5%9F%BA%E7%A1%80/"/>
-    <id>http://yoursite.com/2019/06/17/CSS 基础/</id>
-    <published>2019-06-16T18:31:47.987Z</published>
-    <updated>2018-11-06T04:21:33.292Z</updated>
+    <title>CSS基础</title>
+    <link href="http://yoursite.com/2018/10/02/CSS%20%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yoursite.com/2018/10/02/CSS 基础/</id>
+    <published>2018-10-02T10:11:25.000Z</published>
+    <updated>2019-06-16T18:38:51.019Z</updated>
     
     <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS基础</p><p>cascading style sheet</p><p>选择器：用于匹配HTML元素</p><p>###分类和权重</p><pre><code>元素选择器伪元素选择器类选择器属性选择器伪类选择器ID选择器组合选择器否定选择器通用选择器ID选择器 #{} +100类 属性 伪类 +10元素 伪元素 +1其它选择器+0</code></pre><p>不进位计算</p><p>！important 优先级最高</p><p>元素属性优先级高</p><p>相同权重 后写的生效</p><p>###解析方式和性能</p><p>浏览器的解析方式是从右往左进行解析的</p><p>##非布局样式</p><p>###字体</p><p>字体族</p><pre><code>serif 衬线字体sans-serif 非衬线字体monospace 等宽字体cursive 手写体fantasy 花体</code></pre><p>多字体 fallback</p><p>网络字体 自定义字体</p><p>iconfont iconfont.cn阿里巴巴矢量图标库</p><p>###行高</p><p>top</p><p>bottom</p><p>vertical-align</p><p>默认：base-line</p><pre><code>图片间隙：bottomdisplay：block</code></pre><p>###背景</p><p>背景颜色<br>    red </p><pre><code>#FF0000rgb(255,0,0)hsl(0,100%,60%) 色相 饱和度 亮度</code></pre><p>渐变色背景</p><p>linear-gradient</p><p>多背景叠加</p><p>背景图片和属性</p><p>雪碧图</p><p>移动端的适配</p><p>base64和性能优化</p><p>base64 文本格式</p><p>用于小图标</p><pre><code>减少HTTP连接数文件体积增大解码增大</code></pre><p>多分辨率适配</p><p>background-size</p><p>###边框</p><p>线型</p><p>大小</p><p>颜色</p><p>边框背景图</p><pre><code>round</code></pre><p>边框衔接</p><pre><code>三角形的实现</code></pre><p>###滚动</p><p>滚动行为和滚动条</p><p>visible 显示</p><p>hidden 隐藏</p><p>scroll 滚动条显示</p><p>auto 滚动条自动显示</p><p>###文字折行</p><p>overflow-wrap(word-wrap)通用换行控制 是否保留单词</p><p>word-break 针对多字节文字</p><p>white-space 空白处是否断行</p><pre><code>white-space：nowrap</code></pre><p>###装饰性属性</p><p>字重 font-weight</p><pre><code>font-weight: 100--900normal:400bold:700</code></pre><p>斜体 font-style：itatic</p><p>下划线：text-decoration</p><p>指针：cursor </p>]]></content>
     
@@ -169,27 +132,30 @@
     
     </summary>
     
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
   </entry>
   
   <entry>
-    <title>HTML和CSS面试题(1)</title>
-    <link href="http://yoursite.com/2018/09/26/HTML%E5%92%8CCSS%E9%9D%A2%E8%AF%95%E9%A2%98(1)/"/>
-    <id>http://yoursite.com/2018/09/26/HTML和CSS面试题(1)/</id>
-    <published>2018-09-26T04:12:25.000Z</published>
-    <updated>2018-10-15T11:52:41.590Z</updated>
+    <title>CSS布局</title>
+    <link href="http://yoursite.com/2018/10/01/CSS%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2018/10/01/CSS布局/</id>
+    <published>2018-10-01T10:11:25.000Z</published>
+    <updated>2019-06-16T18:39:10.727Z</updated>
     
-    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>1.浏览器的内核</p><pre><code>IE：trident内核Firefox：gecko内核Safari：webkit内核Opera：以前是presto内核，现已经改用Blink内核Chrome：Blink(基于webkit，Google和Opera Software公共开发）</code></pre><p>2.怪异模式和标准模式的区别</p><p>总体会有布局，样式解析和脚本执行三个方面的区别</p><p>3.div+css的布局较table布局有什么优点？</p><pre><code>改版的时候更方便，只需要改CSS文件表现与结构分离页面加载速度快、结构化清晰、页面显示简洁易于优化(seo)搜索引擎更友好，排名更容易靠前</code></pre><p>4.为什么利用多个域名来存储网站资源会更有效？</p><p>CDN缓存更方便</p><p>突破浏览器并发限制<br>节约cookie带宽<br>节约主域名的连接数，优化页面响应速度<br>防止不必要的安全问题</p><p>5.src和href的区别</p><p>src用于替换当前元素</p><p>href用于在当前文档和引用资源之间建立连接</p><p>href(Hypertext Reference)指向网络资源所在位置</p><pre><code>&lt;link href=&quot;common.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre><p>浏览器会识别该文档为CSS文件，就会并行下载资源并且不会停止对当前文档的处理。这也是问什么使用link方式加载CSS，而不是使用@import方式。</p><p>6.网页制作用到的图片格式</p><pre><code>png-8png-24jpeggifsvg(WebP)</code></pre><p>WebP格式：Google开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节约大量的服务器带宽资源和数据空间。</p><p>在质量相同的情况下，WebP图像的体积比JPEG格式图像小40%</p><p>7.微格式</p><p>微格式是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p><p>优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。(应用范例：豆瓣)</p><p>8.在CSS/JS代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次JS请求一般情况下有哪些地方会有缓存处理？</p><pre><code>DNS缓存CDN缓存浏览器缓存服务器缓存</code></pre><p>9.有哪些方法优化图片的加载</p><p>图片懒加载：</p>]]></content>
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS布局</p><p>表格布局-技巧性布局-flex/grid-响应式布局</p><p>盒子模型</p><p>content padding margin 边框</p><p>display:block/inline/inline-block </p><p>position:static/relative/absolute/fixed</p><pre><code>absolute/fixed是脱离于文档流的z-indexabsolute根据与最近的absolute或者relative定位</code></pre><p>###table布局</p><pre><code>1.table2.display：table-row</code></pre><p>###float+margin</p><p>元素“浮动”</p><p>脱离文档流</p><p>不脱离文本流</p><p>对自身的影响：</p><pre><code>形成块(BFC)位置尽量靠上位置尽量靠左(右)</code></pre><p>对兄弟元素的影响：</p><pre><code>上面贴非float元素旁边贴float元素不影响其它块级元素的位置影响其它块级元素的内部文本</code></pre><p>对父级元素的影响</p><pre><code>从布局上消失高度塌陷 </code></pre><p>overflow：auto</p><p>清除浮动？</p><p>###inline-box</p><p>像文本一样排block元素</p><p>没有清除浮动等问题</p><p>需要处理间隙</p><pre><code>1.font-size2.div和div之间的间隙</code></pre><p>###flexbox布局</p><p>弹性盒子</p><p>盒子本来就是并列的</p><p>指定宽度即可</p><pre><code>存在兼容性问题</code></pre><p>##响应式设计和布局</p><p>在不同设备上正常使用</p><p>一般主要处理屏幕大小问题</p><p>主要方法：</p><pre><code>隐藏+折行+自适应空间rem+viewport+media query</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;1.浏览器的内核&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;IE：trident内核
-Firefox：gecko内核
-Safari：webkit内核
-Opera：以前是presto内核，
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS布局&lt;/p&gt;
+&lt;p&gt;表格布局-技巧性布局-flex/grid-响应式布局&lt;/p&gt;
+&lt;p&gt;盒子模型&lt;/p&gt;
+&lt;p&gt;content padding margin 边框&lt;
       
     
     </summary>
@@ -197,7 +163,34 @@ Opera：以前是presto内核，
       <category term="web" scheme="http://yoursite.com/categories/web/"/>
     
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS hack和案例</title>
+    <link href="http://yoursite.com/2018/10/01/CSS%20hack%E5%92%8C%E6%A1%88%E4%BE%8B/"/>
+    <id>http://yoursite.com/2018/10/01/CSS hack和案例/</id>
+    <published>2018-10-01T10:11:25.000Z</published>
+    <updated>2019-06-16T18:38:08.854Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>##CSS hack</p><p>Hack即不合法但生效的写法</p><p>主要用于区分不同浏览器</p><p>难理解 难维护 易失效</p><p>替代方案：</p><pre><code>特性检测针对性加class</code></pre><p>###checkbox</p><pre><code>.checkbox input + label{           background:url(./checkbox1.png) left center no-repeat;           background-size:20px 20px;           padding-left:20px;       }       .checkbox input:checked + label{           background-image:url(./checkbox2.png);       }</code></pre><p>###tree</p><p>###tabs</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;##CSS hack&lt;/p&gt;
+&lt;p&gt;Hack即不合法但生效的写法&lt;/p&gt;
+&lt;p&gt;主要用于区分不同浏览器&lt;/p&gt;
+&lt;p&gt;难理解 难维护 易失效&lt;/p&gt;
+&lt;p&gt;替代方案：&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
     
@@ -226,6 +219,37 @@ Opera：以前是presto内核，
     
     
       <category term="排序" scheme="http://yoursite.com/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML和CSS面试题(1)</title>
+    <link href="http://yoursite.com/2018/09/26/HTML%E5%92%8CCSS%E9%9D%A2%E8%AF%95%E9%A2%98(1)/"/>
+    <id>http://yoursite.com/2018/09/26/HTML和CSS面试题(1)/</id>
+    <published>2018-09-26T04:12:25.000Z</published>
+    <updated>2018-10-15T11:52:41.590Z</updated>
+    
+    <content type="html"><![CDATA[<script src="/assets/js/APlayer.min.js"> </script><p>1.浏览器的内核</p><pre><code>IE：trident内核Firefox：gecko内核Safari：webkit内核Opera：以前是presto内核，现已经改用Blink内核Chrome：Blink(基于webkit，Google和Opera Software公共开发）</code></pre><p>2.怪异模式和标准模式的区别</p><p>总体会有布局，样式解析和脚本执行三个方面的区别</p><p>3.div+css的布局较table布局有什么优点？</p><pre><code>改版的时候更方便，只需要改CSS文件表现与结构分离页面加载速度快、结构化清晰、页面显示简洁易于优化(seo)搜索引擎更友好，排名更容易靠前</code></pre><p>4.为什么利用多个域名来存储网站资源会更有效？</p><p>CDN缓存更方便</p><p>突破浏览器并发限制<br>节约cookie带宽<br>节约主域名的连接数，优化页面响应速度<br>防止不必要的安全问题</p><p>5.src和href的区别</p><p>src用于替换当前元素</p><p>href用于在当前文档和引用资源之间建立连接</p><p>href(Hypertext Reference)指向网络资源所在位置</p><pre><code>&lt;link href=&quot;common.css&quot; rel=&quot;stylesheet&quot;&gt;</code></pre><p>浏览器会识别该文档为CSS文件，就会并行下载资源并且不会停止对当前文档的处理。这也是问什么使用link方式加载CSS，而不是使用@import方式。</p><p>6.网页制作用到的图片格式</p><pre><code>png-8png-24jpeggifsvg(WebP)</code></pre><p>WebP格式：Google开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节约大量的服务器带宽资源和数据空间。</p><p>在质量相同的情况下，WebP图像的体积比JPEG格式图像小40%</p><p>7.微格式</p><p>微格式是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p><p>优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。(应用范例：豆瓣)</p><p>8.在CSS/JS代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次JS请求一般情况下有哪些地方会有缓存处理？</p><pre><code>DNS缓存CDN缓存浏览器缓存服务器缓存</code></pre><p>9.有哪些方法优化图片的加载</p><p>图片懒加载：</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;script src=&quot;/assets/js/APlayer.min.js&quot;&gt; &lt;/script&gt;&lt;p&gt;1.浏览器的内核&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;IE：trident内核
+Firefox：gecko内核
+Safari：webkit内核
+Opera：以前是presto内核，
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
@@ -435,9 +459,9 @@ Opera：以前是presto内核，
       <category term="web" scheme="http://yoursite.com/categories/web/"/>
     
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
-    
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
@@ -468,9 +492,9 @@ Opera：以前是presto内核，
       <category term="web" scheme="http://yoursite.com/categories/web/"/>
     
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
-    
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
