@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/HTML基础强化/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/05/CSS hack和案例/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -331,7 +331,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/06/HTML基础强化/" itemprop="url">HTML基础强化</a></h1>
+                <a class="post-title-link" href="/2018/10/05/CSS hack和案例/" itemprop="url">CSS hack和案例</a></h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T18:11:25+08:00">
-                2018-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T18:11:25+08:00">
+                2018-10-05
               </time>
             
 
@@ -384,8 +384,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/06/HTML基础强化/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/06/HTML基础强化/" itemprop="commentCount"></span>
+                <a href="/2018/10/05/CSS hack和案例/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/05/CSS hack和案例/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  357
+                  76
                 </span>
               
 
@@ -446,86 +446,26 @@
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>HTML：</p>
-<p>##常见元素：</p>
-<p>###head区元素</p>
-<p>viewport 适应移动端</p>
-<p>###body区元素</p>
-<p>div/section/article/aside/header/footer</p>
-<p>p</p>
-<p>span/em/strong</p>
-<p>table/thead/tbody</p>
-<p>ul</p>
-<p>a</p>
-<p>form/input/select/textarea/button</p>
-<p>##如何理解HTML</p>
-<p>HTML文档</p>
-<p>描述文档的结构</p>
-<p>有区块和大纲</p>
-<p>工具 <a href="http://h5o.github.io" target="_blank" rel="noopener">http://h5o.github.io</a></p>
-<p>HTML5新增内容：</p>
-<p>新区块标签：section/article/nav/aside</p>
-<p>表单增强：</p>
-<pre><code>日期/时间/搜索
+            <script src="/assets/js/APlayer.min.js"> </script><p>##CSS hack</p>
+<p>Hack即不合法但生效的写法</p>
+<p>主要用于区分不同浏览器</p>
+<p>难理解 难维护 易失效</p>
+<p>替代方案：</p>
+<pre><code>特性检测
 
-表单验证
+针对性加class
+</code></pre><p>###checkbox</p>
+<pre><code>.checkbox input + label{
+           background:url(./checkbox1.png) left center no-repeat;
+           background-size:20px 20px;
+           padding-left:20px;
+       }
+       .checkbox input:checked + label{
+           background-image:url(./checkbox2.png);
+       }
+</code></pre><p>###tree</p>
+<p>###tabs</p>
 
-placeholder 自动聚焦
-</code></pre><p>HTML5新增语义：</p>
-<p>header/footer 头尾</p>
-<p>section/article 区域</p>
-<p>nav 导航</p>
-<p>aside 不重要内容 </p>
-<p>em/strong 强调</p>
-<p>i icon 图标</p>
-<p>##HTML元素分类</p>
-<p>###按默认样式分：</p>
-<p>块元素：</p>
-<p>行内元素(内联元素)：</p>
-<p>inline-block：select/input</p>
-<p>###按内容分：</p>
-<p>##HTML元素嵌套关系</p>
-<p>块元素可以包含行内元素</p>
-<p>块级元素不一定能包含块级元素</p>
-<p>行内元素一般不能包含块级元素</p>
-<pre><code>a包含div是合法的
-
-p包含div是不合法的
-</code></pre><p>内容模型：<a>是透明的，计算嵌套关系时候不存在</a></p>
-<p>##CSS reset</p>
-<pre><code>*{
-
- margin：0;
-
- padding:0;
-
-}
-</code></pre><p>###哪些元素可以自闭合</p>
-<pre><code>表单元素 input
-
-图片 img
-
-br hr
-
-meta link
-</code></pre><p>###HTML和DOM的关系</p>
-<p>HTML是死的</p>
-<p>DOM由HTML解析而来，是活的</p>
-<p>JS可以维护DOM</p>
-<p>###proterty和attribute的区别</p>
-<p>attribute是死的 属性</p>
-<p>proterty是活的  特性</p>
-<p>###form的作用有哪些？</p>
-<pre><code>直接提交表单
-
-使用submit和reset按钮
-
-便于浏览器保存表单
-
-第三方库可以整体提取值
-
-第三方库可以进行表单验证
-</code></pre>
           
         
       
@@ -783,7 +723,7 @@ meta link
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/03/CSS面试题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/03/CSS布局/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -802,7 +742,7 @@ meta link
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/03/CSS面试题/" itemprop="url">CSS面试题(2)</a></h1>
+                <a class="post-title-link" href="/2018/10/03/CSS布局/" itemprop="url">CSS布局</a></h1>
         
 
         <div class="post-meta">
@@ -855,8 +795,8 @@ meta link
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/03/CSS面试题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/03/CSS面试题/" itemprop="commentCount"></span>
+                <a href="/2018/10/03/CSS布局/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/03/CSS布局/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -878,7 +818,7 @@ meta link
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  258
+                  293
                 </span>
               
 
@@ -917,64 +857,64 @@ meta link
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>CSS面试题</p>
-<p>###CSS样式的优先级</p>
-<pre><code>计算权重
+            <script src="/assets/js/APlayer.min.js"> </script><p>##CSS布局</p>
+<p>表格布局-技巧性布局-flex/grid-响应式布局</p>
+<p>盒子模型</p>
+<p>content padding margin 边框</p>
+<p>display:block/inline/inline-block </p>
+<p>position:static/relative/absolute/fixed</p>
+<pre><code>absolute/fixed是脱离于文档流的
 
-！important
+z-index
 
-内联样式
+absolute根据与最近的absolute或者relative定位
+</code></pre><p>###table布局</p>
+<pre><code>1.table
 
-后写的优先级
-</code></pre><p>###雪碧图的作用</p>
-<p>background-position</p>
-<p>减少HTTP请求数 提高加载性能</p>
-<p>有一些情况下可以减少图片大小</p>
-<p>###自定义字体的使用场景</p>
-<p>宣传/品牌/banner等固定文案</p>
-<p>字体图标</p>
-<p>###base64的使用</p>
-<p>减少HTTP请求</p>
-<p>适用于小图片</p>
-<p>base64的体积约为原图的4/3</p>
-<p>###伪类和伪元素的区别</p>
-<p>伪类表示状态</p>
-<p>伪元素是真的有元素</p>
-<p>前者单冒号，后者双冒号</p>
-<p>###如何美化checkbox</p>
-<p>label[for]和id</p>
-<p>隐藏原生input</p>
-<p>：checked+label</p>
-<p>###实现两栏(三栏)布局</p>
-<pre><code>表格布局
+2.display：table-row
+</code></pre><p>###float+margin</p>
+<p>元素“浮动”</p>
+<p>脱离文档流</p>
+<p>不脱离文本流</p>
+<p>对自身的影响：</p>
+<pre><code>形成块(BFC)
 
-float+margin
+位置尽量靠上
 
-inline-block
+位置尽量靠左(右)
+</code></pre><p>对兄弟元素的影响：</p>
+<pre><code>上面贴非float元素
 
-flexbox
-</code></pre><p>###position：absolute/fixed</p>
-<pre><code>absolute相对最近的absolute/relative
+旁边贴float元素
 
-fixed相对屏幕
-</code></pre><p>###display：inline-block的间隙</p>
-<pre><code>原因：字符间距
+不影响其它块级元素的位置
 
-1.font-size：0
+影响其它块级元素的内部文本
+</code></pre><p>对父级元素的影响</p>
+<pre><code>从布局上消失
 
-2.div/div
-</code></pre><p>###如何清除浮动</p>
-<pre><code>让盒子负责自己的布局
+高度塌陷 
+</code></pre><p>overflow：auto</p>
+<p>清除浮动？</p>
+<p>###inline-box</p>
+<p>像文本一样排block元素</p>
+<p>没有清除浮动等问题</p>
+<p>需要处理间隙</p>
+<pre><code>1.font-size
 
-overflow：hidden/auto
-
-::after{clear:both}
-</code></pre><p>###如何适应移动端页面</p>
-<pre><code>viewport
+2.div和div之间的间隙
+</code></pre><p>###flexbox布局</p>
+<p>弹性盒子</p>
+<p>盒子本来就是并列的</p>
+<p>指定宽度即可</p>
+<pre><code>存在兼容性问题
+</code></pre><p>##响应式设计和布局</p>
+<p>在不同设备上正常使用</p>
+<p>一般主要处理屏幕大小问题</p>
+<p>主要方法：</p>
+<pre><code>隐藏+折行+自适应空间
 
 rem+viewport+media query
-
-设计上：隐藏+折行+自适应空间
 </code></pre>
           
         
@@ -1325,7 +1265,7 @@ bold:700
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/CSS布局/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/HTML基础强化/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -1344,7 +1284,7 @@ bold:700
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/01/CSS布局/" itemprop="url">CSS布局</a></h1>
+                <a class="post-title-link" href="/2018/10/01/HTML基础强化/" itemprop="url">HTML基础强化</a></h1>
         
 
         <div class="post-meta">
@@ -1397,8 +1337,8 @@ bold:700
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/01/CSS布局/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/01/CSS布局/" itemprop="commentCount"></span>
+                <a href="/2018/10/01/HTML基础强化/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/01/HTML基础强化/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1420,7 +1360,7 @@ bold:700
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  293
+                  357
                 </span>
               
 
@@ -1459,64 +1399,85 @@ bold:700
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>##CSS布局</p>
-<p>表格布局-技巧性布局-flex/grid-响应式布局</p>
-<p>盒子模型</p>
-<p>content padding margin 边框</p>
-<p>display:block/inline/inline-block </p>
-<p>position:static/relative/absolute/fixed</p>
-<pre><code>absolute/fixed是脱离于文档流的
+            <script src="/assets/js/APlayer.min.js"> </script><p>HTML：</p>
+<p>##常见元素：</p>
+<p>###head区元素</p>
+<p>viewport 适应移动端</p>
+<p>###body区元素</p>
+<p>div/section/article/aside/header/footer</p>
+<p>p</p>
+<p>span/em/strong</p>
+<p>table/thead/tbody</p>
+<p>ul</p>
+<p>a</p>
+<p>form/input/select/textarea/button</p>
+<p>##如何理解HTML</p>
+<p>HTML文档</p>
+<p>描述文档的结构</p>
+<p>有区块和大纲</p>
+<p>工具 <a href="http://h5o.github.io" target="_blank" rel="noopener">http://h5o.github.io</a></p>
+<p>HTML5新增内容：</p>
+<p>新区块标签：section/article/nav/aside</p>
+<p>表单增强：</p>
+<pre><code>日期/时间/搜索
 
-z-index
+表单验证
 
-absolute根据与最近的absolute或者relative定位
-</code></pre><p>###table布局</p>
-<pre><code>1.table
+placeholder 自动聚焦
+</code></pre><p>HTML5新增语义：</p>
+<p>header/footer 头尾</p>
+<p>section/article 区域</p>
+<p>nav 导航</p>
+<p>aside 不重要内容 </p>
+<p>em/strong 强调</p>
+<p>i icon 图标</p>
+<p>##HTML元素分类</p>
+<p>###按默认样式分：</p>
+<p>块元素：</p>
+<p>行内元素(内联元素)：</p>
+<p>inline-block：select/input</p>
+<p>###按内容分：</p>
+<p>##HTML元素嵌套关系</p>
+<p>块元素可以包含行内元素</p>
+<p>块级元素不一定能包含块级元素</p>
+<p>行内元素一般不能包含块级元素</p>
+<pre><code>a包含div是合法的
 
-2.display：table-row
-</code></pre><p>###float+margin</p>
-<p>元素“浮动”</p>
-<p>脱离文档流</p>
-<p>不脱离文本流</p>
-<p>对自身的影响：</p>
-<pre><code>形成块(BFC)
+p包含div是不合法的
+</code></pre><p>内容模型：<a>是透明的，计算嵌套关系时候不存在</a></p>
+<p>##CSS reset</p>
+<pre><code>*{
 
-位置尽量靠上
+ margin：0;
 
-位置尽量靠左(右)
-</code></pre><p>对兄弟元素的影响：</p>
-<pre><code>上面贴非float元素
+ padding:0;
 
-旁边贴float元素
+}
+</code></pre><p>###哪些元素可以自闭合</p>
+<pre><code>表单元素 input
 
-不影响其它块级元素的位置
+图片 img
 
-影响其它块级元素的内部文本
-</code></pre><p>对父级元素的影响</p>
-<pre><code>从布局上消失
+br hr
 
-高度塌陷 
-</code></pre><p>overflow：auto</p>
-<p>清除浮动？</p>
-<p>###inline-box</p>
-<p>像文本一样排block元素</p>
-<p>没有清除浮动等问题</p>
-<p>需要处理间隙</p>
-<pre><code>1.font-size
+meta link
+</code></pre><p>###HTML和DOM的关系</p>
+<p>HTML是死的</p>
+<p>DOM由HTML解析而来，是活的</p>
+<p>JS可以维护DOM</p>
+<p>###proterty和attribute的区别</p>
+<p>attribute是死的 属性</p>
+<p>proterty是活的  特性</p>
+<p>###form的作用有哪些？</p>
+<pre><code>直接提交表单
 
-2.div和div之间的间隙
-</code></pre><p>###flexbox布局</p>
-<p>弹性盒子</p>
-<p>盒子本来就是并列的</p>
-<p>指定宽度即可</p>
-<pre><code>存在兼容性问题
-</code></pre><p>##响应式设计和布局</p>
-<p>在不同设备上正常使用</p>
-<p>一般主要处理屏幕大小问题</p>
-<p>主要方法：</p>
-<pre><code>隐藏+折行+自适应空间
+使用submit和reset按钮
 
-rem+viewport+media query
+便于浏览器保存表单
+
+第三方库可以整体提取值
+
+第三方库可以进行表单验证
 </code></pre>
           
         

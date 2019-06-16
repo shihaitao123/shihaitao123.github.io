@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[HTML基础强化]]></title>
-    <url>%2F2018%2F10%2F06%2FHTML%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96%2F</url>
-    <content type="text"><![CDATA[HTML： ##常见元素： ###head区元素 viewport 适应移动端 ###body区元素 div/section/article/aside/header/footer p span/em/strong table/thead/tbody ul a form/input/select/textarea/button ##如何理解HTML HTML文档 描述文档的结构 有区块和大纲 工具 http://h5o.github.io HTML5新增内容： 新区块标签：section/article/nav/aside 表单增强： 日期/时间/搜索 表单验证 placeholder 自动聚焦 HTML5新增语义： header/footer 头尾 section/article 区域 nav 导航 aside 不重要内容 em/strong 强调 i icon 图标 ##HTML元素分类 ###按默认样式分： 块元素： 行内元素(内联元素)： inline-block：select/input ###按内容分： ##HTML元素嵌套关系 块元素可以包含行内元素 块级元素不一定能包含块级元素 行内元素一般不能包含块级元素 a包含div是合法的 p包含div是不合法的 内容模型：是透明的，计算嵌套关系时候不存在 ##CSS reset *{ margin：0; padding:0; } ###哪些元素可以自闭合 表单元素 input 图片 img br hr meta link ###HTML和DOM的关系 HTML是死的 DOM由HTML解析而来，是活的 JS可以维护DOM ###proterty和attribute的区别 attribute是死的 属性 proterty是活的 特性 ###form的作用有哪些？ 直接提交表单 使用submit和reset按钮 便于浏览器保存表单 第三方库可以整体提取值 第三方库可以进行表单验证]]></content>
+    <title><![CDATA[CSS hack和案例]]></title>
+    <url>%2F2018%2F10%2F05%2FCSS%20hack%E5%92%8C%E6%A1%88%E4%BE%8B%2F</url>
+    <content type="text"><![CDATA[##CSS hack Hack即不合法但生效的写法 主要用于区分不同浏览器 难理解 难维护 易失效 替代方案： 特性检测 针对性加class ###checkbox .checkbox input + label{ background:url(./checkbox1.png) left center no-repeat; background-size:20px 20px; padding-left:20px; } .checkbox input:checked + label{ background-image:url(./checkbox2.png); } ###tree ###tabs]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -23,9 +23,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS面试题(2)]]></title>
-    <url>%2F2018%2F10%2F03%2FCSS%E9%9D%A2%E8%AF%95%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[CSS面试题 ###CSS样式的优先级 计算权重 ！important 内联样式 后写的优先级 ###雪碧图的作用 background-position 减少HTTP请求数 提高加载性能 有一些情况下可以减少图片大小 ###自定义字体的使用场景 宣传/品牌/banner等固定文案 字体图标 ###base64的使用 减少HTTP请求 适用于小图片 base64的体积约为原图的4/3 ###伪类和伪元素的区别 伪类表示状态 伪元素是真的有元素 前者单冒号，后者双冒号 ###如何美化checkbox label[for]和id 隐藏原生input ：checked+label ###实现两栏(三栏)布局 表格布局 float+margin inline-block flexbox ###position：absolute/fixed absolute相对最近的absolute/relative fixed相对屏幕 ###display：inline-block的间隙 原因：字符间距 1.font-size：0 2.div/div ###如何清除浮动 让盒子负责自己的布局 overflow：hidden/auto ::after{clear:both} ###如何适应移动端页面 viewport rem+viewport+media query 设计上：隐藏+折行+自适应空间]]></content>
+    <title><![CDATA[CSS布局]]></title>
+    <url>%2F2018%2F10%2F03%2FCSS%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[##CSS布局 表格布局-技巧性布局-flex/grid-响应式布局 盒子模型 content padding margin 边框 display:block/inline/inline-block position:static/relative/absolute/fixed absolute/fixed是脱离于文档流的 z-index absolute根据与最近的absolute或者relative定位 ###table布局 1.table 2.display：table-row ###float+margin 元素“浮动” 脱离文档流 不脱离文本流 对自身的影响： 形成块(BFC) 位置尽量靠上 位置尽量靠左(右) 对兄弟元素的影响： 上面贴非float元素 旁边贴float元素 不影响其它块级元素的位置 影响其它块级元素的内部文本 对父级元素的影响 从布局上消失 高度塌陷 overflow：auto 清除浮动？ ###inline-box 像文本一样排block元素 没有清除浮动等问题 需要处理间隙 1.font-size 2.div和div之间的间隙 ###flexbox布局 弹性盒子 盒子本来就是并列的 指定宽度即可 存在兼容性问题 ##响应式设计和布局 在不同设备上正常使用 一般主要处理屏幕大小问题 主要方法： 隐藏+折行+自适应空间 rem+viewport+media query]]></content>
       <categories>
         <category>web</category>
       </categories>
@@ -45,36 +45,25 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[CSS布局]]></title>
-    <url>%2F2018%2F10%2F01%2FCSS%E5%B8%83%E5%B1%80%2F</url>
-    <content type="text"><![CDATA[##CSS布局 表格布局-技巧性布局-flex/grid-响应式布局 盒子模型 content padding margin 边框 display:block/inline/inline-block position:static/relative/absolute/fixed absolute/fixed是脱离于文档流的 z-index absolute根据与最近的absolute或者relative定位 ###table布局 1.table 2.display：table-row ###float+margin 元素“浮动” 脱离文档流 不脱离文本流 对自身的影响： 形成块(BFC) 位置尽量靠上 位置尽量靠左(右) 对兄弟元素的影响： 上面贴非float元素 旁边贴float元素 不影响其它块级元素的位置 影响其它块级元素的内部文本 对父级元素的影响 从布局上消失 高度塌陷 overflow：auto 清除浮动？ ###inline-box 像文本一样排block元素 没有清除浮动等问题 需要处理间隙 1.font-size 2.div和div之间的间隙 ###flexbox布局 弹性盒子 盒子本来就是并列的 指定宽度即可 存在兼容性问题 ##响应式设计和布局 在不同设备上正常使用 一般主要处理屏幕大小问题 主要方法： 隐藏+折行+自适应空间 rem+viewport+media query]]></content>
+    <title><![CDATA[HTML基础强化]]></title>
+    <url>%2F2018%2F10%2F01%2FHTML%E5%9F%BA%E7%A1%80%E5%BC%BA%E5%8C%96%2F</url>
+    <content type="text"><![CDATA[HTML： ##常见元素： ###head区元素 viewport 适应移动端 ###body区元素 div/section/article/aside/header/footer p span/em/strong table/thead/tbody ul a form/input/select/textarea/button ##如何理解HTML HTML文档 描述文档的结构 有区块和大纲 工具 http://h5o.github.io HTML5新增内容： 新区块标签：section/article/nav/aside 表单增强： 日期/时间/搜索 表单验证 placeholder 自动聚焦 HTML5新增语义： header/footer 头尾 section/article 区域 nav 导航 aside 不重要内容 em/strong 强调 i icon 图标 ##HTML元素分类 ###按默认样式分： 块元素： 行内元素(内联元素)： inline-block：select/input ###按内容分： ##HTML元素嵌套关系 块元素可以包含行内元素 块级元素不一定能包含块级元素 行内元素一般不能包含块级元素 a包含div是合法的 p包含div是不合法的 内容模型：是透明的，计算嵌套关系时候不存在 ##CSS reset *{ margin：0; padding:0; } ###哪些元素可以自闭合 表单元素 input 图片 img br hr meta link ###HTML和DOM的关系 HTML是死的 DOM由HTML解析而来，是活的 JS可以维护DOM ###proterty和attribute的区别 attribute是死的 属性 proterty是活的 特性 ###form的作用有哪些？ 直接提交表单 使用submit和reset按钮 便于浏览器保存表单 第三方库可以整体提取值 第三方库可以进行表单验证]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS面试题(2)]]></title>
+    <url>%2F2018%2F09%2F27%2FCSS%E9%9D%A2%E8%AF%95%E9%A2%98(2)%2F</url>
+    <content type="text"><![CDATA[CSS面试题 ###CSS样式的优先级 计算权重 ！important 内联样式 后写的优先级 ###雪碧图的作用 background-position 减少HTTP请求数 提高加载性能 有一些情况下可以减少图片大小 ###自定义字体的使用场景 宣传/品牌/banner等固定文案 字体图标 ###base64的使用 减少HTTP请求 适用于小图片 base64的体积约为原图的4/3 ###伪类和伪元素的区别 伪类表示状态 伪元素是真的有元素 前者单冒号，后者双冒号 ###如何美化checkbox label[for]和id 隐藏原生input ：checked+label ###实现两栏(三栏)布局 表格布局 float+margin inline-block flexbox ###position：absolute/fixed absolute相对最近的absolute/relative fixed相对屏幕 ###display：inline-block的间隙 原因：字符间距 1.font-size：0 2.div/div ###如何清除浮动 让盒子负责自己的布局 overflow：hidden/auto ::after{clear:both} ###如何适应移动端页面 viewport rem+viewport+media query 设计上：隐藏+折行+自适应空间]]></content>
       <categories>
         <category>web</category>
       </categories>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[CSS hack和案例]]></title>
-    <url>%2F2018%2F10%2F01%2FCSS%20hack%E5%92%8C%E6%A1%88%E4%BE%8B%2F</url>
-    <content type="text"><![CDATA[##CSS hack Hack即不合法但生效的写法 主要用于区分不同浏览器 难理解 难维护 易失效 替代方案： 特性检测 针对性加class ###checkbox .checkbox input + label{ background:url(./checkbox1.png) left center no-repeat; background-size:20px 20px; padding-left:20px; } .checkbox input:checked + label{ background-image:url(./checkbox2.png); } ###tree ###tabs]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[冒泡排序]]></title>
-    <url>%2F2018%2F09%2F26%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%2F</url>
-    <content type="text"><![CDATA[##冒泡排序 它是一种比较简单的排序算法。它会遍历若干次要排序的数列，每次遍历时，它都会从前往后依次的比较相邻两个数的大小；如果前者比后者大，则交换它们的位置。这样，一次遍历之后，最大的元素就在数列的末尾。采用相同的办法再次遍历时，第二大的元素就被排列在最大元素之前。重复此操作，直到整个数列都有序为止。 冒泡排序 * * 冒泡排序 * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort1(int a[], int n) { int i,j; for (i=n-1; i&gt;0; i--) { // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) swap(a[j], a[j+1]); } } } 改进：对冒泡排序进行优化，使它效率更高：添加一个标记，如果一趟遍历中发生了交换，则标记为true，否则为false。如果某一趟没有发生交换，说明排序已经完成。 /* * 冒泡排序(改进版) * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort2(int a[], int n) { int i,j; int flag; // 标记 for (i=n-1; i&gt;0; i--) { flag = 0; // 初始化标记为0 // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) { swap(a[j], a[j+1]); flag = 1; // 若发生交换，则设标记为1 } } if (flag==0) break; // 若没发生交换，则说明数列已有序。 } } ##冒泡排序的时间复杂度和稳定性 假设数列中有N个数，遍历一趟的时间复杂度是O(N),需要遍历N-1次，所以时间复杂度为O(N^2)。 冒泡排序是稳定的。 算法稳定性：假设在数列中存在a[i]=a[j]，若在排序之前，a[i]在a[j]前面；并且排序之后，a[i]仍然在a[j]前面。则这个排序算法是稳定的！ ##完整程序： #include &lt;stdio.h&gt; // 数组长度 #define LENGTH(array) ( (sizeof(array)) / (sizeof(array[0])) ) // 交互数值 #define swap(a,b) (a^=b,b^=a,a^=b) /* * 冒泡排序 * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort1(int a[], int n) { int i,j; for (i=n-1; i&gt;0; i--) { // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) swap(a[j], a[j+1]); } } } /* * 冒泡排序(改进版) * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort2(int a[], int n) { int i,j; int flag; // 标记 for (i=n-1; i&gt;0; i--) { flag = 0; // 初始化标记为0 // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) { swap(a[j], a[j+1]); flag = 1; // 若发生交换，则设标记为1 } } if (flag==0) break; // 若没发生交换，则说明数列已有序。 } } void main() { int i; int a[] = {20,40,30,10,60,50}; int ilen = LENGTH(a); printf(&quot;before sort:&quot;); for (i=0; i&lt;ilen; i++) printf(&quot;%d &quot;, a[i]); printf(&quot;\n&quot;); bubble_sort1(a, ilen); //bubble_sort2(a, ilen); printf(&quot;after sort:&quot;); for (i=0; i&lt;ilen; i++) printf(&quot;%d &quot;, a[i]); printf(&quot;\n&quot;); } 本文链接：数据结构与算法]]></content>
-      <categories>
-        <category>DS &amp;&amp; A</category>
-      </categories>
-      <tags>
-        <tag>排序</tag>
       </tags>
   </entry>
   <entry>
@@ -87,6 +76,17 @@
       <tags>
         <tag>CSS</tag>
         <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[冒泡排序]]></title>
+    <url>%2F2018%2F09%2F26%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[##冒泡排序 它是一种比较简单的排序算法。它会遍历若干次要排序的数列，每次遍历时，它都会从前往后依次的比较相邻两个数的大小；如果前者比后者大，则交换它们的位置。这样，一次遍历之后，最大的元素就在数列的末尾。采用相同的办法再次遍历时，第二大的元素就被排列在最大元素之前。重复此操作，直到整个数列都有序为止。 冒泡排序 * * 冒泡排序 * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort1(int a[], int n) { int i,j; for (i=n-1; i&gt;0; i--) { // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) swap(a[j], a[j+1]); } } } 改进：对冒泡排序进行优化，使它效率更高：添加一个标记，如果一趟遍历中发生了交换，则标记为true，否则为false。如果某一趟没有发生交换，说明排序已经完成。 /* * 冒泡排序(改进版) * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort2(int a[], int n) { int i,j; int flag; // 标记 for (i=n-1; i&gt;0; i--) { flag = 0; // 初始化标记为0 // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) { swap(a[j], a[j+1]); flag = 1; // 若发生交换，则设标记为1 } } if (flag==0) break; // 若没发生交换，则说明数列已有序。 } } ##冒泡排序的时间复杂度和稳定性 假设数列中有N个数，遍历一趟的时间复杂度是O(N),需要遍历N-1次，所以时间复杂度为O(N^2)。 冒泡排序是稳定的。 算法稳定性：假设在数列中存在a[i]=a[j]，若在排序之前，a[i]在a[j]前面；并且排序之后，a[i]仍然在a[j]前面。则这个排序算法是稳定的！ ##完整程序： #include &lt;stdio.h&gt; // 数组长度 #define LENGTH(array) ( (sizeof(array)) / (sizeof(array[0])) ) // 交互数值 #define swap(a,b) (a^=b,b^=a,a^=b) /* * 冒泡排序 * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort1(int a[], int n) { int i,j; for (i=n-1; i&gt;0; i--) { // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) swap(a[j], a[j+1]); } } } /* * 冒泡排序(改进版) * * 参数说明： * a -- 待排序的数组 * n -- 数组的长度 */ void bubble_sort2(int a[], int n) { int i,j; int flag; // 标记 for (i=n-1; i&gt;0; i--) { flag = 0; // 初始化标记为0 // 将a[0...i]中最大的数据放在末尾 for (j=0; j&lt;i; j++) { if (a[j] &gt; a[j+1]) { swap(a[j], a[j+1]); flag = 1; // 若发生交换，则设标记为1 } } if (flag==0) break; // 若没发生交换，则说明数列已有序。 } } void main() { int i; int a[] = {20,40,30,10,60,50}; int ilen = LENGTH(a); printf(&quot;before sort:&quot;); for (i=0; i&lt;ilen; i++) printf(&quot;%d &quot;, a[i]); printf(&quot;\n&quot;); bubble_sort1(a, ilen); //bubble_sort2(a, ilen); printf(&quot;after sort:&quot;); for (i=0; i&lt;ilen; i++) printf(&quot;%d &quot;, a[i]); printf(&quot;\n&quot;); } 本文链接：数据结构与算法]]></content>
+      <categories>
+        <category>DS &amp;&amp; A</category>
+      </categories>
+      <tags>
+        <tag>排序</tag>
       </tags>
   </entry>
   <entry>

@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/01/CSS hack和案例/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/CSS面试题(2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Heath Shi">
@@ -331,7 +331,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/01/CSS hack和案例/" itemprop="url">CSS hack和案例</a></h1>
+                <a class="post-title-link" href="/2018/09/27/CSS面试题(2)/" itemprop="url">CSS面试题(2)</a></h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-01T18:11:25+08:00">
-                2018-10-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T18:11:25+08:00">
+                2018-09-27
               </time>
             
 
@@ -384,8 +384,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/10/01/CSS hack和案例/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/01/CSS hack和案例/" itemprop="commentCount"></span>
+                <a href="/2018/09/27/CSS面试题(2)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/27/CSS面试题(2)/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  76
+                  258
                 </span>
               
 
@@ -446,25 +446,291 @@
       
         
           
-            <script src="/assets/js/APlayer.min.js"> </script><p>##CSS hack</p>
-<p>Hack即不合法但生效的写法</p>
-<p>主要用于区分不同浏览器</p>
-<p>难理解 难维护 易失效</p>
-<p>替代方案：</p>
-<pre><code>特性检测
+            <script src="/assets/js/APlayer.min.js"> </script><p>CSS面试题</p>
+<p>###CSS样式的优先级</p>
+<pre><code>计算权重
 
-针对性加class
-</code></pre><p>###checkbox</p>
-<pre><code>.checkbox input + label{
-           background:url(./checkbox1.png) left center no-repeat;
-           background-size:20px 20px;
-           padding-left:20px;
-       }
-       .checkbox input:checked + label{
-           background-image:url(./checkbox2.png);
-       }
-</code></pre><p>###tree</p>
-<p>###tabs</p>
+！important
+
+内联样式
+
+后写的优先级
+</code></pre><p>###雪碧图的作用</p>
+<p>background-position</p>
+<p>减少HTTP请求数 提高加载性能</p>
+<p>有一些情况下可以减少图片大小</p>
+<p>###自定义字体的使用场景</p>
+<p>宣传/品牌/banner等固定文案</p>
+<p>字体图标</p>
+<p>###base64的使用</p>
+<p>减少HTTP请求</p>
+<p>适用于小图片</p>
+<p>base64的体积约为原图的4/3</p>
+<p>###伪类和伪元素的区别</p>
+<p>伪类表示状态</p>
+<p>伪元素是真的有元素</p>
+<p>前者单冒号，后者双冒号</p>
+<p>###如何美化checkbox</p>
+<p>label[for]和id</p>
+<p>隐藏原生input</p>
+<p>：checked+label</p>
+<p>###实现两栏(三栏)布局</p>
+<pre><code>表格布局
+
+float+margin
+
+inline-block
+
+flexbox
+</code></pre><p>###position：absolute/fixed</p>
+<pre><code>absolute相对最近的absolute/relative
+
+fixed相对屏幕
+</code></pre><p>###display：inline-block的间隙</p>
+<pre><code>原因：字符间距
+
+1.font-size：0
+
+2.div/div
+</code></pre><p>###如何清除浮动</p>
+<pre><code>让盒子负责自己的布局
+
+overflow：hidden/auto
+
+::after{clear:both}
+</code></pre><p>###如何适应移动端页面</p>
+<pre><code>viewport
+
+rem+viewport+media query
+
+设计上：隐藏+折行+自适应空间
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+	  <div>
+    
+      </div>
+	
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/HTML和CSS面试题(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Heath Shi">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/photo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nowshi Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/26/HTML和CSS面试题(1)/" itemprop="url">HTML和CSS面试题(1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T12:12:25+08:00">
+                2018-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/26/HTML和CSS面试题(1)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/26/HTML和CSS面试题(1)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  611
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="/assets/js/APlayer.min.js"> </script><p>1.浏览器的内核</p>
+<pre><code>IE：trident内核
+Firefox：gecko内核
+Safari：webkit内核
+Opera：以前是presto内核，现已经改用Blink内核
+Chrome：Blink(基于webkit，Google和Opera Software公共开发）
+</code></pre><p>2.怪异模式和标准模式的区别</p>
+<p>总体会有布局，样式解析和脚本执行三个方面的区别</p>
+<p>3.div+css的布局较table布局有什么优点？</p>
+<pre><code>改版的时候更方便，只需要改CSS文件
+表现与结构分离
+页面加载速度快、结构化清晰、页面显示简洁
+易于优化(seo)搜索引擎更友好，排名更容易靠前
+</code></pre><p>4.为什么利用多个域名来存储网站资源会更有效？</p>
+<p>CDN缓存更方便</p>
+<p>突破浏览器并发限制<br>节约cookie带宽<br>节约主域名的连接数，优化页面响应速度<br>防止不必要的安全问题</p>
+<p>5.src和href的区别</p>
+<p>src用于替换当前元素</p>
+<p>href用于在当前文档和引用资源之间建立连接</p>
+<p>href(Hypertext Reference)指向网络资源所在位置</p>
+<pre><code>&lt;link href=&quot;common.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre><p>浏览器会识别该文档为CSS文件，就会并行下载资源并且不会停止对当前文档的处理。这也是问什么使用link方式加载CSS，而不是使用@import方式。</p>
+<p>6.网页制作用到的图片格式</p>
+<pre><code>png-8
+png-24
+jpeg
+gif
+svg
+(WebP)
+</code></pre><p>WebP格式：Google开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节约大量的服务器带宽资源和数据空间。</p>
+<p>在质量相同的情况下，WebP图像的体积比JPEG格式图像小40%</p>
+<p>7.微格式</p>
+<p>微格式是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p>
+<p>优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。(应用范例：豆瓣)</p>
+<p>8.在CSS/JS代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次JS请求一般情况下有哪些地方会有缓存处理？</p>
+<pre><code>DNS缓存
+CDN缓存
+浏览器缓存
+服务器缓存
+</code></pre><p>9.有哪些方法优化图片的加载</p>
+<p>图片懒加载：</p>
 
           
         
@@ -793,233 +1059,6 @@ void main()
     printf(&quot;\n&quot;);
 }
 </code></pre><p>本文链接：<a href="https://blog.csdn.net/zuochao_2013/article/details/70854026" target="_blank" rel="noopener">数据结构与算法</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-	  <div>
-    
-      </div>
-	
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/26/HTML和CSS面试题(1)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Heath Shi">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/photo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nowshi Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/26/HTML和CSS面试题(1)/" itemprop="url">HTML和CSS面试题(1)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T12:12:25+08:00">
-                2018-09-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">web</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/26/HTML和CSS面试题(1)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/26/HTML和CSS面试题(1)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  611
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="/assets/js/APlayer.min.js"> </script><p>1.浏览器的内核</p>
-<pre><code>IE：trident内核
-Firefox：gecko内核
-Safari：webkit内核
-Opera：以前是presto内核，现已经改用Blink内核
-Chrome：Blink(基于webkit，Google和Opera Software公共开发）
-</code></pre><p>2.怪异模式和标准模式的区别</p>
-<p>总体会有布局，样式解析和脚本执行三个方面的区别</p>
-<p>3.div+css的布局较table布局有什么优点？</p>
-<pre><code>改版的时候更方便，只需要改CSS文件
-表现与结构分离
-页面加载速度快、结构化清晰、页面显示简洁
-易于优化(seo)搜索引擎更友好，排名更容易靠前
-</code></pre><p>4.为什么利用多个域名来存储网站资源会更有效？</p>
-<p>CDN缓存更方便</p>
-<p>突破浏览器并发限制<br>节约cookie带宽<br>节约主域名的连接数，优化页面响应速度<br>防止不必要的安全问题</p>
-<p>5.src和href的区别</p>
-<p>src用于替换当前元素</p>
-<p>href用于在当前文档和引用资源之间建立连接</p>
-<p>href(Hypertext Reference)指向网络资源所在位置</p>
-<pre><code>&lt;link href=&quot;common.css&quot; rel=&quot;stylesheet&quot;&gt;
-</code></pre><p>浏览器会识别该文档为CSS文件，就会并行下载资源并且不会停止对当前文档的处理。这也是问什么使用link方式加载CSS，而不是使用@import方式。</p>
-<p>6.网页制作用到的图片格式</p>
-<pre><code>png-8
-png-24
-jpeg
-gif
-svg
-(WebP)
-</code></pre><p>WebP格式：Google开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有JPEG的2/3，并能节约大量的服务器带宽资源和数据空间。</p>
-<p>在质量相同的情况下，WebP图像的体积比JPEG格式图像小40%</p>
-<p>7.微格式</p>
-<p>微格式是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</p>
-<p>优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。(应用范例：豆瓣)</p>
-<p>8.在CSS/JS代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次JS请求一般情况下有哪些地方会有缓存处理？</p>
-<pre><code>DNS缓存
-CDN缓存
-浏览器缓存
-服务器缓存
-</code></pre><p>9.有哪些方法优化图片的加载</p>
-<p>图片懒加载：</p>
 
           
         
